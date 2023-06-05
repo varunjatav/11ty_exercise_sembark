@@ -1,0 +1,172 @@
+---
+title: Sembark.com
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="{{ '/main.css' | url }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans">
+    <nav class="bg-white shadow-sm" id="up">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="/">
+            <div class="flex items-center gap-1">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-10 w-10"
+                  src="https://d1myhw8pp24x4f.cloudfront.net/software_logo/1616831695_logo_512x512.png"
+                  alt="Sembark Travel"
+                />
+              </div>
+              <div>
+                <span class="text-gray-800 text-xl font-semibold">SEMBARK</span>
+              </div>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4">
+            <a href="/about" class="text-gray-800 hover:text-gray-600"
+              >About Us</a
+            >
+            <a href="/operator" class="text-gray-800 hover:text-gray-600"
+            >Operater</a
+          >
+
+            <button
+              class="bg-indigo-900 hover:bg-indigo-700 text-white py-2 px-4 rounded"
+            >
+              Book Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+    {{ content | safe }}
+
+    <!-- Footer container -->
+    <footer
+      class="mt-10 bg-indigo-900  text-center dark:bg-neutral-600 lg:text-left text-white-500"
+    >
+      <div class="container p-6 ">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3">
+          <!--First links section-->
+          <div class="mb-6">
+            <h5
+              class="mb-4 font-normal text-sm uppercase text-white dark:text-neutral-200"
+            >
+              Support
+            </h5>
+
+            <ul class="mb-0 list-none space-y-4">
+              <li>
+                <a href="#!" class="text-white  dark:text-neutral-200"
+                  >Downloads</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200"
+                  >Tutorials</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="text-white  dark:text-neutral-200"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200">APIs</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200">Integrations</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200">Release Notes</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200">FAQs</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--Second links section-->
+          <div class="mb-6">
+            <h5
+             class="mb-4 font-normal text-sm uppercase text-white dark:text-neutral-200"
+            >
+            COMPANY
+            </h5>
+
+            <ul class="mb-0 list-none space-y-4">
+              <li>
+                <a href="#!" class="text-white  dark:text-neutral-200"
+                  >blogs</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200"
+                  >Terms & Policies</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200"
+                  >About Us</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+
+          <!--Third links section-->
+          <div class="mb-6">
+            <h5
+            class="mb-4 font-normal text-sm uppercase text-white dark:text-neutral-200"
+            >
+              contact us
+            </h5>
+
+            <ul class="mb-0 list-none space-y-4">
+              <li>
+                <a href="#!" class="text-white  dark:text-neutral-200"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="text-white dark:text-neutral-200"
+                  >Status</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--Copyright section-->
+      <div
+        class="p-4 text-center text-white dark:bg-neutral-700 dark:text-neutral-200"
+      >
+        © 2023 Copyright:
+        <a
+          class="text-white dark:text-neutral-400"
+          href="https://tailwind-elements.com/"
+          >Tailwind Elements</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
