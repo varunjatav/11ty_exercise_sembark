@@ -3,41 +3,322 @@
 @tailwind utilities;
 
 
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 300px;
+  max-height: 100vh;
+}
+
+.number-slide1 {
+  background: rgb(64, 175, 255);
+  background: linear-gradient(128deg,
+      rgba(64, 175, 255, 1) 0%,
+      rgba(63, 97, 255, 1) 100%);
+}
+
+.number-slide2 {
+  background: rgb(255, 75, 64);
+  background: linear-gradient(128deg,
+      rgba(255, 154, 63, 1) 0%,
+      rgba(255, 75, 64, 1) 100%);
+}
+
+.number-slide3 {
+  background: rgb(182, 255, 64);
+  background: linear-gradient(128deg,
+      rgba(182, 255, 64, 1) 0%,
+      rgba(63, 255, 71, 1) 100%);
+  background: linear-gradient(128deg,
+      rgba(189, 255, 83, 1) 0%,
+      rgba(43, 250, 82, 1) 100%);
+}
+
+.number-slide4 {
+  background: rgb(64, 255, 242);
+  background: linear-gradient(128deg,
+      rgba(64, 255, 242, 1) 0%,
+      rgba(63, 188, 255, 1) 100%);
+}
+
+.number-slide5 {
+  background: rgb(255, 64, 156);
+  background: linear-gradient(128deg,
+      rgba(255, 64, 156, 1) 0%,
+      rgba(255, 63, 63, 1) 100%);
+}
+
+.number-slide6 {
+  background: rgb(64, 76, 255);
+  background: linear-gradient(128deg,
+      rgba(64, 76, 255, 1) 0%,
+      rgba(174, 63, 255, 1) 100%);
+}
+
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot--active {
+  background: #000;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+  fill: "#fff";
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3E%3Cpath d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' %3E%3C/path%3E%3C/svg%3E");
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.arrow--disabled.arrow--left {
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='grey' viewBox='0 0 24 24' %3E%3Cpath d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' %3E%3C/path%3E%3C/svg%3E");
+}
+
+.arrow--disabled.arrow--right {
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='grey' viewBox='0 0 24 24' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.banner {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('https://img.veenaworld.com/wp-content/uploads/2018/08/Himachal-feature-image.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.free {
+  background-color: #329a8c;
+}
+
+.package-btn {
+  margin-top: 6rem;
+  padding: 1rem;
+  background-color: #329a8c;
+  border-radius: 2rem;
+}
+
+.form>div {
+  width: 80%
+}
+
+.form input {
+  width: 100%;
+}
+
+.google__icon__wrapper {
+  border: 1px solid #ea4335;
+  background: #ea4335;
+}
+
+.social__icon__wrapper {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: #ecf5fb;
+}
+
+.tripadvisor__icon__wrapper {
+  border: 1px solid #34e0a1;
+  background: #34e0a1;
+}
+
+.fb__icon__wrapper {
+  border: 1px solid #1b74e4;
+  background: #1b74e4;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse:hover {
+  animation: pulse 2s infinite;
+}
+
+/* .journeys {
+  background-image: url('https://pyt-images.imgix.net//pyt-images.imgix.net/images/activity/Card%205.png?w=270&h=360&fit=crop&dpr=1&auto=format%2Ccompress%2Cenhance&q=40');
+  height: 500px;
+} */
+
+
+.hoverImg:hover {
+  transform: scale(1.1);
+  transition: transform .8s ease-in;
+  -webkit-transition: transform .8s ease-in;
+}
+
+.itinary {
+  /* padding: 10px 0; */
+  margin: 0;
+  border-bottom: solid 1px #cfcfcf;
+  border-top: solid 1px #cfcfcf;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.itinary ul li {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.itinary ul li div img {
+  width: 50px;
+}
+
+.single .package_img {
+  margin-top: 20px;
+}
+
+.confused_text h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 40px
+}
+
+.confused_btn {
+  height: 100%;
+}
+
+.package_name {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  min-height: 20px;
+  color: #2e3042;
+  font-size: 18px;
+
+}
+
 .content {
   width: 40%;
   display: flex;
   flex-direction: column;
 }
+
 .content span {
   color: yellow;
 }
+
 label {
   font-weight: 800;
   font-size: small;
 }
+
 .position {
   top: 90%;
   height: 100px;
 }
+
 .right_btn_position {
   @apply right-0;
-   top: 45%;
- 
+  top: 45%;
+
 }
+
 .left_btn_position {
   @apply left-0;
   top: 45%;
 }
+
 .width {
   width: 30%;
 }
+
 .content-width {
   width: 70%;
 }
+
 .div_padding {
-  padding: 100px 10px ;
-}
-.div_height{
-  height: 500px ; 
+  padding: 100px 10px;
 }
 
+.div_height {
+  height: 500px;
+}
