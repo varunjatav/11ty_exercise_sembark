@@ -1,4 +1,15 @@
+<?php
+// PHP code to generate the HTML
+$visibility = "hide"; // Initial visibility state
 
+// Check if the button is clicked
+if (isset($_POST['showButton'])) {
+    $visibility = "show"; 
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +29,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
     />
-     <link rel="stylesheet" href="./main.css" />
+    
   </head>
   <style>
     .hide {
@@ -40,7 +51,7 @@
           src="https://tourism-himachal.com/images/tourism-himachal-brand-logo.jpg"
         />
       </div>
-      <div class="hidden lg:display-none xl:flex gap-5 text-white font-bold">
+      <div class="hidden lg:display-none xl:flex gap-5 text-white font-bold menu " >
         <h4>Best Packages</h4>
         <h4>Honeymoon Packages</h4>
         <h4>Family Packages</h4>
@@ -49,14 +60,16 @@
       <div class="hidden lg:flex gap-2 text-white font-bold">
         <div class="flex items-center gap-1">
           <img src="https://tourism-himachal.com/images/call-info.png" />
-          <h4>+91-9318524888</h4>
+          <h3>+91-9318524888</h3>
         </div>
         <div class="flex items-center gap-1">
           <img src="https://tourism-himachal.com/images/msg-info.png" />
-          <h4>info@tourism-himachal.com</h4>
+          <h3>info@tourism-himachal.com</h3>
         </div>
       </div>
-      <div class="hide">
+
+      <div class="hide menu-icon" id="menuIcon">
+        <button id="menuButton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -70,17 +83,22 @@
             stroke-linejoin="round"
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           />
+          
         </svg>
-      </div>
-    </nav>
+        </button>
 
+      </div>
+
+       
+
+    </nav>
    
     
 <div>
   <section
     class="banner flex justify-between gap-4 px-10 py-10 md:px-20 text-center text-white "
   >
-    <div class="hidden md:block  p-10 flex-2 sm:flex-1">
+    <div class="hidden md:block  p-10 sm:flex-1 md:flex-2">
       <h1 class="fw-bold font-serif text-[12px] leading-none mb-2 md:text-[3.5rem] ">
         Himachal Vacation Packages
       </h1>
@@ -113,7 +131,7 @@
       </a>
     </div>
 
-    <div style="width: fit-content" class=" flex-1 md:w-full ">
+    <div  class=" flex-1 md:w-full ">
       <div class="form-container w-full text-center">
         <div class="free p-5">
           <h1 class="font-semibold text-lg font-serif animate-blink">
@@ -127,7 +145,7 @@
                 class="form-control border p-2"
                 type="text"
                 placeholder="Name"
-                style="width: 75%"
+                style="width: 85%"
               />
             </div>
             <div class="form-group mb-4">
@@ -135,7 +153,7 @@
                 class="form-control border p-2"
                 type="text"
                 placeholder="Email"
-                style="width: 75%"
+               style="width: 85%"
               />
             </div>
             <div class="form-group mb-4">
@@ -143,7 +161,7 @@
                 class="form-control border p-2"
                 type="text"
                 placeholder="Mobile No."
-                style="width: 75%"
+                style="width: 85%"
               />
             </div>
 
@@ -151,9 +169,9 @@
               <select
                 class="form-group border p-2 text-gray-400"
                 placeholder="Mobile No."
-                style="width: 75%"
+                style="width: 85%"
               >
-                <option value="I am Travelling From...">
+                <option selected>
                   I am Travelling From...
                 </option>
                 <option value="I am Travelling From...">
@@ -170,33 +188,28 @@
                 class="form-control border p-2 text-gray-400"
                 type="date"
                 placeholder="Mobile No."
-                style="width: 75%"
+               style="width: 85%"
               />
             </div>
             <div
-              class="form-group mb-4 flex gap-1 items-center m-auto"
-              {#
-              style="width: 85%"
-              #}
+              class="form-group mb-4 flex gap-1 items-center m-auto w-75" style="width:85%"
             >
-              <div class="w-full">
+              <div class="flex-1" style="width:40%">
                 <select
-                  class="form-group border p-2 text-gray-400"
+                  class="form-group border p-2 text-gray-400 w-full"
                   placeholder="Mobile No."
-                  {#
-                  style="width: 75%"
-                  #}
+                 
                 >
                   <option selected>No.of Adults</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                 </select>
               </div>
-              <div class="w-full">
+              <div class="flex-1" style="width:40%">
                 <select
-                  class="form-group border p-2 text-gray-400"
+                  class="form-group border p-2 text-gray-400 w-full"
                   placeholder="Mobile No."
-                  style="width: 75%"
+                  style="width=100%"
                 >
                   <option selected>No of Childs</option>
                   <option value="1">1</option>
@@ -208,12 +221,9 @@
               <button
                 class="bg-black text-white p-5 rounded-full"
                 type="button"
-                style="width: 75%"
-                data-te-toggle="modal"
-                data-te-target="#exampleModal"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                id="modal-open" class="btn"
+                style="width: 75%" 
+                onClick={message()}
+                id="openModalButton"
               >
                 Set Free Quote
               </button>
@@ -254,6 +264,8 @@
     </div>
   </div>
   <div class="container m-auto pt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 p-3" id="packages">
+
+    
     <div class="shadow-xl rounded-lg">
       <div class="single pb-3" style="cursor: pointer">
         <div class="package_img" style="overflow: hidden">
@@ -354,6 +366,318 @@
                   color: #e10000;
                   font-weight: 700;
                 "
+              >
+                <div style="width: 20px">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="red"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+                <div>Read More</div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-top w-100 flex justify-between items-center border-bottom pb-2"
+          >
+            <div>
+              <button
+                type="button"
+                class="btn btn-dark mt-3 fw-bold fs-6 text"
+                id="openModalButton"
+                onClick={message()}
+              >
+                ENQUIRY NOW
+              </button>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/icon-whatsapp.webp"
+                  alt="whatsapp"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/icon-calling.webp"
+                  alt="call"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow-xl rounded-lg">
+      <div class="single pb-3" style="cursor: pointer">
+        <div class="package_img" style="overflow: hidden">
+          <img
+            src="https://pyt-images.imgix.net/images/campaignitinerary/Tanah-Lot-Temple-Bali-Trekking-Tour.jpeg?auto=format&fit=crop&crop=edges&w=345&h=168&q=100&dpr=2"
+            alt="packages"
+            loading="lazy"
+            width="100%"
+            class="hoverImg rounded-t-lg"
+          />
+        </div>
+        <div class="p-3">
+          <h2 class="package_name pt-2">Spiti Tour from Manali</h2>
+          <h3>
+            <span class="text-danger fs-4 text fw-bold"> 5N 6D</span>
+          </h3>
+          <h3 class="package_name pb-2">
+            From
+            <span class="fs-1 text fw-bold" style="color: #f37400 !important">
+              ₹ 12,000</span
+            >
+            Per Person
+          </h3>
+        </div>
+        <div class="itinary p-3">
+          <p>Package Inclusion</p>
+          <ul class="flex justify-between p-3">
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/transfers-icon.webp"
+                  alt="transfer"
+                  loading="lazy"
+                />
+              </div>
+              <p>Transfers</p>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/hotels-icon.webp"
+                  alt="hotels"
+                  loading="lazy"
+                />
+              </div>
+              <p>Hotels</p>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/meals-icon.webp"
+                  alt="meals"
+                  loading="lazy"
+                />
+              </div>
+              <p>Meals</p>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/sightseeing-icon.webp"
+                  alt="sightseeing"
+                  loading="lazy"
+                />
+              </div>
+              <p>Sightseeing</p>
+            </li>
+          </ul>
+        </div>
+        <div class="read p-3">
+          <h5 class="fw-bold">Tour Highlights:</h5>
+          <div class="flex pb-3">
+            <div style="width: 30px">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+            <div style="width: 100%">
+              <p class="fw-bold">Places to explore:</p>
+              <button
+                class="flex items-center gap-2"
+                style="
+                  cursor: pointer;
+                  background: transparent;
+                  border: 0px;
+                  float: right;
+                  color: #e10000;
+                  font-weight: 700;
+                "
+              >
+                <div style="width: 20px">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="red"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+                <div>Read More</div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-top w-100 flex justify-between items-center border-bottom pb-2"
+          >
+            <div>
+              <button
+                type="button"
+                class="btn btn-dark mt-3 fw-bold fs-6 text"
+                data-toggle="modal"
+                data-target="#queryModal"
+              >
+                ENQUIRY NOW
+              </button>
+            </div>
+            <div class="flex items-center gap-3">
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/icon-whatsapp.webp"
+                  alt="whatsapp"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/icon-calling.webp"
+                  alt="call"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow-xl rounded-lg">
+      <div class="single pb-3" style="cursor: pointer">
+        <div class="package_img" style="overflow: hidden">
+          <img
+            src="https://pyt-images.imgix.net/images/campaignitinerary/Tanah-Lot-Temple-Bali-Trekking-Tour.jpeg?auto=format&fit=crop&crop=edges&w=345&h=168&q=100&dpr=2"
+            alt="packages"
+            loading="lazy"
+            width="100%"
+            class="hoverImg rounded-t-lg"
+          />
+        </div>
+        <div class="p-3">
+          <h2 class="package_name pt-2">Spiti Tour from Manali</h2>
+          <h3>
+            <span class="text-danger fs-4 text fw-bold"> 5N 6D</span>
+          </h3>
+          <h3 class="package_name pb-2">
+            From
+            <span class="fs-1 text fw-bold" style="color: #f37400 !important">
+              ₹ 12,000</span
+            >
+            Per Person
+          </h3>
+        </div>
+        <div class="itinary p-3">
+          <p>Package Inclusion</p>
+          <ul class="flex justify-between p-3">
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/transfers-icon.webp"
+                  alt="transfer"
+                  loading="lazy"
+                />
+              </div>
+              <p>Transfers</p>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/hotels-icon.webp"
+                  alt="hotels"
+                  loading="lazy"
+                />
+              </div>
+              <p>Hotels</p>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/meals-icon.webp"
+                  alt="meals"
+                  loading="lazy"
+                />
+              </div>
+              <p>Meals</p>
+            </li>
+            <li>
+              <div>
+                <img
+                  src="https://spiti-trip.com/images/icon/sightseeing-icon.webp"
+                  alt="sightseeing"
+                  loading="lazy"
+                />
+              </div>
+              <p>Sightseeing</p>
+            </li>
+          </ul>
+        </div>
+        <div class="read p-3">
+          <h5 class="fw-bold">Tour Highlights:</h5>
+          <div class="flex pb-3">
+            <div style="width: 30px">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+            <div style="width: 100%">
+              <p class="fw-bold">Places to explore:</p>
+             
+              <button
+                class="flex items-center gap-2"
+                style="
+                  cursor: pointer;
+                  background: transparent;
+                  border: 0px;
+                  float: right;
+                  color: #e10000;
+                  font-weight: 700;
+                "
+                
               >
                 <div style="width: 20px">
                   <svg
@@ -692,318 +1016,8 @@
               <button
                 type="button"
                 class="btn btn-dark mt-3 fw-bold fs-6 text"
-                data-toggle="modal"
-                data-target="#queryModal"
-              >
-                ENQUIRY NOW
-              </button>
-            </div>
-            <div class="flex items-center gap-3">
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/icon-whatsapp.webp"
-                  alt="whatsapp"
-                  loading="lazy"
-                />
-              </div>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/icon-calling.webp"
-                  alt="call"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="shadow-xl rounded-lg">
-      <div class="single pb-3" style="cursor: pointer">
-        <div class="package_img" style="overflow: hidden">
-          <img
-            src="https://pyt-images.imgix.net/images/campaignitinerary/Tanah-Lot-Temple-Bali-Trekking-Tour.jpeg?auto=format&fit=crop&crop=edges&w=345&h=168&q=100&dpr=2"
-            alt="packages"
-            loading="lazy"
-            width="100%"
-            class="hoverImg rounded-t-lg"
-          />
-        </div>
-        <div class="p-3">
-          <h2 class="package_name pt-2">Spiti Tour from Manali</h2>
-          <h3>
-            <span class="text-danger fs-4 text fw-bold"> 5N 6D</span>
-          </h3>
-          <h3 class="package_name pb-2">
-            From
-            <span class="fs-1 text fw-bold" style="color: #f37400 !important">
-              ₹ 12,000</span
-            >
-            Per Person
-          </h3>
-        </div>
-        <div class="itinary p-3">
-          <p>Package Inclusion</p>
-          <ul class="flex justify-between p-3">
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/transfers-icon.webp"
-                  alt="transfer"
-                  loading="lazy"
-                />
-              </div>
-              <p>Transfers</p>
-            </li>
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/hotels-icon.webp"
-                  alt="hotels"
-                  loading="lazy"
-                />
-              </div>
-              <p>Hotels</p>
-            </li>
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/meals-icon.webp"
-                  alt="meals"
-                  loading="lazy"
-                />
-              </div>
-              <p>Meals</p>
-            </li>
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/sightseeing-icon.webp"
-                  alt="sightseeing"
-                  loading="lazy"
-                />
-              </div>
-              <p>Sightseeing</p>
-            </li>
-          </ul>
-        </div>
-        <div class="read p-3">
-          <h5 class="fw-bold">Tour Highlights:</h5>
-          <div class="flex pb-3">
-            <div style="width: 30px">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </div>
-            <div style="width: 100%">
-              <p class="fw-bold">Places to explore:</p>
-              <button
-                class="flex items-center gap-2"
-                style="
-                  cursor: pointer;
-                  background: transparent;
-                  border: 0px;
-                  float: right;
-                  color: #e10000;
-                  font-weight: 700;
-                "
-              >
-                <div style="width: 20px">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="red"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </div>
-                <div>Read More</div>
-              </button>
-            </div>
-          </div>
-          <div
-            class="border-top w-100 flex justify-between items-center border-bottom pb-2"
-          >
-            <div>
-              <button
-                type="button"
-                class="btn btn-dark mt-3 fw-bold fs-6 text"
-                data-toggle="modal"
-                data-target="#queryModal"
-              >
-                ENQUIRY NOW
-              </button>
-            </div>
-            <div class="flex items-center gap-3">
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/icon-whatsapp.webp"
-                  alt="whatsapp"
-                  loading="lazy"
-                />
-              </div>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/icon-calling.webp"
-                  alt="call"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="shadow-xl rounded-lg">
-      <div class="single pb-3" style="cursor: pointer">
-        <div class="package_img" style="overflow: hidden">
-          <img
-            src="https://pyt-images.imgix.net/images/campaignitinerary/Tanah-Lot-Temple-Bali-Trekking-Tour.jpeg?auto=format&fit=crop&crop=edges&w=345&h=168&q=100&dpr=2"
-            alt="packages"
-            loading="lazy"
-            width="100%"
-            class="hoverImg rounded-t-lg"
-          />
-        </div>
-        <div class="p-3">
-          <h2 class="package_name pt-2">Spiti Tour from Manali</h2>
-          <h3>
-            <span class="text-danger fs-4 text fw-bold"> 5N 6D</span>
-          </h3>
-          <h3 class="package_name pb-2">
-            From
-            <span class="fs-1 text fw-bold" style="color: #f37400 !important">
-              ₹ 12,000</span
-            >
-            Per Person
-          </h3>
-        </div>
-        <div class="itinary p-3">
-          <p>Package Inclusion</p>
-          <ul class="flex justify-between p-3">
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/transfers-icon.webp"
-                  alt="transfer"
-                  loading="lazy"
-                />
-              </div>
-              <p>Transfers</p>
-            </li>
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/hotels-icon.webp"
-                  alt="hotels"
-                  loading="lazy"
-                />
-              </div>
-              <p>Hotels</p>
-            </li>
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/meals-icon.webp"
-                  alt="meals"
-                  loading="lazy"
-                />
-              </div>
-              <p>Meals</p>
-            </li>
-            <li>
-              <div>
-                <img
-                  src="https://spiti-trip.com/images/icon/sightseeing-icon.webp"
-                  alt="sightseeing"
-                  loading="lazy"
-                />
-              </div>
-              <p>Sightseeing</p>
-            </li>
-          </ul>
-        </div>
-        <div class="read p-3">
-          <h5 class="fw-bold">Tour Highlights:</h5>
-          <div class="flex pb-3">
-            <div style="width: 30px">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </div>
-            <div style="width: 100%">
-              <p class="fw-bold">Places to explore:</p>
-              <button
-                class="flex items-center gap-2"
-                style="
-                  cursor: pointer;
-                  background: transparent;
-                  border: 0px;
-                  float: right;
-                  color: #e10000;
-                  font-weight: 700;
-                "
-              >
-                <div style="width: 20px">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="red"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </div>
-                <div>Read More</div>
-              </button>
-            </div>
-          </div>
-          <div
-            class="border-top w-100 flex justify-between items-center border-bottom pb-2"
-          >
-            <div>
-              <button
-                type="button"
-                class="btn btn-dark mt-3 fw-bold fs-6 text"
-                data-toggle="modal"
-                data-target="#queryModal"
+                {# data-toggle="modal"
+                data-target="#queryModal" #}
               >
                 ENQUIRY NOW
               </button>
@@ -1649,23 +1663,32 @@
       </div>
     </div>
   </div>
-
+  <section class="container m-auto text-center mt-10 mb-10">
+    <div>
+      <h1  class="font-black tracking-[1.5px] relative text-[#22577a] text-[1rem] md:text-[2rem] mb-5"
+      style="font-family: Poppins, sans-serif !important"> Himachal Tourism </h1>
+    </div>
+  <video width="100%" height="500" controls autoplay>
+  <source  src="/tour.mp4" type="video/mp4">
+  
+  </video>  
+  </section>
   <section class="text-center p-10 m-5 bg-[#edf7fb] ">
     <h1
-      class="font-black tracking-[1.5px] relative text-[#22577a] text-[2rem] mb-5"
+      class="font-black tracking-[1.5px] relative text-[#22577a] text-[1rem] md:text-[2rem] mb-5"
       style="font-family: Poppins, sans-serif !important"
     >
       TESTIMONIALS
     </h1>
     <div class="container m-auto grid grid-cols-1 shadow-lg md:grid-cols-2">
-      <div class="bg-[#22577a] p-10 rounded-s-lg">
+      <div class="bg-[#22577a] p-5 md:p-10 rounded-s-lg">
         <h1
-          class="font-black relative text-white text-[2rem] text-left"
-          style="width: 75%"
+          class="font-black relative text-white text-[1.5rem] w-full md:text-[2rem] w-75 text-left"
+          
         >
           Most Trusted Travel Community
         </h1>
-        <div class="text-white mt-5 text-left pl-20">
+        <div class="text-white mt-5 text-left pl-0 md:pl-20">
           <ul>
             <li>A stellar rating of 5 on Trip Advisor.</li>
             <li>An exceptional rating of 4.9 stars on Google.</li>
@@ -1674,7 +1697,7 @@
             <li>4,000+ successful trips.</li>
           </ul>
         </div>
-        <div class="flex justify-left gap-5 pt-10">
+        <div class="flex justify-left  pt-10 md:gap-4">
           <div>
             <a
               href="https://www.google.com/search?q=justwravel&rlz=1C1PNGB_enIN968IN971&ei=m7EpYrPDGYyE4-EPgKWQoAo&ved=0ahUKEwjz_MaSi7v2AhUMwjgGHYASBKQQ4dUDCA4&uact=5&oq=justwravel&gs_lcp=Cgdnd3Mtd2l6EAMyDgguEIAEELEDEMcBEK8BMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgQIABBDOgYIABAWEB46CAgAEBYQChAeOhQIABDqAhC0AhCKAxC3AxDUAxDlAjoICAAQgAQQsQM6DQguELEDEMcBENEDEEM6CgguEMcBENEDEEM6BwguELEDEEM6DgguEIAEELEDEMcBENEDOggILhCABBCxAzoICAAQsQMQgwE6CwgAEIAEELEDEIMBOgcIABCABBAKSgQIQRgASgQIRhgAUABYjRlg2x5oAXABeASAAfYBiAHCFJIBBjAuMTEuNZgBAKABAbABCsABAQ&sclient=gws-wiz#lrd=0x390cef8c21d567a7:0xd85f882ae6449cca,1,,,"
@@ -1713,13 +1736,55 @@
         </div>
       </div>
       <div class="rounded-e-lg bg-white">
-       <div id="my-keen-slider" class="keen-slider">
-      <div class="keen-slider__slide number-slide1">1</div>
-      <div class="keen-slider__slide number-slide2">2</div>
-      <div class="keen-slider__slide number-slide3">3</div>
-      <div class="keen-slider__slide number-slide4">4</div>
-      <div class="keen-slider__slide number-slide5">5</div>
-      <div class="keen-slider__slide number-slide6">6</div>
+       <div id="my-keen-slider" class="keen-slider h-full">
+      <div class="keen-slider__slide number-slide1">
+        <div>
+          <img src="https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d" width="100px" height="50px" class="m-auto rounded-full mt-6"/>
+        </div>
+        <div>
+          <p class="text-sm">hismdk akdkcajodmdkodKJ KOJDAJNDJAN Jjijaijdao ojajdojdwqw jiajdijdwaoj</p>
+        </div>
+      </div>
+      <div class="keen-slider__slide number-slide1">
+        <div>
+          <img src="https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d" width="100px" height="50px" class="m-auto rounded-full mt-6"/>
+        </div>
+        <div>
+          <p class="text-sm">hismdk akdkcajodmdkodKJ KOJDAJNDJAN Jjijaijdao ojajdojdwqw jiajdijdwaoj</p>
+        </div>
+      </div>
+      <div class="keen-slider__slide number-slide1">
+        <div>
+          <img src="https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d" width="100px" height="50px" class="m-auto rounded-full mt-6"/>
+        </div>
+        <div>
+          <p class="text-sm">hismdk akdkcajodmdkodKJ KOJDAJNDJAN Jjijaijdao ojajdojdwqw jiajdijdwaoj</p>
+        </div>
+      </div>
+      <div class="keen-slider__slide number-slide1">
+        <div>
+          <img src="https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d" width="100px" height="50px" class="m-auto rounded-full mt-6"/>
+        </div>
+        <div>
+          <p class="text-sm">hismdk akdkcajodmdkodKJ KOJDAJNDJAN Jjijaijdao ojajdojdwqw jiajdijdwaoj</p>
+        </div>
+      </div>
+      <div class="keen-slider__slide number-slide1">
+        <div>
+          <img src="https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d" width="100px" height="50px" class="m-auto rounded-full mt-6"/>
+        </div>
+        <div>
+          <p class="text-sm">hismdk akdkcajodmdkodKJ KOJDAJNDJAN Jjijaijdao ojajdojdwqw jiajdijdwaoj</p>
+        </div>
+      </div>
+      <div class="keen-slider__slide number-slide1">
+        <div>
+          <img src="https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d" width="100px" height="50px" class="m-auto rounded-full mt-6"/>
+        </div>
+        <div>
+          <p class="text-sm">hismdk akdkcajodmdkodKJ KOJDAJNDJAN Jjijaijdao ojajdojdwqw jiajdijdwaoj</p>
+        </div>
+      </div>
     </div>
     </div>
   </section>
@@ -1838,89 +1903,201 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
-         {# <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script> #}
-    <script src="./script.js"></script>
+        <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 
 
+<div id="modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="modal-overlay absolute inset-0 bg-gray-900 opacity-50"></div>
 
+    <div class="modal-container bg-white w-[95%] md:w-1/3 m-auto rounded shadow-lg z-50 overflow-y-auto">
+        <div class="modal-content  text-left ">
+            <div class="free p-5 flex justify-between">
+                <h1 class="font-semibold text-lg font-serif animate-blink text-white">
+                    Yes, Set Free Quote
+                </h1>
+                <button id="closeModalButton" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <span class="sr-only">Close</span>
+                    <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M14.348 14.849l-1.414 1.414L10 11.414l-2.93 2.83-1.414-1.415L8.586 10 5.657 7.071l1.414-1.414L10 8.586l2.929-2.829 1.415 1.414L11.414 10l2.93 2.93z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="bg-[#f1f0ee] h-full">
+                <form class="flex-col items-center justify-center gap-4 p-4 m" >
+                    <div class="form-group mb-4 m-auto" >
+                        <input class="form-control border p-2" type="text" placeholder="Name" style="width: 100%" />
+                    </div>
+                    <div class="form-group mb-4">
+                        <input class="form-control border p-2" type="text" placeholder="Email" style="width: 100%" />
+                    </div>
+                    <div class="form-group mb-4">
+                        <input class="form-control border p-2" type="text" placeholder="Mobile No." style="width: 100%" />
+                    </div>
 
-    <!-- Modal -->
-<div
-  data-te-modal-init
-  class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div
-    data-te-modal-dialog-ref
-    class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
-    <div
-      class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-      <div
-        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-        <!--Modal title-->
-        <h5
-          class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-          id="exampleModalLabel">
-          Modal title
-        </h5>
-        <!--Close button-->
-        <button
-          type="button"
-          class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-          data-te-modal-dismiss
-          aria-label="Close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="h-6 w-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+                    <div class="form-group mb-4">
+                        <select class="form-group border p-2 text-gray-400"  style="width: 100%">
+                            <option selected>I am Travelling From...</option>
+                            <option value="I am Travelling From...">I am Travelling From...</option>
+                            <option value="I am Travelling From...">I am Travelling From...</option>
+                        </select>
+                    </div>
 
-      <!--Modal body-->
-      <div class="relative flex-auto p-4" data-te-modal-body-ref>
-        Modal body text goes here.
-      </div>
-
-      <!--Modal footer-->
-      <div
-        class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-        <button
-          type="button"
-          class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
-          data-te-modal-dismiss
-          data-te-ripple-init
-          data-te-ripple-color="light">
-          Close
-        </button>
-        <button
-          type="button"
-          class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-          data-te-ripple-init
-          data-te-ripple-color="light">
-          Save changes
-        </button>
-      </div>
+                    <div class="form-group mb-4">
+                        <input class="form-control border p-2 text-gray-400" type="date" placeholder="Mobile No." style="width: 100%" />
+                    </div>
+                    <div class="form-group mb-4 flex gap-5 items-center m-auto" style="width: 100%">
+                        <div class="flex-1">
+                            <select class="form-group border p-2 text-gray-400 w-full" placeholder="Mobile No.">
+                                <option selected>No.of Adults</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="flex-1">
+                            <select class="form-group border p-2 text-gray-400 w-full" placeholder="Mobile No.">
+                                <option selected>No of Childs</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="bg-black text-white p-5 rounded-full" type="button" style="width: 100%">
+                            Set Free Quote
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<script>
-  const modalOpenButton = document.getElementById('modal-open');
-  const modal = document.querySelector('.modal');
+</div>
 
-  modalOpenButton.addEventListener('click', () => {
-    modal.classList.add('open');
-  });
-</script>
+
+<script>
+  function navigation(slider) {
+    let wrapper, dots, arrowLeft, arrowRight
+  
+    function markup(remove) {
+      wrapperMarkup(remove)
+      dotMarkup(remove)
+      arrowMarkup(remove)
+    }
+  
+    function removeElement(elment) {
+      elment.parentNode.removeChild(elment)
+    }
+    function createDiv(className) {
+      var div = document.createElement("div")
+      var classNames = className.split(" ")
+      classNames.forEach((name) => div.classList.add(name))
+      return div
+    }
+  
+    function arrowMarkup(remove) {
+      if (remove) {
+        removeElement(arrowLeft)
+        removeElement(arrowRight)
+        return
+      }
+      arrowLeft = createDiv("arrow arrow--left")
+      arrowLeft.addEventListener("click", () => slider.prev())
+      arrowRight = createDiv("arrow arrow--right")
+      arrowRight.addEventListener("click", () => slider.next())
+  
+      wrapper.appendChild(arrowLeft)
+      wrapper.appendChild(arrowRight)
+    }
+  
+    function wrapperMarkup(remove) {
+      if (remove) {
+        var parent = wrapper.parentNode
+        while (wrapper.firstChild)
+          parent.insertBefore(wrapper.firstChild, wrapper)
+        removeElement(wrapper)
+        return
+      }
+      wrapper = createDiv("navigation-wrapper")
+      slider.container.parentNode.appendChild(wrapper)
+      wrapper.appendChild(slider.container)
+    }
+  
+    function dotMarkup(remove) {
+      if (remove) {
+        removeElement(dots)
+        return
+      }
+      dots = createDiv("dots")
+      slider.track.details.slides.forEach((_e, idx) => {
+        var dot = createDiv("dot")
+        dot.addEventListener("click", () => slider.moveToIdx(idx))
+        dots.appendChild(dot)
+      })
+      wrapper.appendChild(dots)
+    }
+  
+    function updateClasses() {
+      var slide = slider.track.details.rel
+      slide === 0
+        ? arrowLeft.classList.add("arrow--disabled")
+        : arrowLeft.classList.remove("arrow--disabled")
+      slide === slider.track.details.slides.length - 1
+        ? arrowRight.classList.add("arrow--disabled")
+        : arrowRight.classList.remove("arrow--disabled")
+      Array.from(dots.children).forEach(function (dot, idx) {
+        idx === slide
+          ? dot.classList.add("dot--active")
+          : dot.classList.remove("dot--active")
+      })
+    }
+  
+    slider.on("created", () => {
+      markup()
+      updateClasses()
+    })
+    slider.on("optionsChanged", () => {
+      console.log(2)
+      markup(true)
+      markup()
+      updateClasses()
+    })
+    slider.on("slideChanged", () => {
+      updateClasses()
+    })
+    slider.on("destroyed", () => {
+      markup(true)
+    })
+  }
+  
+  var slider = new KeenSlider("#my-keen-slider", {}, [navigation])
+  
+
+  function message(){
+    console.log("clicked")
+  }
+
+
+var openModalButton = document.getElementById('openModalButton');
+var closeModalButton = document.getElementById('closeModalButton');
+var modal = document.getElementById('modal');
+
+openModalButton.addEventListener('click', function() {
+    modal.classList.remove('hidden');
+});
+
+closeModalButton.addEventListener('click', function() {
+    modal.classList.add('hidden');
+});
+
+
+
+
+  
+   </script>
+
+
+
   </body>
 </html>
+
