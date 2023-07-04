@@ -248,6 +248,10 @@ ul {
 
 .single .package_img {
   margin-top: 20px;
+  height:200px
+}
+.single .package_img img {
+  height:100%
 }
 
 .confused_text h1 {
