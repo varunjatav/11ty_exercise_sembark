@@ -30,40 +30,7 @@ body {
   display: grid;
   grid-template-rows: repeat(2,1fr)
 }
-.number-slide1 div{
-  /* height: 50%; */
-}
 
-/* .number-slide2 {
-  background-image: url('https://1.bp.blogspot.com/-4UySOgwPxu0/XPEaPVjSCZI/AAAAAAAABNY/udE9SH41zNEEN9ezbxCwjaRwJrq5zrwMwCEwYBhgL/s1600/Culture%2Bof%2BHimachal%2BPradesh.jpg');
-  background-size: cover;
-}
-
-.number-slide3 {
- background-image: url("https://th.bing.com/th/id/OIP.tepHT4X7jtMs4wukNgFa6wHaE7?pid=ImgDet&rs=1");
- background-size: cover;
-}
-
-.number-slide4 {
-  background: rgb(64, 255, 242);
-  background: linear-gradient(128deg,
-      rgba(64, 255, 242, 1) 0%,
-      rgba(63, 188, 255, 1) 100%);
-} */
-
-.number-slide5 {
-  background: rgb(255, 64, 156);
-  background: linear-gradient(128deg,
-      rgba(255, 64, 156, 1) 0%,
-      rgba(255, 63, 63, 1) 100%);
-}
-
-.number-slide6 {
-  background: rgb(64, 76, 255);
-  background: linear-gradient(128deg,
-      rgba(64, 76, 255, 1) 0%,
-      rgba(174, 63, 255, 1) 100%);
-}
 
 .navigation-wrapper {
   position: relative;
@@ -130,7 +97,38 @@ body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('https://img.veenaworld.com/wp-content/uploads/2018/08/Himachal-feature-image.jpg');
   background-size: cover;
   background-position: center;
-
+  display: flex;
+  padding: 2.5rem 5rem;
+}
+.himachal-form{
+  width:30%
+}
+@media screen and (max-width: 900px){
+  .banner{
+    padding: 1rem;
+  }
+  .himachal{
+    width:65%
+  }
+  .himachal-form{
+    width:35%
+  }
+}
+@media screen and (min-width:400px) and (max-width: 768px){
+  .banner{
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 760px){
+  .himachal-form{
+    border:1px solid rgb(13, 13, 17);
+    width:100%
+  }
+}
+@media screen and (max-width: 400px){
+  .banner{
+    padding: 0.5rem;
+  }
 }
 
 .free {
@@ -327,39 +325,6 @@ label {
   max-height: 80%;
 }
 
-/* .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #685a5a;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
+.hide {
+  display: none;
 }
-
-.menu.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.close-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.close-icon button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #000;
-  cursor: pointer;
-} */
