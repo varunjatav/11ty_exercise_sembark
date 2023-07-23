@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.hover:hover{
+  transform: scale(1.1);
+  transition: transform .8s ease-in;
+ -webkit-transition: transform .8s ease-in;
 
+}
 
 body {
   margin: 0;
