@@ -6,12 +6,6 @@ module.exports = function(eleventyConfig) {
     
       eleventyConfig.addPassthroughCopy("src");
     return { 
-        dir: { 
-        input: "src", 
-        includes:"../_includes",
-        output: "_site" ,
-        layout: "layouts/travel_root.njk"
-    },
     templateFormats: ["html", "liquid", "njk"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
