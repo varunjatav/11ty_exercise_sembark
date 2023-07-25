@@ -4,10 +4,10 @@ layout: "layouts/rain_root.njk"
 
 <section>
   <div
-    class="bg-[url('https://raindrop.io/_next/static/images/blob-intro-82a9537613a4c073b91da3dee2cba356.jpg')] bg-no-repeat grid grid-cols-2 py-24 pl-28"
+    class="bg-[url('https://raindrop.io/_next/static/images/blob-intro-82a9537613a4c073b91da3dee2cba356.jpg')] bg-no-repeat grid grid-cols-1 md:grid-cols-2 py-28 px-5 md:pl-28"
     style="background-position: 50vw 20px; background-size: 731px 622px"
   >
-    <div class="space-y-10">
+    <div class="space-y-10 pb-10 md:pb-0">
       <h1 class="text-5xl font-bold">All-in-one bookmark manager</h1>
       <p class="text-2xl">Intuitive. Powerful. Runs everywhere</p>
       <div class="flex gap-3">
@@ -48,7 +48,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="grid grid-cols-2 py-24 pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
+    class="grid grid-cols-1 md:grid-cols-2 py-24 px-5 md:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
     style="background-position: 50vw 20px; background-size: 731px 622px"
   >
     <div class="space-y-10">
@@ -192,7 +192,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="grid grid-cols-2 py-24 pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
+    class="flex flex-col-reverse  md:grid  md:grid-cols-2 py-24 px-5 md:pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
     style="
       background-position: 50vw 20px;
       background-size: 893px 511px;
@@ -329,7 +329,7 @@ layout: "layouts/rain_root.njk"
     </div>
   </div>
 
-  <div class="flex items-center justify-between w-[80%] m-auto gap-5">
+  <div class="flex flex-col items-center justify-between w-[90%] m-auto gap-5 md:flex-row md:w-[80%]">
     <div class="text-left items-start space-y-5">
       <h1 class="text-3xl font-bold">Connect to your world</h1>
       <p class="text-xl">
@@ -419,7 +419,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="grid grid-cols-2 py-24 pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
+    class="flex flex-col-reverse md:grid md:grid-cols-2 py-24 px-5 md:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
     style="
       background-position: 50vw 20px;
       background-size: 893px 511px;
@@ -557,7 +557,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="grid grid-cols-2 py-24 pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
+    class="grid grid-cols-1 md:grid-cols-2  py-24 px-5 md:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
     style="background-position: 50vw 20px; background-size: 731px 622px"
   >
     <div class="space-y-10">
@@ -701,7 +701,7 @@ layout: "layouts/rain_root.njk"
     </div>
   </div>
 
-  <div class="grid grid-cols-2 w-[80%] m-auto gap-5">
+  <div class="flex flex-col items-center justify-between w-[90%] m-auto gap-5 md:flex-row md:w-[80%]">
     <div class="text-left items-start space-y-5">
       <h1 class="text-3xl font-bold">Safe & secure</h1>
       <p class="text-xl">
@@ -772,14 +772,14 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="py-16 text-center space-y-3 bg-[url('https://raindrop.io/_next/static/images/blob-devices-left-5a45b57404ed98f1d6f7f827c8c0b5d9.jpg'), url('https://raindrop.io/_next/static/images/blob-devices-right-6f4db65e782bf14a90b25f837741785c.jpg')] bg-no-repeat"
+    class="py-16  px-5 text-center md:px-0 space-y-3 bg-[url('https://raindrop.io/_next/static/images/blob-devices-left-5a45b57404ed98f1d6f7f827c8c0b5d9.jpg'), url('https://raindrop.io/_next/static/images/blob-devices-right-6f4db65e782bf14a90b25f837741785c.jpg')] bg-no-repeat"
     style="
       background-size: 599px 589px, 631px 532px;
       background-position: calc(50vw - 1100px) 80px, calc(50vw + 550px) 20px;
     "
   >
     <h1 class="text-4xl font-semibold">Access even outside of the browser</h1>
-    <p class="w-1/2 m-auto text-xl">
+    <p class="w-full m-auto text-xl md:w-1/2">
       Raindrop.io is available as
       <a
         href="https://chrome.google.com/webstore/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien"
@@ -798,7 +798,7 @@ layout: "layouts/rain_root.njk"
       >
         Safari,
       </a>
-      , and
+       and
       <a
         href="https://raindrop.io/r/extension/edge"
         class="text-blue-500 text-xl"

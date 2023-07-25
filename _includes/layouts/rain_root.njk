@@ -55,33 +55,67 @@ footer_data:
       class="fixed w-full flex justify-around items-center text-center py-3 shadow-md bg-[rgba(255,255,255,0.7)]"
       style="backdrop-filter: blur(20px)"
     >
-      <div class="flex items-center gap-2 cursor-pointer">
+      <div class="md:flex items-center gap-2 cursor-pointer">
         <img
           src="https://assets.ifttt.com/images/channels/946168322/icons/large.png"
           class="w-10 h-10"
         />
-        <h1 class="text-gray-700 text-xl">Raindrop</h1>
+        <h1 class="text-gray-700 text-xl">Raindrop.io</h1>
+      </div>
+      <div class="block md:hidden">
+        <select id="select" onchange="openSelectedLink()">
+          <option  value="#">
+             Features
+          </option>
+          <option value="https://raindrop.io/pro/buy">
+            Pricing 
+          </option>
+          <option value="https://raindrop.io/download">
+             Download 
+          </option>
+          <option value="https://blog.raindrop.io/">
+            Blog 
+          </option>
+          <option value="https://help.raindrop.io/about/">
+            About
+          </option>
+        </select>
       </div>
       <div
-        class="flex justify-between gap-3 items-center text-center cursor-pointer"
+        class="hidden md:flex justify-between gap-3 items-center text-center cursor-pointer"
       >
-        <a href="#" class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2">
+        <a
+          href="#"
+          class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2"
+        >
           Features
         </a>
-        <a href="https://raindrop.io/pro/buy" class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2">
+        <a
+          href="https://raindrop.io/pro/buy"
+          class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2"
+        >
           Pricing
         </a>
-        <a href="https://raindrop.io/download" class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2">
+        <a
+          href="https://raindrop.io/download"
+          class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2"
+        >
           Download
         </a>
-        <a href="https://blog.raindrop.io/" class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2">
+        <a
+          href="https://blog.raindrop.io/"
+          class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2"
+        >
           Blog
         </a>
-        <a href="https://help.raindrop.io/about/" class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2">
+        <a
+          href="https://help.raindrop.io/about/"
+          class="text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-2"
+        >
           About
         </a>
       </div>
-      <div>
+      <div class="hidden md:block">
         <a href="https://app.raindrop.io/account/login">
           <div
             class="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2"
@@ -110,7 +144,7 @@ footer_data:
     <footer class="text-center">
       <h1 class="text-4xl font-semibold">But wait, there's more</h1>
 
-      <div class="grid grid-cols-3 gap-4 p-5 w-[90%] m-auto py-10 border-b-2">
+      <div class="grid grid-cols-1 space-y-4 md:grid-cols-3 md:space-y-0 gap-4 p-5 w-[90%] m-auto py-10 border-b-2">
         {% for data in footer_data%}
         <div class="flex text-left gap-3">
           <div>
@@ -137,7 +171,7 @@ footer_data:
         {% endfor %}
       </div>
 
-      <div class="flex justify-between w-[80%] m-auto py-10 items-center">
+      <div class="flex flex-col w-[90%] space-y-10  justify-between m-auto py-10 items-center md:flex-row md:space-y-0 md:w-[80%]">
         <div class="grid grid-cols-2 gap-20 text-left">
           <div class="grid grid-cols-1">
             <a href="https://raindrop.io/"> Features</a>
@@ -162,17 +196,33 @@ footer_data:
             </div>
             <div>
               <h1 class="font-semibold text-gray-500">Raindrop.io</h1>
-              <p class="text-sm font-[100] text-gray-500">All in one bookmark manager</p>
+              <p class="text-sm font-[100] text-gray-500">
+                All in one bookmark manager
+              </p>
               <div class="pt-3">
-                <p class="text-sm text-gray-500">© 2013 - 2023 SP Rustem Mussabekov</p>
+                <p class="text-sm text-gray-500">
+                  © 2013 - 2023 SP Rustem Mussabekov
+                </p>
                 <div class="flex items-center gap-3">
                   <img
                     src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/TWITTER-512.png"
                     class="h-5 w-5"
                   />
-                  <a href="https://twitter.com/raindrop_io"class="text-sm text-gray-500">Twitter</a>
-                  <a href="https://help.raindrop.io/terms" class="text-sm text-gray-500">Terms</a>
-                  <a href="https://help.raindrop.io/privacy" class="text-sm text-gray-500">Privacy</a>
+                  <a
+                    href="https://twitter.com/raindrop_io"
+                    class="text-sm text-gray-500"
+                    >Twitter</a
+                  >
+                  <a
+                    href="https://help.raindrop.io/terms"
+                    class="text-sm text-gray-500"
+                    >Terms</a
+                  >
+                  <a
+                    href="https://help.raindrop.io/privacy"
+                    class="text-sm text-gray-500"
+                    >Privacy</a
+                  >
                 </div>
               </div>
             </div>
@@ -181,4 +231,19 @@ footer_data:
       </div>
     </footer>
   </body>
+
+  <script>
+    function openSelectedLink() {
+      // Get the select element
+      var selectElement = document.getElementById("select");
+
+      // Get the selected option value
+      var selectedValue = selectElement.value;
+
+      // Open the link in a new tab if a valid option is selected
+      if (selectedValue !== "") {
+        window.open(selectedValue, "_blank");
+      }
+    }
+  </script>
 </html>
