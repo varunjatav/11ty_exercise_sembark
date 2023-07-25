@@ -28,10 +28,10 @@ module.exports = {
       },
       
       colors:{
-        cyan: "#00ffff",
-        blue: "#3b3bff",
-        pink: "#ff748c",
-        yellow: "#e6e600",
+        cyan1: "#00ffff",
+        blue1: "#3b3bff",
+        pink1: "#ff748c",
+        yellow1: "#e6e600",
       },
     },
   },
