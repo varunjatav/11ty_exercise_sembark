@@ -1,0 +1,909 @@
+---
+layout: "layouts/rain_root.njk"
+---
+
+<section>
+  <div
+    class="bg-[url('https://raindrop.io/_next/static/images/blob-intro-82a9537613a4c073b91da3dee2cba356.jpg')] bg-no-repeat grid grid-cols-2 py-24 pl-28"
+    style="background-position: 50vw 20px; background-size: 731px 622px"
+  >
+    <div class="space-y-10">
+      <h1 class="text-5xl font-bold">All-in-one bookmark manager</h1>
+      <p class="text-2xl">Intuitive. Powerful. Runs everywhere</p>
+      <div class="flex gap-3">
+        <a href="https://app.raindrop.io/account/signup">
+          <div
+            class="bg-blue-500 py-2 rounded-sm px-8 text-center text-lg text-white cursor-pointer"
+          >
+            Sign up
+          </div>
+        </a>
+        <a href="https://raindrop.io/download">
+          <div
+            class="bg-white py-2 rounded-sm px-8 text-center text-lg text-blue-500 hover:bg-gray-50 cursor-pointer"
+          >
+            Download App
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <video class="h-auto w-full rounded-md" controls autoplay>
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <div class="text-center py-2 space-y-4">
+    <h1 class="text-4xl">Designed for ✐ creatives, built for {coders}</h1>
+    <h2 class="text-2xl w-2/3 m-auto">
+      Raindrop.io is the best place to keep all your favorite books, songs,
+      articles or whatever else you come across while browsing.
+    </h2>
+    <p class="text-xl text-gray-500 w-1/2 m-auto pt-5">
+      We're not trying to reinvent the wheel; we're working on a tool that does
+      everything you expect from a modern bookmark manager.
+    </p>
+  </div>
+
+  <div
+    class="grid grid-cols-2 py-24 pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
+    style="background-position: 50vw 20px; background-size: 731px 622px"
+  >
+    <div class="space-y-10">
+      <h1 class="text-5xl font-bold">Organize with ease</h1>
+      <p class="text-2xl">
+        Raindrop.io is not just a pretty interface, it can help you untangle
+        your bookmarks mess.
+      </p>
+      <div class="space-y-3">
+        <div
+          class="flex items-center gap-2 group hover:bg-[#fff5e1] p-3 cursor-pointer"
+          id="btn1"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.0"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:stroke-[#ad710d]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#ad710d]">
+              Collections
+            </h1>
+            <p class="hidden group-hover:block">
+              Group related bookmarks within the same context. Thousands of
+              predefined icons.
+              <a
+                href="https://help.raindrop.io/collections/"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#fff5e1] p-3 cursor-pointer"
+          id="btn2"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.0"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:stroke-[#ad710d]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#ad710d]">
+              Tags & filters
+            </h1>
+            <p class="hidden group-hover:block">
+              Add tags to classify items. Search efficiently by type, tags, or
+              domain.
+              <a href="https://help.raindrop.io/tags/" class="text-blue-500">
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#fff5e1] p-3 cursor-pointer"
+          id="btn3"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.0"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:stroke-[#ad710d]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1
+              class="font-semibold group-hover:text-[#ad710d] flex items-center gap-2"
+            >
+              Duplicates and broken links
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.0"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </h1>
+            <p class="hidden group-hover:block">
+              Keep it clean. We help you find duplicates and pages that are no
+              longer accessible.
+              <a
+                href="https://help.raindrop.io/using-search/#broken-links"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img
+        src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+        class="h-[500px] w-full"
+        id="image"
+      />
+    </div>
+  </div>
+
+  <div
+    class="grid grid-cols-2 py-24 pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
+    style="
+      background-position: 50vw 20px;
+      background-size: 893px 511px;
+      background-position: calc(50vw - 893px) 0;
+      background-position-x: calc(50vw - 893px);
+      background-position-y: 0px;
+    "
+  >
+    <div>
+      <img
+        src="https://raindrop.io/_next/static/images/view-modes-1296-920d1ee40167a15276283d32c533afca.png"
+        class="h-[500px] w-full"
+        id="image2"
+      />
+    </div>
+    <div class="space-y-10">
+      <h1 class="text-5xl font-bold">See the big picture</h1>
+      <p class="text-2xl">
+        All relevant info about bookmarks visible at a glance, so you can find
+        anything fast.
+      </p>
+      <div class="space-y-3">
+        <div
+          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer"
+          id="btn4"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 group-hover:stroke-[#E54837]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#E54837]">Highlights</h1>
+            <p class="hidden group-hover:block">
+              Annotate web and easily revisit key passages in the future.
+              <a
+                href="https://help.raindrop.io/highlights/"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer"
+          id="btn5"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 group-hover:stroke-[#E54837]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#E54837]">
+              Instant preview
+            </h1>
+            <p class="hidden group-hover:block">
+              Read articles, view videos, and browse the web without ever
+              leaving your library.
+              <a
+                href="https://help.raindrop.io/bookmarks/#preview"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer"
+          id="btn6"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.0"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:stroke-[#E54837]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#E54837]">
+              Multiple views
+            </h1>
+            <p class="hidden group-hover:block">
+              View bookmarks the way you like. We have Grid, Headlines, Masonry,
+              or List view modes
+              <a
+                href="https://help.raindrop.io/bookmarks/#appearance"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between w-[80%] m-auto gap-5">
+    <div class="text-left items-start space-y-5">
+      <h1 class="text-3xl font-bold">Connect to your world</h1>
+      <p class="text-xl">
+        Want to automatically save your Twitter or Youtube favs? Need more
+        complex integration?
+      </p>
+      <p class="pt-5 text-xl">We've covered all use-cases.</p>
+
+      <div class="flex items-center justify-start gap-4">
+        <a
+          href="https://ifttt.com/raindrop"
+          class="text-blue-500 text-xl flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 1h14a2 2 0 0 1 2 2v9H1V3a2 2 0 0 1 2-2z"
+            />
+          </svg>
+          IFTTT
+        </a>
+
+        <a
+          href="https://developer.raindrop.io/"
+          class="text-blue-500 text-xl flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+            />
+          </svg>
+
+          API
+        </a>
+      </div>
+    </div>
+
+    <div class="text-left items-start space-y-5">
+      <h1 class="text-3xl font-bold flex items-center gap-2">
+        Full-text search
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </h1>
+      <p class="text-xl">
+        The entire content of every web-page and PDF that you've saved is fully
+        searchable.
+      </p>
+      <p class="pt-5 text-xl">Look deeper beyond titles and tags.</p>
+      <div class="mt-5">
+        <a
+          href="https://help.raindrop.io/using-search#full-text-search"
+          class="text-blue-500 text-xl"
+          >Learn more..</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="grid grid-cols-2 py-24 pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
+    style="
+      background-position: 50vw 20px;
+      background-size: 893px 511px;
+      background-position: calc(50vw - 893px) 0;
+      background-position-x: calc(50vw - 893px);
+      background-position-y: 0px;
+    "
+  >
+    <div>
+      <img
+        src="https://help.raindrop.io/assets/images/copy-501fd154b1957cdfacb12ad0ff6da569.jpg"
+        class="h-[500px] w-full"
+        id="image3"
+      />
+    </div>
+    <div class="space-y-10">
+      <h1 class="text-5xl font-bold">We've got your backup</h1>
+      <p class="text-2xl">
+        Raindrop automatically creates copies of all web-pages and files in your
+        collection.
+      </p>
+      <div class="space-y-3">
+        <div
+          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer"
+          id="btn7"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 group-hover:stroke-[#069d94]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1
+              class="font-semibold group-hover:text-[#069d94] flex items-center gap-2"
+            >
+              Permanent copies
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </h1>
+            <p class="hidden group-hover:block">
+              Even if a page you've saved is taken down, you'll still have a
+              copy of it
+              <a
+                href="https://help.raindrop.io/permanent-copy/"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer"
+          id="btn8"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 group-hover:stroke-[#069d94]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1
+              class="font-semibold group-hover:text-[#069d94] flex items-center gap-2"
+            >
+              Dropbox & Google Drive
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </h1>
+            <p class="hidden group-hover:block">
+              Save another backup to your cloud drive.
+              <a
+                href="https://help.raindrop.io/backups/#automatic"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="grid grid-cols-2 py-24 pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
+    style="background-position: 50vw 20px; background-size: 731px 622px"
+  >
+    <div class="space-y-10">
+      <h1 class="text-5xl font-bold">
+        Designed to be personal. Great for teamwork
+      </h1>
+      <p class="text-2xl">
+        Enable access to your collection by coworkers, family or the entire web.
+      </p>
+      <div class="space-y-3">
+        <div
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
+          id="btn9"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 group-hover:stroke-[#7B34DD]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#7B34DD]">
+              Edit together
+            </h1>
+            <p class="hidden group-hover:block">
+              Permissions let you control who can access each of your
+              collections.
+              <a
+                href="https://help.raindrop.io/collaboration/"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
+          id="btn10"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.0"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:stroke-[#7B34DD]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-semibold group-hover:text-[#7B34DD]">
+              Tags & filters
+            </h1>
+            <p class="hidden group-hover:block">
+              Add tags to classify items. Search efficiently by type, tags, or
+              domain.
+              <a href="https://help.raindrop.io/tags/" class="text-blue-500">
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
+          id="btn11"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.0"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:stroke-[#7B34DD]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1
+              class="font-semibold group-hover:text-[#7B34DD] flex items-center gap-2"
+            >
+              Duplicates and broken links
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.0"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </h1>
+            <p class="hidden group-hover:block">
+              Keep it clean. We help you find duplicates and pages that are no
+              longer accessible.
+              <a
+                href="https://help.raindrop.io/using-search/#broken-links"
+                class="text-blue-500"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img
+        src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+        class="h-[500px] w-full"
+        id="image4"
+      />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 w-[80%] m-auto gap-5">
+    <div class="text-left items-start space-y-5">
+      <h1 class="text-3xl font-bold">Safe & secure</h1>
+      <p class="text-xl">
+        SSL everywhere, 100% cloud-based architecture secured behind a VPC.
+      </p>
+      <p class="pt-5 text-xl">
+        We keep your data safe, never sold. No ads &
+        <a
+          href="https://themarkup.org/blacklight?url=raindrop.io"
+          class="text-blue-500"
+        >
+          trackers </a
+        >. Open-source apps.
+      </p>
+
+      <div class="flex items-center justify-start gap-4">
+        <a
+          href="https://ifttt.com/raindrop"
+          class="text-blue-500 text-xl flex items-center gap-2"
+        >
+          About Raindrop.io
+        </a>
+
+        <a
+          href="https://github.com/raindropio"
+          class="text-blue-500 text-xl flex items-center gap-2"
+        >
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png"
+            class="h-6 w-6"
+          />
+
+          Github
+        </a>
+      </div>
+    </div>
+
+    <div class="text-left items-start space-y-5">
+      <h1 class="text-3xl font-bold flex items-center gap-2">
+        Starting from $0
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </h1>
+      <p class="text-xl">
+        Unlimited bookmarks, collections, and devices. Free to use indefinitely.
+        Upgrade for premium features.
+      </p>
+
+      <div class="mt-5">
+        <a href="https://raindrop.io/pro/buy" class="text-blue-500 text-xl"
+          >Compare plans</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="py-16 text-center space-y-3 bg-[url('https://raindrop.io/_next/static/images/blob-devices-left-5a45b57404ed98f1d6f7f827c8c0b5d9.jpg'), url('https://raindrop.io/_next/static/images/blob-devices-right-6f4db65e782bf14a90b25f837741785c.jpg')] bg-no-repeat"
+    style="
+      background-size: 599px 589px, 631px 532px;
+      background-position: calc(50vw - 1100px) 80px, calc(50vw + 550px) 20px;
+    "
+  >
+    <h1 class="text-4xl font-semibold">Access even outside of the browser</h1>
+    <p class="w-1/2 m-auto text-xl">
+      Raindrop.io is available as
+      <a
+        href="https://chrome.google.com/webstore/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien"
+        class="text-blue-500 text-xl"
+        >Chrome,
+      </a>
+      <a
+        href="https://raindrop.io/r/extension/firefox"
+        class="text-blue-500 text-xl"
+      >
+        Firefox,
+      </a>
+      <a
+        href="https://raindrop.io/r/extension/safari"
+        class="text-blue-500 text-xl"
+      >
+        Safari,
+      </a>
+      , and
+      <a
+        href="https://raindrop.io/r/extension/edge"
+        class="text-blue-500 text-xl"
+        >Edge</a
+      >
+      extension. But we also have
+      <a href="https://app.raindrop.io/" class="text-blue-500 text-xl">Web, </a>
+      <a href="https://raindrop.io/r/app/windows" class="text-blue-500 text-xl">
+        Windows,
+      </a>
+      <a href="https://raindrop.io/r/app/macos" class="text-blue-500 text-xl">
+        Mac,
+      </a>
+      <a href="https://raindrop.io/r/app/linux" class="text-blue-500 text-xl">
+        Linux,
+      </a>
+      <a href="https://raindrop.io/r/app/ios" class="text-blue-500 text-xl">
+        iPad,
+      </a>
+      <a href="https://raindrop.io/r/app/ios" class="text-blue-500 text-xl">
+        iPhone,
+      </a>
+      , and
+      <a href="https://raindrop.io/r/app/android" class="text-blue-500 text-xl"
+        >Android</a
+      >
+      app.
+    </p>
+    <div>
+        <img src="https://raindrop.io/_next/static/images/devices-2154-e823c124b9b3c47a72530fe51f472ed4.png" class="w-[80%] m-auto"/>
+    </div>
+  </div>
+</section>
+<script>
+  var btn1 = document.getElementById("btn1")
+  var image = document.getElementById("image")
+
+  btn1.addEventListener("mouseenter", function () {
+    image.src =
+      "https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+  })
+  var btn2 = document.getElementById("btn2")
+
+  btn2.addEventListener("mouseenter", function () {
+    image.src =
+      "https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
+  })
+
+  var btn3 = document.getElementById("btn3")
+  btn3.addEventListener("mouseenter", function () {
+    image.src =
+      "https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
+  })
+
+  var btn4 = document.getElementById("btn4")
+  var image2 = document.getElementById("image2")
+
+  btn4.addEventListener("mouseenter", function () {
+    image2.src =
+      "https://raindrop.io/_next/static/images/view-modes-1296-920d1ee40167a15276283d32c533afca.png"
+  })
+  var btn5 = document.getElementById("btn5")
+
+  btn5.addEventListener("mouseenter", function () {
+    image2.src =
+      "https://venngage-wordpress.s3.amazonaws.com/uploads/2021/06/Process-Infographic-.png"
+  })
+
+  var btn6 = document.getElementById("btn6")
+  btn6.addEventListener("mouseenter", function () {
+    image2.src =
+      "https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
+  })
+
+  var btn7 = document.getElementById("btn7")
+  var image3 = document.getElementById("image3")
+
+  btn7.addEventListener("mouseenter", function () {
+    image3.src =
+      "https://help.raindrop.io/assets/images/copy-501fd154b1957cdfacb12ad0ff6da569.jpg"
+  })
+  var btn8 = document.getElementById("btn8")
+
+  btn8.addEventListener("mouseenter", function () {
+    image3.src =
+      "https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
+  })
+
+  var btn9 = document.getElementById("btn9")
+  var image4 = document.getElementById("image4")
+
+  btn9.addEventListener("mouseenter", function () {
+    image4.src =
+      "https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+  })
+  var btn10 = document.getElementById("btn10")
+
+  btn10.addEventListener("mouseenter", function () {
+    image4.src =
+      "https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
+  })
+
+  var btn11 = document.getElementById("btn11")
+  btn11.addEventListener("mouseenter", function () {
+    image4.src =
+      "https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
+  })
+</script>
