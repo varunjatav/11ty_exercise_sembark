@@ -2,12 +2,50 @@
 layout: "layouts/rain_root.njk"
 ---
 
+<style>
+  .bg-color {
+    background-color: #fff5e1;
+  }
+  .bg-color2 {
+    background-color: #fee1f0;
+  }
+  .bg-color3 {
+    background-color: #effaf7;
+  }
+  .bg-color4 {
+    color: #f6f1fc;
+  }
+  .text1 {
+    color: #ad710d;
+  }
+  .text2 {
+    color: #e54837;
+  }
+  .text3 {
+    color: #069d94;
+  }
+  .text4 {
+    color: #7b34dd;
+  }
+  .stroke {
+    stroke: #ad710d;
+  }
+  .stroke2 {
+    stroke: #e54837;
+  }
+  .stroke3 {
+    stroke: #069d94;
+  }
+  .stroke4 {
+    stroke: #7b34dd;
+  }
+</style>
 <section>
   <div
-    class="bg-[url('https://raindrop.io/_next/static/images/blob-intro-82a9537613a4c073b91da3dee2cba356.jpg')] bg-no-repeat grid grid-cols-1 md:grid-cols-2 py-28 px-5 md:pl-28"
+    class="bg-[url('https://raindrop.io/_next/static/images/blob-intro-82a9537613a4c073b91da3dee2cba356.jpg')] bg-no-repeat grid grid-cols-1 lg:grid-cols-2 py-28 px-5 lg:pl-28"
     style="background-position: 50vw 20px; background-size: 731px 622px"
   >
-    <div class="space-y-10 pb-10 md:pb-0">
+    <div class="space-y-10 pb-10 lg:pb-0">
       <h1 class="text-5xl font-bold">All-in-one bookmark manager</h1>
       <p class="text-2xl">Intuitive. Powerful. Runs everywhere</p>
       <div class="flex gap-3">
@@ -37,18 +75,18 @@ layout: "layouts/rain_root.njk"
 
   <div class="text-center py-2 space-y-4">
     <h1 class="text-4xl">Designed for ✐ creatives, built for {coders}</h1>
-    <h2 class="text-2xl w-2/3 m-auto">
+    <h2 class="text-2xl w-[90%] lg:w-2/3 m-auto">
       Raindrop.io is the best place to keep all your favorite books, songs,
       articles or whatever else you come across while browsing.
     </h2>
-    <p class="text-xl text-gray-500 w-1/2 m-auto pt-5">
+    <p class="text-xl w-[90%] text-gray-500 lg:w-1/2 m-auto pt-5">
       We're not trying to reinvent the wheel; we're working on a tool that does
       everything you expect from a modern bookmark manager.
     </p>
   </div>
 
   <div
-    class="grid grid-cols-1 md:grid-cols-2 py-24 px-5 md:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
+    class="grid grid-cols-1 lg:grid-cols-2 py-24 px-5 lg:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
     style="background-position: 50vw 20px; background-size: 731px 622px"
   >
     <div class="space-y-10">
@@ -57,7 +95,7 @@ layout: "layouts/rain_root.njk"
         Raindrop.io is not just a pretty interface, it can help you untangle
         your bookmarks mess.
       </p>
-      <div class="space-y-3">
+      <div class="space-y-3" id="button-container">
         <div
           class="flex items-center gap-2 group hover:bg-[#fff5e1] p-3 cursor-pointer"
           id="btn1"
@@ -69,7 +107,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="2.0"
               stroke="currentColor"
-              class="w-4 h-4 group-hover:stroke-[#ad710d]"
+              class="w-4 h-4 group-hover:stroke-[#ad710d] strokeColor1"
             >
               <path
                 stroke-linecap="round"
@@ -79,19 +117,31 @@ layout: "layouts/rain_root.njk"
             </svg>
           </div>
           <div>
-            <h1 class="font-semibold group-hover:text-[#ad710d]">
+            <h1 class="font-semibold group-hover:text-[#ad710d] text-color">
               Collections
             </h1>
-            <p class="hidden group-hover:block">
-              Group related bookmarks within the same context. Thousands of
-              predefined icons.
-              <a
-                href="https://help.raindrop.io/collections/"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden" id="p1">
+              <p>
+                Group related bookmarks within the same context. Thousands of
+                predefined icons.
+                <a
+                  href="https://help.raindrop.io/collections/"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+                  style="
+                    width: 1056px;
+                    aspect-ratio: auto 1056 / 500;
+                    height: 500px;
+                  "
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -105,7 +155,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="2.0"
               stroke="currentColor"
-              class="w-4 h-4 group-hover:stroke-[#ad710d]"
+              class="w-4 h-4 group-hover:stroke-[#ad710d] strokeColor2"
             >
               <path
                 stroke-linecap="round"
@@ -115,16 +165,28 @@ layout: "layouts/rain_root.njk"
             </svg>
           </div>
           <div>
-            <h1 class="font-semibold group-hover:text-[#ad710d]">
+            <h1 class="font-semibold group-hover:text-[#ad710d] text-color2">
               Tags & filters
             </h1>
-            <p class="hidden group-hover:block">
-              Add tags to classify items. Search efficiently by type, tags, or
-              domain.
-              <a href="https://help.raindrop.io/tags/" class="text-blue-500">
-                Learn more
-              </a>
-            </p>
+            <div class="hidden" id="p2">
+              <p>
+                Add tags to classify items. Search efficiently by type, tags, or
+                domain.
+                <a href="https://help.raindrop.io/tags/" class="text-blue-500">
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
+                  style="
+                    width: 1056px;
+                    aspect-ratio: auto 1056 / 500;
+                    height: 500px;
+                  "
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -138,7 +200,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="2.0"
               stroke="currentColor"
-              class="w-4 h-4 group-hover:stroke-[#ad710d]"
+              class="w-4 h-4 group-hover:stroke-[#ad710d] strokeColor3"
             >
               <path
                 stroke-linecap="round"
@@ -149,7 +211,7 @@ layout: "layouts/rain_root.njk"
           </div>
           <div>
             <h1
-              class="font-semibold group-hover:text-[#ad710d] flex items-center gap-2"
+              class="font-semibold group-hover:text-[#ad710d] flex items-center gap-2 text-color3"
             >
               Duplicates and broken links
               <svg
@@ -167,32 +229,45 @@ layout: "layouts/rain_root.njk"
                 />
               </svg>
             </h1>
-            <p class="hidden group-hover:block">
-              Keep it clean. We help you find duplicates and pages that are no
-              longer accessible.
-              <a
-                href="https://help.raindrop.io/using-search/#broken-links"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden" id="p3">
+              <p>
+                Keep it clean. We help you find duplicates and pages that are no
+                longer accessible.
+                <a
+                  href="https://help.raindrop.io/using-search/#broken-links"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
+                  style="
+                    width: 1056px;
+                    aspect-ratio: auto 1056 / 500;
+                    height: 500px;
+                  "
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div>
-      <img
-        src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
-        class="h-[500px] w-full"
-        id="image"
-      />
+    <div class="hidden lg:block">
+      <div>
+        <img
+          src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+          style="width: 1056px; aspect-ratio: auto 1056 / 500; height: 500px"
+          id="image"
+        />
+      </div>
     </div>
   </div>
 
   <div
-    class="flex flex-col-reverse  md:grid  md:grid-cols-2 py-24 px-5 md:pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
+    class="flex flex-col-reverse lg:grid lg:grid-cols-2 py-24 px-5 lg:pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
     style="
       background-position: 50vw 20px;
       background-size: 893px 511px;
@@ -201,7 +276,7 @@ layout: "layouts/rain_root.njk"
       background-position-y: 0px;
     "
   >
-    <div>
+    <div class="hidden lg:block">
       <img
         src="https://raindrop.io/_next/static/images/view-modes-1296-920d1ee40167a15276283d32c533afca.png"
         class="h-[500px] w-full"
@@ -216,7 +291,7 @@ layout: "layouts/rain_root.njk"
       </p>
       <div class="space-y-3">
         <div
-          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer"
+          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer bg-color2"
           id="btn4"
         >
           <div>
@@ -226,7 +301,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 group-hover:stroke-[#E54837]"
+              class="w-6 h-6 group-hover:stroke-[#E54837] strokeColor4"
             >
               <path
                 stroke-linecap="round"
@@ -236,16 +311,26 @@ layout: "layouts/rain_root.njk"
             </svg>
           </div>
           <div>
-            <h1 class="font-semibold group-hover:text-[#E54837]">Highlights</h1>
-            <p class="hidden group-hover:block">
-              Annotate web and easily revisit key passages in the future.
-              <a
-                href="https://help.raindrop.io/highlights/"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <h1 class="font-semibold group-hover:text-[#E54837] text-color4">
+              Highlights
+            </h1>
+            <div class="hidden group-hover:block" id="p4">
+              <p>
+                Annotate web and easily revisit key passages in the future.
+                <a
+                  href="https://help.raindrop.io/highlights/"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://raindrop.io/_next/static/images/view-modes-1296-920d1ee40167a15276283d32c533afca.png"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -259,7 +344,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 group-hover:stroke-[#E54837]"
+              class="w-6 h-6 group-hover:stroke-[#E54837] strokeColor5"
             >
               <path
                 stroke-linecap="round"
@@ -274,19 +359,27 @@ layout: "layouts/rain_root.njk"
             </svg>
           </div>
           <div>
-            <h1 class="font-semibold group-hover:text-[#E54837]">
+            <h1 class="font-semibold group-hover:text-[#E54837] text-color5">
               Instant preview
             </h1>
-            <p class="hidden group-hover:block">
-              Read articles, view videos, and browse the web without ever
-              leaving your library.
-              <a
-                href="https://help.raindrop.io/bookmarks/#preview"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden group-hover:block" id="p5">
+              <p>
+                Read articles, view videos, and browse the web without ever
+                leaving your library.
+                <a
+                  href="https://help.raindrop.io/bookmarks/#preview"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://venngage-wordpress.s3.amazonaws.com/uploads/2021/06/Process-Infographic-.png"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -300,7 +393,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="2.0"
               stroke="currentColor"
-              class="w-4 h-4 group-hover:stroke-[#E54837]"
+              class="w-4 h-4 group-hover:stroke-[#E54837] strokeColor6"
             >
               <path
                 stroke-linecap="round"
@@ -310,26 +403,36 @@ layout: "layouts/rain_root.njk"
             </svg>
           </div>
           <div>
-            <h1 class="font-semibold group-hover:text-[#E54837]">
+            <h1 class="font-semibold group-hover:text-[#E54837] text-color6">
               Multiple views
             </h1>
-            <p class="hidden group-hover:block">
-              View bookmarks the way you like. We have Grid, Headlines, Masonry,
-              or List view modes
-              <a
-                href="https://help.raindrop.io/bookmarks/#appearance"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden group-hover:block" id="p6">
+              <p>
+                View bookmarks the way you like. We have Grid, Headlines,
+                Masonry, or List view modes
+                <a
+                  href="https://help.raindrop.io/bookmarks/#appearance"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="flex flex-col items-center justify-between w-[90%] m-auto gap-5 md:flex-row md:w-[80%]">
+  <div
+    class="flex flex-col items-center justify-between w-[90%] m-auto gap-5 lg:flex-row lg:w-[80%]"
+  >
     <div class="text-left items-start space-y-5">
       <h1 class="text-3xl font-bold">Connect to your world</h1>
       <p class="text-xl">
@@ -419,7 +522,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="flex flex-col-reverse md:grid md:grid-cols-2 py-24 px-5 md:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
+    class="flex flex-col-reverse lg:grid lg:grid-cols-2 py-24 px-5 lg:pr-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-glance-99194c76a5b70a78378bc3915b8c8599.jpg')] bg-no-repeat"
     style="
       background-position: 50vw 20px;
       background-size: 893px 511px;
@@ -428,7 +531,7 @@ layout: "layouts/rain_root.njk"
       background-position-y: 0px;
     "
   >
-    <div>
+    <div class="hidden lg:block">
       <img
         src="https://help.raindrop.io/assets/images/copy-501fd154b1957cdfacb12ad0ff6da569.jpg"
         class="h-[500px] w-full"
@@ -443,7 +546,7 @@ layout: "layouts/rain_root.njk"
       </p>
       <div class="space-y-3">
         <div
-          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer"
+          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer bg-color3"
           id="btn7"
         >
           <div>
@@ -453,7 +556,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 group-hover:stroke-[#069d94]"
+              class="w-6 h-6 group-hover:stroke-[#069d94] strokeColor7"
             >
               <path
                 stroke-linecap="round"
@@ -464,7 +567,7 @@ layout: "layouts/rain_root.njk"
           </div>
           <div>
             <h1
-              class="font-semibold group-hover:text-[#069d94] flex items-center gap-2"
+              class="font-semibold group-hover:text-[#069d94] flex items-center gap-2 text-color7"
             >
               Permanent copies
 
@@ -483,20 +586,28 @@ layout: "layouts/rain_root.njk"
                 />
               </svg>
             </h1>
-            <p class="hidden group-hover:block">
-              Even if a page you've saved is taken down, you'll still have a
-              copy of it
-              <a
-                href="https://help.raindrop.io/permanent-copy/"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden group-hover:block" id="p7">
+              <p>
+                Even if a page you've saved is taken down, you'll still have a
+                copy of it
+                <a
+                  href="https://help.raindrop.io/permanent-copy/"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://help.raindrop.io/assets/images/copy-501fd154b1957cdfacb12ad0ff6da569.jpg"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer"
+          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer bg-color3"
           id="btn8"
         >
           <div>
@@ -506,7 +617,7 @@ layout: "layouts/rain_root.njk"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 group-hover:stroke-[#069d94]"
+              class="w-6 h-6 group-hover:stroke-[#069d94] strokeColor8"
             >
               <path
                 stroke-linecap="round"
@@ -522,7 +633,7 @@ layout: "layouts/rain_root.njk"
           </div>
           <div>
             <h1
-              class="font-semibold group-hover:text-[#069d94] flex items-center gap-2"
+              class="font-semibold group-hover:text-[#069d94] flex items-center gap-2 text-color8"
             >
               Dropbox & Google Drive
 
@@ -541,15 +652,23 @@ layout: "layouts/rain_root.njk"
                 />
               </svg>
             </h1>
-            <p class="hidden group-hover:block">
-              Save another backup to your cloud drive.
-              <a
-                href="https://help.raindrop.io/backups/#automatic"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden group-hover:block" id="p8">
+              <p>
+                Save another backup to your cloud drive.
+                <a
+                  href="https://help.raindrop.io/backups/#automatic"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -557,7 +676,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="grid grid-cols-1 md:grid-cols-2  py-24 px-5 md:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
+    class="grid grid-cols-1 lg:grid-cols-2 py-24 px-5 lg:pl-28 gap-5 bg-[url('https://raindrop.io/_next/static/images/blob-organize-5810d3c01fbd300a86b3075ee1a7f16f.jpg')] bg-no-repeat"
     style="background-position: 50vw 20px; background-size: 731px 622px"
   >
     <div class="space-y-10">
@@ -569,7 +688,7 @@ layout: "layouts/rain_root.njk"
       </p>
       <div class="space-y-3">
         <div
-          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer bg-color4"
           id="btn9"
         >
           <div>
@@ -578,8 +697,8 @@ layout: "layouts/rain_root.njk"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 group-hover:stroke-[#7B34DD]"
+              stroke="black"
+              class="w-6 h-6 group-hover:stroke-[#7B34DD] strokeColor9"
             >
               <path
                 stroke-linecap="round"
@@ -589,23 +708,33 @@ layout: "layouts/rain_root.njk"
             </svg>
           </div>
           <div>
-            <h1 class="font-semibold group-hover:text-[#7B34DD]">
+            <h1
+              class="font-semibold text-black group-hover:text-[#7B34DD] text-color9"
+            >
               Edit together
             </h1>
-            <p class="hidden group-hover:block">
-              Permissions let you control who can access each of your
-              collections.
-              <a
-                href="https://help.raindrop.io/collaboration/"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden group-hover:block text-black" id="p9">
+              <p>
+                Permissions let you control who can access each of your
+                collections.
+                <a
+                  href="https://help.raindrop.io/collaboration/"
+                  class="text-blue-500"
+                >
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://raindrop.io/_next/static/images/collaborate-1056-03d1d5b9578e0a1e700f300799078d8d.png"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer bg-color4"
           id="btn10"
         >
           <div>
@@ -613,95 +742,54 @@ layout: "layouts/rain_root.njk"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2.0"
-              stroke="currentColor"
-              class="w-4 h-4 group-hover:stroke-[#7B34DD]"
+              stroke-width="1.5"
+              stroke="black"
+              class="w-6 h-6 group-hover:stroke-[#7B34DD] strokeColor10"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1 class="font-semibold group-hover:text-[#7B34DD]">
-              Tags & filters
-            </h1>
-            <p class="hidden group-hover:block">
-              Add tags to classify items. Search efficiently by type, tags, or
-              domain.
-              <a href="https://help.raindrop.io/tags/" class="text-blue-500">
-                Learn more
-              </a>
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
-          id="btn11"
-        >
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2.0"
-              stroke="currentColor"
-              class="w-4 h-4 group-hover:stroke-[#7B34DD]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+                d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
               />
             </svg>
           </div>
           <div>
             <h1
-              class="font-semibold group-hover:text-[#7B34DD] flex items-center gap-2"
+              class="font-semibold text-black group-hover:text-[#7B34DD] text-color10"
             >
-              Duplicates and broken links
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2.0"
-                stroke="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              Public Page
             </h1>
-            <p class="hidden group-hover:block">
-              Keep it clean. We help you find duplicates and pages that are no
-              longer accessible.
-              <a
-                href="https://help.raindrop.io/using-search/#broken-links"
-                class="text-blue-500"
-              >
-                Learn more
-              </a>
-            </p>
+            <div class="hidden text-black group-hover:block" id="p10">
+              <p>
+                Add tags to classify items. Search efficiently by type, tags, or
+                domain.
+                <a href="https://help.raindrop.io/tags/" class="text-blue-500">
+                  Learn more
+                </a>
+              </p>
+              <div class="lg:hidden">
+                <img
+                  src="https://raindrop.io/_next/static/images/public-1056-c56e4757a76d3135049c494b0cd73403.png"
+                  class="h-[500px] w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
 
-    <div>
+    <div class="hidden lg:block">
       <img
-        src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+        src="https://raindrop.io/_next/static/images/collaborate-1056-03d1d5b9578e0a1e700f300799078d8d.png"
         class="h-[500px] w-full"
         id="image4"
       />
     </div>
   </div>
 
-  <div class="flex flex-col items-center justify-between w-[90%] m-auto gap-5 md:flex-row md:w-[80%]">
+  <div class="grid grid-cols-1 w-[90%] m-auto gap-5 lg:grid-cols-2 lg:w-[80%]">
     <div class="text-left items-start space-y-5">
       <h1 class="text-3xl font-bold">Safe & secure</h1>
       <p class="text-xl">
@@ -772,7 +860,7 @@ layout: "layouts/rain_root.njk"
   </div>
 
   <div
-    class="py-16  px-5 text-center md:px-0 space-y-3 bg-[url('https://raindrop.io/_next/static/images/blob-devices-left-5a45b57404ed98f1d6f7f827c8c0b5d9.jpg'), url('https://raindrop.io/_next/static/images/blob-devices-right-6f4db65e782bf14a90b25f837741785c.jpg')] bg-no-repeat"
+    class="py-16 px-5 text-center md:px-0 space-y-3 bg-[url('https://raindrop.io/_next/static/images/blob-devices-left-5a45b57404ed98f1d6f7f827c8c0b5d9.jpg'), url('https://raindrop.io/_next/static/images/blob-devices-right-6f4db65e782bf14a90b25f837741785c.jpg')] bg-no-repeat"
     style="
       background-size: 599px 589px, 631px 532px;
       background-position: calc(50vw - 1100px) 80px, calc(50vw + 550px) 20px;
@@ -798,7 +886,7 @@ layout: "layouts/rain_root.njk"
       >
         Safari,
       </a>
-       and
+      and
       <a
         href="https://raindrop.io/r/extension/edge"
         class="text-blue-500 text-xl"
@@ -828,82 +916,561 @@ layout: "layouts/rain_root.njk"
       app.
     </p>
     <div>
-        <img src="https://raindrop.io/_next/static/images/devices-2154-e823c124b9b3c47a72530fe51f472ed4.png" class="w-[80%] m-auto"/>
+      <img
+        src="https://raindrop.io/_next/static/images/devices-2154-e823c124b9b3c47a72530fe51f472ed4.png"
+        class="w-[80%] m-auto"
+      />
     </div>
   </div>
 </section>
 <script>
   var btn1 = document.getElementById("btn1")
   var image = document.getElementById("image")
+  var p1 = document.getElementById("p1")
+
+  var textColor = document.querySelector(".text-color")
+  var textColor2 = document.querySelector(".text-color2")
+  var textColor3 = document.querySelector(".text-color3")
+  var textColor4 = document.querySelector(".text-color4")
+  var textColor5 = document.querySelector(".text-color5")
+  var textColor6 = document.querySelector(".text-color6")
+  var textColor7 = document.querySelector(".text-color7")
+  var textColor8 = document.querySelector(".text-color8")
+  var textColor9 = document.querySelector(".text-color9")
+  var textColor10 = document.querySelector(".text-color10")
+  
+
+  var strokeColor1 = document.querySelector(".strokeColor1")
+  var strokeColor2 = document.querySelector(".strokeColor2")
+  var strokeColor3 = document.querySelector(".strokeColor3")
+  var strokeColor4 = document.querySelector(".strokeColor4")
+  var strokeColor5 = document.querySelector(".strokeColor5")
+  var strokeColor6 = document.querySelector(".strokeColor6")
+  var strokeColor7 = document.querySelector(".strokeColor7")
+  var strokeColor8 = document.querySelector(".strokeColor8")
+  var strokeColor9 = document.querySelector(".strokeColor9")
+  var strokeColor10 = document.querySelector(".strokeColor10")
+
 
   btn1.addEventListener("mouseenter", function () {
     image.src =
       "https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+
+    p1.classList.remove("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+    p11.classList.add("hidden")
+
+    btn1.classList.add("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+   
+    textColor.classList.add("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+    
+
+    strokeColor1.classList.add("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
+    
   })
   var btn2 = document.getElementById("btn2")
-
+  var p2 = document.getElementById("p2")
   btn2.addEventListener("mouseenter", function () {
     image.src =
       "https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
+    p1.classList.add("hidden")
+    p2.classList.remove("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.add("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor.classList.remove("text1")
+    textColor2.classList.add("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.add("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
   })
 
   var btn3 = document.getElementById("btn3")
+  var p3 = document.getElementById("p3")
   btn3.addEventListener("mouseenter", function () {
     image.src =
       "https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.remove("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.add("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor3.classList.add("text1")
+    textColor2.classList.remove("text1")
+    textColor.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.add("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
   })
 
   var btn4 = document.getElementById("btn4")
+  var p4 = document.getElementById("p4")
   var image2 = document.getElementById("image2")
 
   btn4.addEventListener("mouseenter", function () {
     image2.src =
       "https://raindrop.io/_next/static/images/view-modes-1296-920d1ee40167a15276283d32c533afca.png"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.remove("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.add("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.add("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.add("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
   })
   var btn5 = document.getElementById("btn5")
+  var p5 = document.getElementById("p5")
 
   btn5.addEventListener("mouseenter", function () {
     image2.src =
       "https://venngage-wordpress.s3.amazonaws.com/uploads/2021/06/Process-Infographic-.png"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.remove("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.add("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.add("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.add("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
+
   })
 
   var btn6 = document.getElementById("btn6")
+  var p6 = document.getElementById("p6")
+
   btn6.addEventListener("mouseenter", function () {
     image2.src =
       "https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.remove("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.add("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.add("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.add("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
   })
 
   var btn7 = document.getElementById("btn7")
   var image3 = document.getElementById("image3")
+  var p7 = document.getElementById("p7")
 
   btn7.addEventListener("mouseenter", function () {
     image3.src =
       "https://help.raindrop.io/assets/images/copy-501fd154b1957cdfacb12ad0ff6da569.jpg"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.remove("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.add("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.add("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.add("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
   })
   var btn8 = document.getElementById("btn8")
+  var p8 = document.getElementById("p8")
 
   btn8.addEventListener("mouseenter", function () {
     image3.src =
       "https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.remove("hidden")
+    p9.classList.add("hidden")
+    p10.classList.add("hidden")
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.add("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.remove("bg-color4")
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.add("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.remove("text4")
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.add("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.remove("stroke4")
+
   })
 
   var btn9 = document.getElementById("btn9")
+  var p9 = document.getElementById("p9")
+
   var image4 = document.getElementById("image4")
 
   btn9.addEventListener("mouseenter", function () {
     image4.src =
-      "https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+      "https://raindrop.io/_next/static/images/collaborate-1056-03d1d5b9578e0a1e700f300799078d8d.png"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.remove("hidden")
+    p10.classList.add("hidden")
+   
+
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.add("bg-color4")
+    btn10.classList.remove("bg-color4")
+   
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.add("text4")
+    textColor10.classList.remove("text4")
+    
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.add("stroke4")
+    strokeColor10.classList.remove("stroke4")
+    
   })
   var btn10 = document.getElementById("btn10")
+  var p10 = document.getElementById("p10")
 
   btn10.addEventListener("mouseenter", function () {
     image4.src =
-      "https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
+      "https://raindrop.io/_next/static/images/public-1056-c56e4757a76d3135049c494b0cd73403.png"
+    p1.classList.add("hidden")
+    p2.classList.add("hidden")
+    p3.classList.add("hidden")
+    p4.classList.add("hidden")
+    p5.classList.add("hidden")
+    p6.classList.add("hidden")
+    p7.classList.add("hidden")
+    p8.classList.add("hidden")
+    p9.classList.add("hidden")
+    p10.classList.remove("hidden")
+    
+    btn1.classList.remove("bg-color")
+    btn2.classList.remove("bg-color")
+    btn3.classList.remove("bg-color")
+    btn4.classList.remove("bg-color2")
+    btn5.classList.remove("bg-color2")
+    btn6.classList.remove("bg-color2")
+    btn7.classList.remove("bg-color3")
+    btn8.classList.remove("bg-color3")
+    btn9.classList.remove("bg-color4")
+    btn10.classList.add("bg-color4")
+    
+
+    textColor.classList.remove("text1")
+    textColor2.classList.remove("text1")
+    textColor3.classList.remove("text1")
+    textColor4.classList.remove("text2")
+    textColor5.classList.remove("text2")
+    textColor6.classList.remove("text2")
+    textColor7.classList.remove("text3")
+    textColor8.classList.remove("text3")
+    textColor9.classList.remove("text4")
+    textColor10.classList.add("text4")
+   
+
+    strokeColor1.classList.remove("stroke")
+    strokeColor2.classList.remove("stroke")
+    strokeColor3.classList.remove("stroke")
+    strokeColor4.classList.remove("stroke2")
+    strokeColor5.classList.remove("stroke2")
+    strokeColor6.classList.remove("stroke2")
+    strokeColor7.classList.remove("stroke3")
+    strokeColor8.classList.remove("stroke3")
+    strokeColor9.classList.remove("stroke4")
+    strokeColor10.classList.add("stroke4")
+   
   })
 
   var btn11 = document.getElementById("btn11")
-  btn11.addEventListener("mouseenter", function () {
-    image4.src =
-      "https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
-  })
+  var p11 = document.getElementById("p11")
+
+
 </script>
