@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+bg-color {
+  background-color: #fff5e1;
+}
+.bg-color2 {
+  background-color: #fee1f0;
+}
+.bg-color3 {
+  background-color: #effaf7;
+}
+.bg-color4 {
+  background-color: #F6F1FC;
+}
+.text1 {
+  color: #ad710d;
+}
+.text2 {
+  color: #e54837;
+}
+.text3 {
+  color: #069d94;
+}
+.text4 {
+  color: #7b34dd;
+}
+.stroke {
+  stroke: #ad710d;
+}
+.stroke2 {
+  stroke: #e54837;
+}
+.stroke3 {
+  stroke: #069d94;
+}
+.stroke4 {
+  stroke: #7b34dd;
+}
 .hover:hover{
   transform: scale(1.1);
   transition: transform .8s ease-in;

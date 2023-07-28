@@ -2,44 +2,6 @@
 layout: "layouts/rain_root.njk"
 ---
 
-<style>
-  .bg-color {
-    background-color: #fff5e1;
-  }
-  .bg-color2 {
-    background-color: #fee1f0;
-  }
-  .bg-color3 {
-    background-color: #effaf7;
-  }
-  .bg-color4 {
-    color: #f6f1fc;
-  }
-  .text1 {
-    color: #ad710d;
-  }
-  .text2 {
-    color: #e54837;
-  }
-  .text3 {
-    color: #069d94;
-  }
-  .text4 {
-    color: #7b34dd;
-  }
-  .stroke {
-    stroke: #ad710d;
-  }
-  .stroke2 {
-    stroke: #e54837;
-  }
-  .stroke3 {
-    stroke: #069d94;
-  }
-  .stroke4 {
-    stroke: #7b34dd;
-  }
-</style>
 <section>
   <div
     class="bg-[url('https://raindrop.io/_next/static/images/blob-intro-82a9537613a4c073b91da3dee2cba356.jpg')] bg-no-repeat grid grid-cols-1 lg:grid-cols-2 py-28 px-5 lg:pl-28"
@@ -67,8 +29,22 @@ layout: "layouts/rain_root.njk"
     </div>
 
     <div>
-      <video class="h-auto w-full rounded-md" controls autoplay>
-        <source src="/video.mp4" type="video/mp4" />
+      <video
+        class="rounded-md"
+        width="858"
+        height="858"
+        preload="true"
+        controls
+        controlslist="nodownload nofullscreen noremoteplayback"
+        disablepictureinpicture
+        autoplay
+        loop
+        
+      >
+        <source
+          src="https://raindrop.io/_next/static/videos/intro-cf784d51ef4837b013c5ee8d208ed31e.mp4"
+          type="video/mp4"
+        />
       </video>
     </div>
   </div>
@@ -134,11 +110,7 @@ layout: "layouts/rain_root.njk"
               <div class="lg:hidden">
                 <img
                   src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
-                  style="
-                    width: 1056px;
-                    aspect-ratio: auto 1056 / 500;
-                    height: 500px;
-                  "
+                  class="h-[300px] sm:h-[350px] md:h-[400px] w-full"
                 />
               </div>
             </div>
@@ -178,12 +150,9 @@ layout: "layouts/rain_root.njk"
               </p>
               <div class="lg:hidden">
                 <img
-                  src="https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
-                  style="
-                    width: 1056px;
-                    aspect-ratio: auto 1056 / 500;
-                    height: 500px;
-                  "
+                  src="https://raindrop.io/_next/static/images/tags-2112-ed8e6754be9ad4d522394abb39e1e662.png"
+                  class="h-[500px] w-full"
+                  class="h-[500px] w-full"
                 />
               </div>
             </div>
@@ -242,12 +211,8 @@ layout: "layouts/rain_root.njk"
               </p>
               <div class="lg:hidden">
                 <img
-                  src="https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
-                  style="
-                    width: 1056px;
-                    aspect-ratio: auto 1056 / 500;
-                    height: 500px;
-                  "
+                  src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
+                  class="h-[500px] w-full"
                 />
               </div>
             </div>
@@ -257,11 +222,7 @@ layout: "layouts/rain_root.njk"
     </div>
     <div class="hidden lg:block">
       <div>
-        <img
-          src="https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
-          style="width: 1056px; aspect-ratio: auto 1056 / 500; height: 500px"
-          id="image"
-        />
+        <img src="/img1.png" style="height: 500px" id="image" />
       </div>
     </div>
   </div>
@@ -291,7 +252,7 @@ layout: "layouts/rain_root.njk"
       </p>
       <div class="space-y-3">
         <div
-          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer bg-color2"
+          class="flex items-center gap-2 group hover:bg-[#FEE1F0] p-3 cursor-pointer"
           id="btn4"
         >
           <div>
@@ -546,7 +507,7 @@ layout: "layouts/rain_root.njk"
       </p>
       <div class="space-y-3">
         <div
-          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer bg-color3"
+          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer"
           id="btn7"
         >
           <div>
@@ -607,7 +568,7 @@ layout: "layouts/rain_root.njk"
           </div>
         </div>
         <div
-          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer bg-color3"
+          class="flex items-center gap-2 group hover:bg-[#effaf7] p-3 cursor-pointer"
           id="btn8"
         >
           <div>
@@ -688,7 +649,7 @@ layout: "layouts/rain_root.njk"
       </p>
       <div class="space-y-3">
         <div
-          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer bg-color4"
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
           id="btn9"
         >
           <div>
@@ -734,7 +695,7 @@ layout: "layouts/rain_root.njk"
           </div>
         </div>
         <div
-          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer bg-color4"
+          class="flex items-center gap-2 group hover:bg-[#F6F1FC] p-3 cursor-pointer"
           id="btn10"
         >
           <div>
@@ -776,7 +737,6 @@ layout: "layouts/rain_root.njk"
             </div>
           </div>
         </div>
-        
       </div>
     </div>
 
@@ -923,554 +883,4 @@ layout: "layouts/rain_root.njk"
     </div>
   </div>
 </section>
-<script>
-  var btn1 = document.getElementById("btn1")
-  var image = document.getElementById("image")
-  var p1 = document.getElementById("p1")
-
-  var textColor = document.querySelector(".text-color")
-  var textColor2 = document.querySelector(".text-color2")
-  var textColor3 = document.querySelector(".text-color3")
-  var textColor4 = document.querySelector(".text-color4")
-  var textColor5 = document.querySelector(".text-color5")
-  var textColor6 = document.querySelector(".text-color6")
-  var textColor7 = document.querySelector(".text-color7")
-  var textColor8 = document.querySelector(".text-color8")
-  var textColor9 = document.querySelector(".text-color9")
-  var textColor10 = document.querySelector(".text-color10")
-  
-
-  var strokeColor1 = document.querySelector(".strokeColor1")
-  var strokeColor2 = document.querySelector(".strokeColor2")
-  var strokeColor3 = document.querySelector(".strokeColor3")
-  var strokeColor4 = document.querySelector(".strokeColor4")
-  var strokeColor5 = document.querySelector(".strokeColor5")
-  var strokeColor6 = document.querySelector(".strokeColor6")
-  var strokeColor7 = document.querySelector(".strokeColor7")
-  var strokeColor8 = document.querySelector(".strokeColor8")
-  var strokeColor9 = document.querySelector(".strokeColor9")
-  var strokeColor10 = document.querySelector(".strokeColor10")
-
-
-  btn1.addEventListener("mouseenter", function () {
-    image.src =
-      "https://raindrop.io/_next/static/images/duplicates-2112-9e536142e72e5c4809864d0f7202d0ca.png"
-
-    p1.classList.remove("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-    p11.classList.add("hidden")
-
-    btn1.classList.add("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-   
-    textColor.classList.add("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-    
-
-    strokeColor1.classList.add("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-    
-  })
-  var btn2 = document.getElementById("btn2")
-  var p2 = document.getElementById("p2")
-  btn2.addEventListener("mouseenter", function () {
-    image.src =
-      "https://images.template.net/wp-content/uploads/2014/11/Elena-Responsive-Email-Template.jpg"
-    p1.classList.add("hidden")
-    p2.classList.remove("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.add("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor.classList.remove("text1")
-    textColor2.classList.add("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.add("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-  })
-
-  var btn3 = document.getElementById("btn3")
-  var p3 = document.getElementById("p3")
-  btn3.addEventListener("mouseenter", function () {
-    image.src =
-      "https://colorlib.com/wp/wp-content/uploads/sites/2/modern-html-email-template.jpg"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.remove("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.add("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor3.classList.add("text1")
-    textColor2.classList.remove("text1")
-    textColor.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.add("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-  })
-
-  var btn4 = document.getElementById("btn4")
-  var p4 = document.getElementById("p4")
-  var image2 = document.getElementById("image2")
-
-  btn4.addEventListener("mouseenter", function () {
-    image2.src =
-      "https://raindrop.io/_next/static/images/view-modes-1296-920d1ee40167a15276283d32c533afca.png"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.remove("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.add("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.add("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.add("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-  })
-  var btn5 = document.getElementById("btn5")
-  var p5 = document.getElementById("p5")
-
-  btn5.addEventListener("mouseenter", function () {
-    image2.src =
-      "https://venngage-wordpress.s3.amazonaws.com/uploads/2021/06/Process-Infographic-.png"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.remove("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.add("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.add("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.add("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-
-  })
-
-  var btn6 = document.getElementById("btn6")
-  var p6 = document.getElementById("p6")
-
-  btn6.addEventListener("mouseenter", function () {
-    image2.src =
-      "https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.remove("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.add("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.add("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.add("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-  })
-
-  var btn7 = document.getElementById("btn7")
-  var image3 = document.getElementById("image3")
-  var p7 = document.getElementById("p7")
-
-  btn7.addEventListener("mouseenter", function () {
-    image3.src =
-      "https://help.raindrop.io/assets/images/copy-501fd154b1957cdfacb12ad0ff6da569.jpg"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.remove("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.add("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.add("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.add("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-  })
-  var btn8 = document.getElementById("btn8")
-  var p8 = document.getElementById("p8")
-
-  btn8.addEventListener("mouseenter", function () {
-    image3.src =
-      "https://raindrop.io/_next/static/images/backup-1640-4f013f867d9e1988ae5253dbeef9fe82.png"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.remove("hidden")
-    p9.classList.add("hidden")
-    p10.classList.add("hidden")
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.add("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.remove("bg-color4")
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.add("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.remove("text4")
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.add("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.remove("stroke4")
-
-  })
-
-  var btn9 = document.getElementById("btn9")
-  var p9 = document.getElementById("p9")
-
-  var image4 = document.getElementById("image4")
-
-  btn9.addEventListener("mouseenter", function () {
-    image4.src =
-      "https://raindrop.io/_next/static/images/collaborate-1056-03d1d5b9578e0a1e700f300799078d8d.png"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.remove("hidden")
-    p10.classList.add("hidden")
-   
-
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.add("bg-color4")
-    btn10.classList.remove("bg-color4")
-   
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.add("text4")
-    textColor10.classList.remove("text4")
-    
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.add("stroke4")
-    strokeColor10.classList.remove("stroke4")
-    
-  })
-  var btn10 = document.getElementById("btn10")
-  var p10 = document.getElementById("p10")
-
-  btn10.addEventListener("mouseenter", function () {
-    image4.src =
-      "https://raindrop.io/_next/static/images/public-1056-c56e4757a76d3135049c494b0cd73403.png"
-    p1.classList.add("hidden")
-    p2.classList.add("hidden")
-    p3.classList.add("hidden")
-    p4.classList.add("hidden")
-    p5.classList.add("hidden")
-    p6.classList.add("hidden")
-    p7.classList.add("hidden")
-    p8.classList.add("hidden")
-    p9.classList.add("hidden")
-    p10.classList.remove("hidden")
-    
-    btn1.classList.remove("bg-color")
-    btn2.classList.remove("bg-color")
-    btn3.classList.remove("bg-color")
-    btn4.classList.remove("bg-color2")
-    btn5.classList.remove("bg-color2")
-    btn6.classList.remove("bg-color2")
-    btn7.classList.remove("bg-color3")
-    btn8.classList.remove("bg-color3")
-    btn9.classList.remove("bg-color4")
-    btn10.classList.add("bg-color4")
-    
-
-    textColor.classList.remove("text1")
-    textColor2.classList.remove("text1")
-    textColor3.classList.remove("text1")
-    textColor4.classList.remove("text2")
-    textColor5.classList.remove("text2")
-    textColor6.classList.remove("text2")
-    textColor7.classList.remove("text3")
-    textColor8.classList.remove("text3")
-    textColor9.classList.remove("text4")
-    textColor10.classList.add("text4")
-   
-
-    strokeColor1.classList.remove("stroke")
-    strokeColor2.classList.remove("stroke")
-    strokeColor3.classList.remove("stroke")
-    strokeColor4.classList.remove("stroke2")
-    strokeColor5.classList.remove("stroke2")
-    strokeColor6.classList.remove("stroke2")
-    strokeColor7.classList.remove("stroke3")
-    strokeColor8.classList.remove("stroke3")
-    strokeColor9.classList.remove("stroke4")
-    strokeColor10.classList.add("stroke4")
-   
-  })
-
-  var btn11 = document.getElementById("btn11")
-  var p11 = document.getElementById("p11")
-
-
-</script>
+<script src="/rain.js"></script>

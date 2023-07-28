@@ -52,7 +52,7 @@ footer_data:
   </head>
   <body>
     <nav
-      class="fixed w-full flex justify-around items-center text-center py-3 shadow-md bg-[rgba(255,255,255,0.7)] md:justify-between"
+      class="fixed w-full flex justify-between items-center text-center py-3 shadow-md bg-[rgba(255,255,255,0.7)] md:justify-around"
       style="backdrop-filter: blur(20px)"
     >
       <div class="flex items-center gap-2 cursor-pointer">
@@ -233,17 +233,18 @@ footer_data:
   </body>
 
   <script>
-    function openSelectedLink() {
-      // Get the select element
-      var selectElement = document.getElementById("select");
+  
+function openSelectedLink() {
+    // Get the select element
+    var selectElement = document.getElementById("select");
 
-      // Get the selected option value
-      var selectedValue = selectElement.value;
+    // Get the selected option value
+    var selectedValue = selectElement.value;
 
-      // Open the link in a new tab if a valid option is selected
-      if (selectedValue !== "") {
-        window.open(selectedValue, "_blank");
-      }
+    // Open the link in a new tab if a valid option is selected
+    if (selectedValue !== "") {
+      window.open(selectedValue, "_blank");
     }
+  }
   </script>
 </html>
