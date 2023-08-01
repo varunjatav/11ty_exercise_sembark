@@ -1,0 +1,122 @@
+---
+title: "ECLIPSE"
+
+footer_data:
+  - ques: "What is automated expense tracking?"
+    ans: "Automated expense tracking is a feature that allows you to track your expenses automatically with a single click. It is a great way to keep track of your spending and make sure you are not overspending."
+
+  - ques: "What kind of investment opportunities does Eclipse provide?"
+    ans: "Eclipse provides you with the best investment opportunities in Mutual Funds and FDs."
+
+  - ques: "What is Eclipse News?"
+    ans: "Eclipse news is a platform where you can get the latest financial news and market trends."
+
+  - ques: "What is the advance tax calculator?"
+    ans: "The advance tax calculator is a tool that helps you calculate your tax liability in advance. It is a great way to make sure you are not paying more tax than you need to."
+
+  - ques: "What is Eclipse Education(for users)?"
+    ans: "Eclipse Education is a platform where you can learn about financial literacy and get tips on how to manage your finances better."
+
+  - ques: "What is Eclipse Education(for writers)?"
+    ans: "Eclipse invites writers/bloggers/influencers to showcase their work on our platform and help us increasing the financial literacy of our users."
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ '/main.css' | url }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/732/732063.png?w=740&t=st=1690878014~exp=1690878614~hmac=24e2fc3b9e196a4b8cb4046de154d7208f4f03b4509c666b8bbdb6b4c10ea478"
+    />
+  </head>
+  <body class="bg-gray-900">
+    <header class="text-white flex justify-between items-center px-4 py-4">
+      <div>
+        <a class="text-2xl font-bold" href="#">Eclipse</a>
+      </div>
+      <div class="flex gap-5 text-sm font-[100]">
+        <a href="#features">Features</a>
+        <a href="#financial_plan">Pricing</a>
+        <a href="#faq">FAQ's</a>
+      </div>
+      <div>
+        <div
+          class="flex gap-1 items-center text-sm font-[100] rounded-full border border-white px-3 py-2 cursor-pointer"
+          style="
+            background: radial-gradient(
+              67.5% 67.5% at 50% 50%,
+              #4b5563 0,
+              rgba(75, 85, 99, 0) 100%
+            );
+          "
+        >
+          <a href="#financial_plan">Start Now</a>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    {{ content | safe }}
+    <footer class="text-center text-white pt-20 space-y-3" id="faq">
+      <h1 class="text-4xl font-bold">Everything you need to know</h1>
+      <p class="text-sm text-gray-500">
+        Here are the most questions people always ask about.
+      </p>
+      <div
+        class="grid grid-cols-3 gap-5 w-[90%] m-auto text-left py-10 border-b-2"
+      >
+        {% for data in footer_data%}
+        <div class="space-y-5">
+          <h1 class="text-lg">{{data.ques}}</h1>
+          <p class="text-sm text-gray-400">{{data.ans}}</p>
+        </div>
+
+        {% endfor %}
+      </div>
+      <div class="py-4 px-20 flex justify-between">
+        <div>
+          <p>© 2023 Inside Labs. All rights reserved.</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://twitter.com/InsideLabsInc?t=dVl3FS-Kuhj6JNfL3z1HOg&s=08">
+            <img
+              src="https://cdn.icon-icons.com/icons2/792/PNG/512/TWITTER_icon-icons.com_65536.png"
+              class="w-5 h-5"
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/inside-labs/">
+            <img
+              src="https://th.bing.com/th/id/R.73d96368d1177e4c51d3371f41152161?rik=5jUO1FUoXYfkSA&riu=http%3a%2f%2fwww.number31.nl%2fWebRoot%2fStoreNL2%2fShops%2f82643737%2fMediaGallery%2fSocial_media_icons%2flinkedin-icon-grey.png&ehk=ZJORsrZJF%2fqtGnTIYV7Ci2CSu8iwU%2fBbTAM6Imi3x44%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+              class="w-5 h-5"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

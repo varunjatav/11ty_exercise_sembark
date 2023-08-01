@@ -1,0 +1,280 @@
+---
+layout: layouts/eclipse_root.njk
+
+eclips_data:
+  - title: "Automated Expense Tracking"
+    para: "Eclipse automatically tracks your expenses and provides a monthly report, in just a single click."
+
+  - title: "Investment Opportunities"
+    para: "Eclipse provides you with the best investment opportunities in Mutual Funds and FDs."
+
+  - title: "Latest Financial News"
+    para: "Eclipse provides you with the latest financial news and market trends."
+
+  - title: "Advance Tax Calculator"
+    para: "Take the guesswork out of your tax calculations with advanced tax calculator"
+
+  - title: "Eclipse Education (For Users)"
+    para: "Eclipse Education is a fintech blogging platform for users to learn about finance and investments."
+
+  - title: "Eclipse Education (For Writers)"
+    para: "A fintech blogging platform for writers to showcase their work in finance and investments"
+
+
+finance_plan:
+    - head: "Starter"
+      amt: "$12"
+      para: "Ideal for growing finance"
+      plan1: "Automated Expense Tracking(Detail Analysis)"
+      plan2: "Family Expense Tracking(4 Users Only)"
+      plan3: "Latest Fintechnology News"
+      plan4: "Investment Opportunities (Can invest)"
+      plan5: "Advance Tax Calculator"
+      btn: "Coming Soon!"
+      id: 1
+
+    - head: "Basic plan"
+      amt: "$0"
+      para: "For individuals"
+      plan1: "Automated Expense Tracking"
+      plan2: "Family Expense Tracking(2 Users Only)"
+      plan3: "Latest Fintechnology News"
+      plan4: "Investment Opportunities (Only showcase)"
+      plan5: "Advance Tax Calculator"
+      btn: "Download Now!"
+      id: 2
+    
+    - head: "Pro"
+      amt: "$32"
+      para: "Built for financially savvy"
+      plan1: "Automated Expense Tracking(Detail Analysis)"
+      plan2: "Family Expense Tracking(6 Users Only)"
+      plan3: "Latest Fintechnology News"
+      plan4: "Personalized Investment Opportunities"
+      plan5: "Tax calculation and Tax saving schemes"
+      btn: "Coming Soon!"
+      id: 3
+---
+
+<section class="py-28">
+  <div class="duration-1000 delay-300 opacity-1">
+    <div class="text-center space-y-5">
+      <h1
+        class="text-white font-black text-[4rem] bg-clip-text bg-gradient-to-r text-taransparent w-2/3 m-auto"
+        style="
+          background-image: linear-gradient(
+            179.1deg,
+            #ffffff 0.77%,
+            rgba(255, 255, 255, 0) 182.09%
+          );
+        "
+      >
+        All-in-one Finance App you always wanted
+      </h1>
+      <p class="text-gray-100 text-lg w-1/2 m-auto">
+        Gain control of your finances with our all-in-one finance app. Track
+        your spending, find investment opportunities, and learn.
+      </p>
+      <div
+        class="flex gap-1 items-center justify-center text-sm font-[100] bg-purple-600 m-auto text-white rounded-full px-3 py-2 cursor-pointer w-32"
+      >
+        <a href="#financial_plan">Get Started</a>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-[90%] m-auto py-20 shadow-purple-700">
+    <img
+      src="https://eclipsefin.netlify.app/_ipx/w_1920,q_75/%2F_next%2Fstatic%2Fmedia%2Freadme1.f23860ab.png?url=%2F_next%2Fstatic%2Fmedia%2Freadme1.f23860ab.png&w=1920&q=75"
+      alt="eclipse.png"
+      class="rounded-xl"
+    />
+  </div>
+  <div class="text-center text-white space-y-2" id="features">
+    <h1 class="text-4xl font-bold w-1/2 m-auto">
+      Start growing your wealth with Eclipse
+    </h1>
+    <p class="text-md w-1/2 m-auto font-thin">
+      All-in-one personal finance app that simplifies investment opportunities,
+      expense tracking, and financial news for users..
+    </p>
+  </div>
+  <div class="py-9 w-[90%] m-auto grid grid-cols-3 text-white gap-8">
+    {% for data in eclips_data %}
+    <div class="space-y-3 p-4 rounded-2xl back">
+      <div
+        class="w-12 h-12 flex items-center justify-center p-3 rounded-lg bg-gray-700"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="white"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+          />
+        </svg>
+      </div>
+      <h3 class="text-lg">{{data.title}}</h3>
+      <p class="text-sm text-gray-300">{{data.para}}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="text-center text-white py-28 space-y-3">
+    <h1 class="text-4xl">Build a head start to your finances</h1>
+    <p class="w-1/2 m-auto font-extralight">
+      Eclipse is the perfect answer! Our platform enables you to create wealth,
+      manage your expenses, stay up to date with the latest financial news, and
+      get ready for upcoming tax season.
+    </p>
+
+    <div
+      class="flex gap-1 items-center justify-center text-sm font-[100] bg-purple-600 m-auto text-white rounded-full px-3 py-2 cursor-pointer w-32"
+    >
+      <a href="#financial_plan">Start Now</a>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-4 h-4"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </div>
+  </div>
+  <div class="text-center text-white space-y-3" id="financial_plan">
+    <h1 class="text-4xl pb-10">Find a plan to power your finances</h1>
+
+    <div class="grid grid-cols-3 w-[90%] m-auto gap-5" >
+        {% for plan in finance_plan %}
+      <div class="border border-gray-400 rounded-xl text-center p-5 group hover:border-purple-500 " key={{plan.id}}>
+        <div class="border-b-2 pb-5">
+          <p class="text-purple-600">{{plan.head}}</p>
+          <p><span class="text-xl"> {{plan.amt}} </span> /mo</p>
+          <p>{{plan.para}}</p>
+        </div>
+        <div class="pt-5 px-4 space-y-5 text-left h-80">
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              <h1>{{plan.plan1}}</h1>
+            </svg>
+          </div>
+
+           <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              <h1>{{plan.plan2}}</h1>
+            </svg>
+          </div>
+
+           <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              <h1>{{plan.plan3}}</h1>
+            </svg>
+          </div>
+
+           <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              <h1>{{plan.plan4}}</h1>
+            </svg>
+          </div>
+           <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              <h1>{{plan.plan5}}</h1>
+            </svg>
+          </div>
+        </div>
+        <a href="https://drive.google.com/uc?export=download&id=143uXyJ-9MZCFVKqsEFYm7LPEafvfZhep"><div class="rounded-full py-2 mt-5 cursor-pointer text-xs font-semibold bg-gray-600 w-[90%] m-auto group-hover:bg-purple-500">{{plan.btn}}</div></a>
+      </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+</section>

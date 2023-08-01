@@ -23,8 +23,8 @@ module.exports = {
         // => @media (min-width: 1280px) { ... }
       },
       backgroundColor:{
-        gray: "#ededed",
-        green: "#00ff00",
+        gray1: "#ededed",
+        green1: "#00ff00",
       },
       
       colors:{
