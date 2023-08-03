@@ -20,52 +20,50 @@ eclips_data:
   - title: "Eclipse Education (For Writers)"
     para: "A fintech blogging platform for writers to showcase their work in finance and investments"
 
-
 finance_plan:
-    - head: "Starter"
-      amt: "$12"
-      para: "Ideal for growing finance"
-      plan1: "Automated Expense Tracking(Detail Analysis)"
-      plan2: "Family Expense Tracking(4 Users Only)"
-      plan3: "Latest Fintechnology News"
-      plan4: "Investment Opportunities (Can invest)"
-      plan5: "Advance Tax Calculator"
-      btn: "Coming Soon!"
-      id: 1
+  - head: "Starter"
+    amt: "$12"
+    para: "Ideal for growing finance"
+    plan1: "Automated Expense Tracking(Detail Analysis)"
+    plan2: "Family Expense Tracking(4 Users Only)"
+    plan3: "Latest Fintechnology News"
+    plan4: "Investment Opportunities (Can invest)"
+    plan5: "Advance Tax Calculator"
+    btn: "Coming Soon!"
+    id: 1
 
-    - head: "Basic plan"
-      amt: "$0"
-      para: "For individuals"
-      plan1: "Automated Expense Tracking"
-      plan2: "Family Expense Tracking(2 Users Only)"
-      plan3: "Latest Fintechnology News"
-      plan4: "Investment Opportunities (Only showcase)"
-      plan5: "Advance Tax Calculator"
-      btn: "Download Now!"
-      id: 2
-    
-    - head: "Pro"
-      amt: "$32"
-      para: "Built for financially savvy"
-      plan1: "Automated Expense Tracking(Detail Analysis)"
-      plan2: "Family Expense Tracking(6 Users Only)"
-      plan3: "Latest Fintechnology News"
-      plan4: "Personalized Investment Opportunities"
-      plan5: "Tax calculation and Tax saving schemes"
-      btn: "Coming Soon!"
-      id: 3
+  - head: "Basic plan"
+    amt: "$0"
+    para: "For individuals"
+    plan1: "Automated Expense Tracking"
+    plan2: "Family Expense Tracking(2 Users Only)"
+    plan3: "Latest Fintechnology News"
+    plan4: "Investment Opportunities (Only showcase)"
+    plan5: "Advance Tax Calculator"
+    btn: "Download Now!"
+    id: 2
+
+  - head: "Pro"
+    amt: "$32"
+    para: "Built for financially savvy"
+    plan1: "Automated Expense Tracking(Detail Analysis)"
+    plan2: "Family Expense Tracking(6 Users Only)"
+    plan3: "Latest Fintechnology News"
+    plan4: "Personalized Investment Opportunities"
+    plan5: "Tax calculation and Tax saving schemes"
+    btn: "Coming Soon!"
+    id: 3
 ---
 
 <section class="py-28">
   <div>
-    <div class="text-center space-y-5">
+    <div class="text-center space-y-5 hidden-effect">
       <h1
-        class="text-white font-black text-3xl md:text-[4rem]  leading-none w-full lg:w-2/3 m-auto"
-      
+        class="text-white font-black text-3xl md:text-[4rem] leading-none w-[90%] lg:w-2/3 m-auto"
       >
         All-in-one Finance App you always wanted
       </h1>
-      <p class="text-gray-100 text-lg w-[95%] lg:w-1/2 m-auto">
+      <p class="text-gray-100 text-lg w-[90%] lg:w-1/2 m-auto">
         Gain control of your finances with our all-in-one finance app. Track
         your spending, find investment opportunities, and learn.
       </p>
@@ -92,23 +90,44 @@ finance_plan:
     </div>
   </div>
 
-  <div class="w-[90%] m-auto py-20 shadow-purple-700">
-    <img
-      src="https://eclipsefin.netlify.app/_ipx/w_1920,q_75/%2F_next%2Fstatic%2Fmedia%2Freadme1.f23860ab.png?url=%2F_next%2Fstatic%2Fmedia%2Freadme1.f23860ab.png&w=1920&q=75"
-      alt="eclipse.png"
-      class="rounded-xl"
-    />
+  <div class="relative">
+    <div
+      class="absolute m-auto max-w-3xl h-[450px] inset-0 top-12 blur-[160px]"
+      style="
+        background: linear-gradient(
+          180deg,
+          #7c3aed 0%,
+          rgba(152, 103, 240, 0.984375) 0.01%,
+          rgba(237, 78, 80, 0.2) 100%
+        );
+      "
+    ></div>
+    <div
+      class="relative w-[90%] m-auto my-28 rounded-xl hidden-effect"
+      id="image_div"
+    >
+      <img
+        src="https://eclipsefin.netlify.app/_ipx/w_1920,q_75/%2F_next%2Fstatic%2Fmedia%2Freadme1.f23860ab.png?url=%2F_next%2Fstatic%2Fmedia%2Freadme1.f23860ab.png&w=1920&q=75"
+        alt="eclipse.png"
+        class="rounded-xl"
+      />
+    </div>
   </div>
-  <div class="text-center text-white space-y-2" id="features">
-    <h1 class="text-4xl font-bold w-full lg:w-1/2 m-auto">
+  <div
+    class="text-center text-white space-y-2 py-10 hidden-effect"
+    id="features"
+  >
+    <h1 class="text-4xl w-[90%] font-bold  lg:w-1/2 m-auto">
       Start growing your wealth with Eclipse
     </h1>
-    <p class="text-md w-[95%] lg:w-1/2 m-auto font-thin">
+    <p class="text-md w-[90%] lg:w-1/2 m-auto font-thin">
       All-in-one personal finance app that simplifies investment opportunities,
       expense tracking, and financial news for users..
     </p>
   </div>
-  <div class="py-9 w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white gap-8">
+  <div
+    class="py-9 w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white gap-8 hidden-effect"
+  >
     {% for data in eclips_data %}
     <div class="space-y-3 p-4 rounded-2xl back">
       <div
@@ -134,48 +153,70 @@ finance_plan:
     </div>
     {% endfor %}
   </div>
-
-  <div class="text-center text-white py-28 space-y-3">
-    <h1 class="text-4xl">Build a head start to your finances</h1>
-    <p class=" w-[95%] lg:w-1/2 m-auto font-extralight">
-      Eclipse is the perfect answer! Our platform enables you to create wealth,
-      manage your expenses, stay up to date with the latest financial news, and
-      get ready for upcoming tax season.
-    </p>
-
+  <div class="relative">
     <div
-      class="flex gap-1 items-center justify-center text-sm font-[100] bg-purple-600 m-auto text-white rounded-full px-3 py-2 cursor-pointer w-32"
+      class="absolute m-auto max-w-xs h-[13rem] inset-0 top-12 blur-[160px]"
+      style="
+        background: linear-gradient(
+          180deg,
+          #7c3aed 0%,
+          rgba(152, 103, 240, 0.984375) 0.01%,
+          rgba(237, 78, 80, 0.2) 100%
+        );
+      "
+    ></div>
+    <div
+      class="relative text-center text-white py-28 space-y-3 hidden-effect bg-[url('https://eclipsefin.netlify.app/_ipx/w_3840,q_75/%2F_next%2Fstatic%2Fmedia%2Fbg-pattern.5aa07776.webp?url=%2F_next%2Fstatic%2Fmedia%2Fbg-pattern.5aa07776.webp&w=3840&q=75')] bg-cover bg-repeat"
     >
-      <a href="#financial_plan">Start Now</a>
+      <h1 class="text-4xl w-[90%] m-auto">Build a head start to your finances</h1>
+      <p class="w-[90%] lg:w-1/2 m-auto font-extralight">
+        Eclipse is the perfect answer! Our platform enables you to create
+        wealth, manage your expenses, stay up to date with the latest financial
+        news, and get ready for upcoming tax season.
+      </p>
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-4 h-4"
+      <div
+        class="flex gap-1 items-center justify-center text-sm font-[100] bg-purple-600 m-auto text-white rounded-full px-3 py-2 cursor-pointer w-32"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5"
-        />
-      </svg>
+        <a href="#financial_plan">Start Now</a>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
     </div>
   </div>
-  <div class="text-center text-white space-y-3" id="financial_plan">
+  <div
+    class="text-center text-white space-y-3 hidden-effect pt-20"
+    id="financial_plan"
+  >
     <h1 class="text-4xl pb-10">Find a plan to power your finances</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] m-auto gap-5" >
-        {% for plan in finance_plan %}
-      <div class="border border-gray-400 rounded-xl text-center p-5 group hover:border-purple-500 " key={{plan.id}}>
-        <div class="border-b-2 pb-5">
-          <p class="text-purple-600">{{plan.head}}</p>
-          <p><span class="text-xl"> {{plan.amt}} </span> /mo</p>
-          <p>{{plan.para}}</p>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-[90%] m-auto gap-5"
+    >
+      <div
+        class="relative flex-1 flex items-stretch flex-col rounded-xl border border-gray-800 mt-6 sm:mt-0"
+      >
+        <div class="p-8 space-y-4 border-b border-gray-800 text-center">
+          <p class="text-purple-600">Starter</p>
+          <p class="text-gray-500">
+            <span class="text-2xl text-white"> $12 </span> /mo
+          </p>
+          <p class="text-gray-500">Ideal for growing finance</p>
         </div>
-        <div class="pt-5 px-4 space-y-5 text-left h-80">
+        <div class="p-8 space-y-5 text-left text-sm">
           <div class="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -190,11 +231,12 @@ finance_plan:
                 stroke-linejoin="round"
                 d="M4.5 12.75l6 6 9-13.5"
               />
-              <h1>{{plan.plan1}}</h1>
+              
             </svg>
+            <h1>Automated Expense Tracking(Detail Analysis)</h1>
           </div>
 
-           <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -208,11 +250,12 @@ finance_plan:
                 stroke-linejoin="round"
                 d="M4.5 12.75l6 6 9-13.5"
               />
-              <h1>{{plan.plan2}}</h1>
+              
             </svg>
+            <h1>Family Expense Tracking(4 Users Only)</h1>
           </div>
 
-           <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -226,11 +269,12 @@ finance_plan:
                 stroke-linejoin="round"
                 d="M4.5 12.75l6 6 9-13.5"
               />
-              <h1>{{plan.plan3}}</h1>
+             
             </svg>
+             <h1>Latest Fintechnology News</h1>
           </div>
 
-           <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -244,10 +288,11 @@ finance_plan:
                 stroke-linejoin="round"
                 d="M4.5 12.75l6 6 9-13.5"
               />
-              <h1>{{plan.plan4}}</h1>
+             
             </svg>
+             <h1>Investment Opportunities (Can invest)</h1>
           </div>
-           <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -261,14 +306,264 @@ finance_plan:
                 stroke-linejoin="round"
                 d="M4.5 12.75l6 6 9-13.5"
               />
-              <h1>{{plan.plan5}}</h1>
+            
             </svg>
+              <h1>Advance Tax Calculator</h1>
           </div>
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=143uXyJ-9MZCFVKqsEFYm7LPEafvfZhep"><div class="rounded-full py-2 mt-5 cursor-pointer text-xs font-semibold bg-gray-600 w-[90%] m-auto group-hover:bg-purple-500">{{plan.btn}}</div></a>
+        <div class="pb-8 w-[80%] m-auto">
+        <button
+          class="w-full rounded-full text-white ring-offset-2 focus:ring bg-gray-800 hover:bg-gray-700 ring-gray-800 px-4 py-2.5 font-medium text-sm text-center duration-150 download_btn"
+        >
+          Coming Soon!
+        </button>
+        </div>
       </div>
-      {% endfor %}
-    </div>
-    
+
+      <div class="relative flex-1 flex items-stretch flex-col rounded-xl mt-6 sm:mt-0 border border-purple-500" style="background-image: radial-gradient(130.39% 130.39% at 51.31% -0.71%,  #1f2937 0%, rgba(31, 41, 55, 0) 100%);" >
+        <div class="p-8 space-y-4 border-b border-gray-800 text-center">
+          <p class="text-purple-600">Basic Plan</p>
+          <p class="text-gray-500">
+            <span class="text-2xl text-white"> $0 </span> /mo
+          </p>
+          <p class="text-gray-500">For individuals</p>
+        </div>
+        <div class="p-8 space-y-5 text-left text-sm">
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+             
+            </svg>
+             <h1>Automated Expense Tracking</h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              
+            </svg>
+            <h1>Family Expense Tracking(2 Users Only)</h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+             
+            </svg>
+             <h1>Latest Fintechnology News</h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+            
+            </svg>
+              <h1>Investment Opportunities (Only showcase)</h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+             
+            </svg>
+             <h1>Advance Tax Calculator</h1>
+          </div>
+        </div>
+        <div class="pb-8 w-[80%] m-auto">
+        <button class="w-full rounded-full text-white ring-offset-2 focus:ring bg-purple-600 hover:bg-purple-500 focus:bg-purple-700 ring-purple-600 px-4 py-2.5 font-medium text-sm text-center duration-150 download_btn">
+          Download Now!
+        </button>
+        </div>
+      </div>
+
+       <div class="relative flex-1 flex items-stretch flex-col rounded-xl border border-gray-800 mt-6 sm:mt-0">
+        <div class="p-8 space-y-4 border-b border-gray-800 text-center">
+          <p class="text-purple-600">Pro</p>
+          <p class="text-gray-500">
+            <span class="text-2xl text-white"> $32 </span> /mo
+          </p>
+          <p class="text-gray-500">Built for financially savvy</p>
+        </div>
+        <div class="p-8 space-y-5 text-left text-sm">
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+            
+            </svg>
+              <h1>Automated Expense Tracking(Detail Analysis)</h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+             
+            </svg>
+             <h1>Family Expense Tracking(6 Users Only)</h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+              
+            </svg>
+            <h1>Latest Fintechnology News</h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+             
+            </svg>
+             <h1>Personalized Investment Opportunities</h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="blue"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12.75l6 6 9-13.5"
+              />
+            
+            </svg>
+              <h1>Tax calculation and Tax saving schemes</h1>
+          </div>
+        </div>
+        <div class="pb-8 w-[80%] m-auto">
+        <button class="w-full rounded-full text-white ring-offset-2 focus:ring bg-gray-800 hover:bg-gray-700 ring-gray-800 px-4 py-2.5 font-medium text-sm text-center duration-150 download_btn">
+          Coming Soon!
+        </button>
+        </div>
+      </div>
   </div>
 </section>
+<script>
+
+var observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show-effect")
+      }else {
+      if (!entry.target.classList.contains("show-effect")) {
+        entry.target.classList.remove("show-effect");
+      }
+      }
+    });
+  })
+
+  var hiddenElement = document.querySelectorAll(".hidden-effect");
+  hiddenElement.forEach((el) => observer.observe(el));
+
+  var download_btn = document.querySelectorAll(".download_btn");
+  for( var i = 0; i < download_btn.length; i++){
+download_btn[i].addEventListener("click",() => {
+    window.open("https://drive.google.com/uc?export=download&id=143uXyJ-9MZCFVKqsEFYm7LPEafvfZhep");
+    console.log("clicked")
+  })
+  }
+  
+</script>
