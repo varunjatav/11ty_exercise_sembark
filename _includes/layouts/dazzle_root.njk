@@ -1,0 +1,170 @@
+---
+title: "Dazzle"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ '/main.css' | url }}" />
+    <link
+      rel="icon"
+      href="https://th.bing.com/th/id/R.f4448a428afda09c17d60bb4c60821d7?rik=QTCqsEypgf7E%2bw&riu=http%3a%2f%2fwww.structel.com%2fwp-content%2fuploads%2f2020%2f05%2fD150.png&ehk=umwXafQbTPTrVpWTqQ3RFHVBxWEFzKBNmNMOMOndQHk%3d&risl=&pid=ImgRaw&r=0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
+    />
+  </head>
+  <body>
+    <header
+      class="fixed w-full left-0 right-0 max-w-6xl mx-auto flex items-center justify-between py-4 px-8 bg-black text-white z-10"
+    >
+      <div class="cursor-pointer">
+        <h1 class="text-3xl font-semibold">Dazzle.</h1>
+      </div>
+      <div class="flex justify-between gap-4 items-center cursor-pointer">
+        <ul class="flex items-center gap-4 text-sm font-bold text-gray-500">
+          <li class="hover:text-white">
+            <a href="#heroimg"> Home </a>
+            </li>
+          <li class="hover:text-white">
+           <a href="#about"> 
+            About
+          </a>
+           </li>
+          <li class="hover:text-white">
+            <a href="#pricing"> 
+              Pricing
+            </a>
+            </li>
+          <li class="hover:text-white">
+           <a href="#testimonial"> Testimonials </a>
+          </li>
+          <li class="hover:text-white">
+            <a href="#download">
+               Download
+             </a>
+            </li>
+        </ul>
+        <a
+          class="border border-gray-500 bg-green-600 rounded-md px-5 py-2 text-white font-bold text-sm"
+         href="#" >Sign Up</a
+        >
+      </div>
+    </header>
+    {{ content | safe }}
+
+    <footer class="bg-[#252525] py-20">
+      <div class="max-w-6xl mx-auto grid grid-cols-2 gap-10">
+        <div class="grid grid-cols-2 gap-10">
+          <div class="space-y-5">
+            <h1 class="text-white font-bold text-2xl">Dazzle.</h1>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+              lacinia eget consectetur sed, convallis at tellus
+            </p>
+            <ul class="flex items-center justify-start gap-4">
+              <li class="cursor-pointer">
+                <a href="#">
+                  <img
+                    src="https://th.bing.com/th/id/R.7c6676a2408cb8f2bf2710bfa6c6f436?rik=zTPclcp%2bFgZlqA&riu=http%3a%2f%2fwww.bionicsscientific.com%2fimages%2ffacebook.png&ehk=PfZPb1MpV%2b%2b9vH7dQKM3bQeSg7yLyzWPIndGuY%2bEx4k%3d&risl=&pid=ImgRaw&r=0"
+                    width="20px"
+                    alt="facebook.png"
+                  />
+                </a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">
+                  <img
+                    src="https://africa.multicitychallenge.org/images/twitter-logo-white.png"
+                    width="30px"
+                    alt="twitter.png"
+                  />
+                </a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">
+                  <img
+                    src="https://www.pikpng.com/pngl/b/112-1124492_instagram-instagram-new-logo-png-white-clipart.png"
+                    width="20px"
+                    alt="instagram.png"
+                  />
+                </a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">
+                  <img
+                    src="https://th.bing.com/th/id/R.3cfbc995df96e1ace93e0d23e5884b3e?rik=7N4nANscprreig&riu=http%3a%2f%2fclipart-library.com%2fimages%2fdc4LABqni.png&ehk=wMo4WyijaHWTJt1nMQKvD06j9%2fjkDwXAO%2btufnjfRwU%3d&risl=&pid=ImgRaw&r=0"
+                    width="20px"
+                    alt="youtube.png"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1 class="text-white font-bold text-md">Contact</h1>
+            <div class="w-20 border-[0.5px] border-gray-700 my-5"></div>
+            <p class="text-gray-500 pb-10">
+              1600 Amphitheatre Parkway Mountain View, CA 94043 US
+            </p>
+            <p class="text-gray-500">
+              someone@dazzlesite.com Phone: (+63) 555 1212 Fax: (+63) 555 0100
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-10">
+          <div class="flex-1 flex flex-col">
+            <h1 class="text-white font-bold text-md">Site Links</h1>
+            <div class="w-20 border-[0.5px] border-gray-700 my-5"></div>
+            <a class="text-gray-500"> Home </a>
+            <a class="text-gray-500"> About Us </a>
+            <a class="text-gray-500"> Blog </a>
+            <a class="text-gray-500"> FAQ </a>
+            <a class="text-gray-500"> Terms </a>
+            <a class="text-gray-500"> Privacy Policy </a>
+          </div>
+
+          <div clas="flex-2">
+            <h1 class="text-white font-bold text-md">Our Newsletter</h1>
+            <div class="w-20 border-[0.5px] border-gray-700 my-5"></div>
+            <p class="text-gray-500 pb-10">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="flex">
+              <div class="px-4 py-2 rounded-s-md">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="white"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+              </div>
+              <input type="email" placeholder="Email Address" class="bg-[#252525]"/>
+              <a href="https://demos.onepagelove.com/html/dazzle/?EMAIL=&subscribe=Send#">
+              <button type="submit" class="text-sm font-bold bg-[#39b54a] text-white px-4 py-2 rounded-e-md" >
+                send
+              </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+  </body>
+</html>
