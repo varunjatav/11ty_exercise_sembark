@@ -120,9 +120,9 @@ title: "Dazzle"
     </header>
     {{ content | safe }}
 
-    <footer class="bg-[#252525] py-20 px-10 md:px-0">
+    <footer class="bg-[#252525] py-20 px-10 text-center">
       <div class="max-w-6xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 gap-10">
-        <div class="grid grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols2 gap-10">
           <div class="space-y-5">
             <h1 class="text-white font-bold text-2xl">Dazzle.</h1>
             <p class="text-gray-500">
@@ -130,7 +130,7 @@ title: "Dazzle"
               Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
               lacinia eget consectetur sed, convallis at tellus
             </p>
-            <ul class="flex items-center justify-start gap-4">
+            <ul class="flex items-center justify-center lg:justify-start gap-4">
               <li class="cursor-pointer">
                 <a href="#">
                   <img
@@ -171,7 +171,7 @@ title: "Dazzle"
           </div>
           <div>
             <h1 class="text-white font-bold text-md">Contact</h1>
-            <div class="w-20 border-[0.5px] border-gray-700 my-5"></div>
+            <div class="w-20 border-[0.5px] border-gray-700 my-5 m-auto lg:m-0"></div>
             <p class="text-gray-500 pb-10">
               1600 Amphitheatre Parkway Mountain View, CA 94043 US
             </p>
@@ -180,10 +180,10 @@ title: "Dazzle"
             </p>
           </div>
         </div>
-        <div class="flex gap-10">
+        <div class="flex flex-col lg:flex-row gap-10">
           <div class="flex-1 flex flex-col">
             <h1 class="text-white font-bold text-md">Site Links</h1>
-            <div class="w-20 border-[0.5px] border-gray-700 my-5"></div>
+            <div class="w-20 border-[0.5px] border-gray-700 my-5 m-auto lg:m-0"></div>
             <a class="text-gray-500"> Home </a>
             <a class="text-gray-500"> About Us </a>
             <a class="text-gray-500"> Blog </a>
@@ -194,12 +194,12 @@ title: "Dazzle"
 
           <div clas="flex-2">
             <h1 class="text-white font-bold text-md">Our Newsletter</h1>
-            <div class="w-20 border-[0.5px] border-gray-700 my-5"></div>
+            <div class="w-20 border-[0.5px] border-gray-700 my-5 m-auto lg:m-0"></div>
             <p class="text-gray-500 pb-10">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div class="flex">
+            <div class="flex justify-center lg:justify-start">
               <div class="px-4 py-2 rounded-s-md">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
