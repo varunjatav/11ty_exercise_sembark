@@ -21,45 +21,107 @@ title: "Dazzle"
   </head>
   <body>
     <header
-      class="fixed w-full left-0 right-0 max-w-6xl mx-auto flex items-center justify-between py-4 px-8 bg-black text-white z-10"
+      class="fixed w-full left-0 right-0 max-w-6xl mx-auto py-4 px-8 bg-[#252525] text-white z-10"
     >
-      <div class="cursor-pointer">
-        <h1 class="text-3xl font-semibold">Dazzle.</h1>
+      <div class="flex items-center justify-between">
+        <div class="cursor-pointer">
+          <h1 class="text-3xl font-semibold">Dazzle.</h1>
+        </div>
+        <div
+          class="hidden md:flex justify-between gap-5 items-center cursor-pointer"
+        >
+          <ul
+            class="flex items-center gap-5 text-[14px] font-bold text-gray-600"
+          >
+            <li class="hover:text-white">
+              <a class="scroll-smooth" href="#heroimg"> Home </a>
+            </li>
+            <li class="hover:text-white">
+              <a class="smoothscroll" href="#about"> About </a>
+            </li>
+            <li class="hover:text-white">
+              <a href="#pricing"> Pricing </a>
+            </li>
+            <li class="hover:text-white">
+              <a href="#testimonial"> Testimonials </a>
+            </li>
+            <li class="hover:text-white">
+              <a href="#download"> Download </a>
+            </li>
+          </ul>
+          <a
+            class="bg-green-600 rounded-md px-5 py-2 text-white font-bold text-[14px]"
+            href="#"
+            >Sign Up</a
+          >
+        </div>
+        <div class="lg:hidden" id="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="white"
+            class="w-10 h-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+        <div class="hidden lg:hidden" id="cancle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="white"
+            class="w-10 h-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
       </div>
-      <div class="flex justify-between gap-4 items-center cursor-pointer">
-        <ul class="flex items-center gap-4 text-sm font-bold text-gray-500">
-          <li class="hover:text-white">
-            <a href="#heroimg"> Home </a>
-            </li>
-          <li class="hover:text-white">
-           <a href="#about"> 
-            About
-          </a>
-           </li>
-          <li class="hover:text-white">
-            <a href="#pricing"> 
-              Pricing
-            </a>
-            </li>
-          <li class="hover:text-white">
-           <a href="#testimonial"> Testimonials </a>
+      <div
+        class="flex flex-col justify-between gap-5 items-start cursor-pointer md:hidden mt-14"
+        id="hambar"
+      >
+        <ul
+          class="flex flex-col items-start text-left border-t w-full border-gray-700 py-5 gap-5 text-[14px] font-bold text-gray-600"
+        >
+          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
+            <a class="scroll-smooth remover" href="#heroimg"> Home </a>
           </li>
-          <li class="hover:text-white">
-            <a href="#download">
-               Download
-             </a>
-            </li>
+          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
+            <a class="smoothscroll remover" href="#about"> About </a>
+          </li>
+          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
+            <a class="remover" href="#pricing"> Pricing </a>
+          </li>
+          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
+            <a href="#testimonial"> Testimonials </a>
+          </li>
+          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
+            <a class="remover" href="#download"> Download </a>
+          </li>
         </ul>
         <a
-          class="border border-gray-500 bg-green-600 rounded-md px-5 py-2 text-white font-bold text-sm"
-         href="#" >Sign Up</a
+          class="bg-green-600 rounded-md px-5 py-2 text-white font-bold text-[14px] my-5 remover"
+          href="#"
+          >Sign Up</a
         >
       </div>
     </header>
     {{ content | safe }}
 
-    <footer class="bg-[#252525] py-20">
-      <div class="max-w-6xl mx-auto grid grid-cols-2 gap-10">
+    <footer class="bg-[#252525] py-20 px-10 md:px-0">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="grid grid-cols-2 gap-10">
           <div class="space-y-5">
             <h1 class="text-white font-bold text-2xl">Dazzle.</h1>
@@ -154,11 +216,20 @@ title: "Dazzle"
                   />
                 </svg>
               </div>
-              <input type="email" placeholder="Email Address" class="bg-[#252525]"/>
-              <a href="https://demos.onepagelove.com/html/dazzle/?EMAIL=&subscribe=Send#">
-              <button type="submit" class="text-sm font-bold bg-[#39b54a] text-white px-4 py-2 rounded-e-md" >
-                send
-              </button>
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="bg-[#252525]"
+              />
+              <a
+                href="https://demos.onepagelove.com/html/dazzle/?EMAIL=&subscribe=Send#"
+              >
+                <button
+                  type="submit"
+                  class="text-sm font-bold bg-[#39b54a] text-white px-4 py-2 rounded-e-md"
+                >
+                  send
+                </button>
               </a>
             </div>
           </div>
@@ -166,5 +237,80 @@ title: "Dazzle"
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+    <script>
+      /* Smooth Scrolling
+       * ------------------------------------------------------ */
+      var ssSmoothScroll = function () {
+        var smoothScrollLinks = document.querySelectorAll(".smoothscroll")
+
+        smoothScrollLinks.forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault()
+            e.stopPropagation()
+
+            var target = this.hash
+            var $target = document.querySelector(target)
+
+            if (!$target) return // If the target element does not exist, exit the function
+
+            var scrollDuration = 500 // Change this value to adjust the scroll duration (in milliseconds)
+
+            var targetOffsetTop =
+              $target.getBoundingClientRect().top + window.pageYOffset
+            var startingY = window.pageYOffset
+            var startTime = null
+
+            function scrollStep(timestamp) {
+              if (!startTime) startTime = timestamp
+              var progress = timestamp - startTime
+              var easeInOutQuad =
+                progress < scrollDuration / 2
+                  ? 2 * Math.pow(progress / scrollDuration, 2)
+                  : -1 +
+                    ((4 - (2 * progress) / scrollDuration) * progress) /
+                      scrollDuration
+
+              window.scrollTo(
+                0,
+                startingY + easeInOutQuad * (targetOffsetTop - startingY)
+              )
+
+              if (progress < scrollDuration) {
+                requestAnimationFrame(scrollStep)
+              } else {
+                window.location.hash = target
+              }
+            }
+
+            requestAnimationFrame(scrollStep)
+          })
+        })
+      }
+
+      var hamburger = document.getElementById("hamburger")
+      var cancle = document.getElementById("cancle")
+      var hambar = document.getElementById("hambar")
+      hambar.classList.add("hidden")
+      hamburger.addEventListener("click", function () {
+        hambar.classList.toggle("hidden")
+        cancle.classList.remove("hidden")
+        hamburger.classList.add("hidden")
+      })
+
+      var remover = document.getElementsByClassName("remover")
+      for (var i = 0; i < remover.length; i++) {
+        remover[i].addEventListener("click", function () {
+          hambar.classList.toggle("hidden")
+          cancle.classList.add("hidden")
+          hamburger.classList.remove("hidden")
+        })
+      }
+
+      cancle.addEventListener("click", () => {
+        hambar.classList.toggle("hidden")
+        cancle.classList.add("hidden")
+        hamburger.classList.remove("hidden")
+      })
+    </script>
   </body>
 </html>
