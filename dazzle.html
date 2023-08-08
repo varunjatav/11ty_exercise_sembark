@@ -28,16 +28,16 @@ about_data:
 ---
 
 <section
-  class="bg-[url('https://wallpaperaccess.com/full/3813848.jpg')] w-[100%] bg-cover bg-no-repeat"
+  class="bg-[url('https://wallpaperaccess.com/full/3813848.jpg')] w-[100%] bg-cover bg-no-repeat "
   id="heroimg"
 >
-  <div class="max-w-6xl mx-auto grid grid-cols-1 text-center lg:grid-cols-2 lg:text-left  text-white">
-    <div class="py-40">
-      <h2 class="text-lg w-2/3 m-auto lg:text-xl lg:w-full font-bold text-gray-400 pb-6">WELCOME TO DAZZLE</h2>
-      <h1 class="text-4xl w-2/3 m-auto lg:w-full lg:text-6xl font-bold">
+  <div class="max-w-6xl pt-20 px-10 mx-auto grid grid-cols-1 text-center lg:grid-cols-2 lg:text-left   text-white">
+    <div class="py-40 space-y-4">
+      <h3 class="text-lg w-2/3 m-auto  lg:w-full font-semibold text-[#ffffffcc] ">WELCOME TO DAZZLE</h2>
+      <h1 class="lg:leading-snug text-4xl w-2/3 m-auto  lg:w-full lg:text-5xl font-black">
         Creative Landing Page to Showcase Your Amazing App.
       </h1>
-      <div class="pt-24 pl-2 flex justify-center lg:justify-start gap-5 items-center hidden-effect">
+      <div class="pt-16  pl-2 flex justify-center lg:justify-start gap-5 items-center hidden-effect">
         <a
           class="text-white border-[3px] border-white font-bold px-6 py-2 rounded-sm flex items-center justify-center gap-4 cursor-pointer"
           href="#download"
@@ -82,18 +82,14 @@ about_data:
         >
       </div>
     </div>
-    <div class="hidden lg:block lg:absolute right-10 pt-[100px] hidden-effect">
+    <div class="home-image-right absolute md:right-10 lg:pt-[100px] hidden-effect">
       <img
         src="https://demos.onepagelove.com/html/dazzle/images/iphone-app-470.png"
+        class="h-[768px]"
         alt="moblie.png"
       />
     </div>
-    <div class="m-auto lg:hidden" >
-      <img
-        src="https://demos.onepagelove.com/html/dazzle/images/iphone-app-470.png"
-        alt="moblie.png"
-      />
-    </div>
+   
   </div>
 </section>
 <ul class="absolute right-10 top-[50%] flex flex-col gap-3 cursor-pointer">
@@ -118,7 +114,7 @@ about_data:
   <li>
     <a href="#">
       <img
-        src="https://www.pikpng.com/pngl/b/112-1124492_instagram-instagram-new-logo-png-white-clipart.png"
+        src="https://th.bing.com/th/id/R.ce696ac7ed0a96ef661e9b3d46efb51d?rik=tsBkTWivWYuFtA&riu=http%3a%2f%2fmeetthebeasts.com%2fimages%2finstagram-logo.png&ehk=aCkTxr0vpSVh2bK%2fskygbq01%2fhIx3KWzbNzjAVrSa9c%3d&risl=&pid=ImgRaw&r=0"
         width="20px"
         alt="instagram.png"
       />
@@ -134,14 +130,14 @@ about_data:
     </a>
   </li>
 </ul>
-<section class="max-w-6xl mx-auto pt-52 hidden-effect" id="about">
+<section class="max-w-6xl mx-auto pt-56 hidden-effect" id="about">
   <div class="flex flex-col text-center items-center lg:flex-row lg:items-start lg:text-left border-b border-gray-500 pb-20">
     <div class="flex-1 w-full lg:w-[30%]">
       <h1 class="text-3xl font-bold pb-8">About Our App</h1>
-      <div class="w-20 border border-[#39b54a] m-auto mb-8"></div>
+       <div class="w-20 border m-auto border-[#39b54a] lg:m-0"></div>
     </div>
     <div class="flex-2 w-full lg:w-[70%]">
-      <h1 class="text-xl leading-10 w-[90%] m-auto lg:text-3xl text-gray-400 font-light lg:w-full">
+      <h2 class="text-lg leading-10 w-[90%] m-auto lg:text-2xl text-gray-500 font-[100] lg:w-full">
         Excepteur enim magna veniam labore veniam sint. Ex aliqua esse proident
         ullamco voluptate. Nisi nisi nisi aliqua eiusmod dolor dolor proident
         deserunt occaecat elit Lorem reprehenderit. Id culpa veniam ex aliqua
@@ -166,27 +162,28 @@ about_data:
       <path stroke-linecap="round" stroke-linejoin="round" d="{{data.d}}" />
     </svg>
     <h1 class="text-xl font-bold md:text-left">{{data.head}}</h1>
-    <p class="text-xl text-gray-500">{{data.para}}</p>
+    <p class="text-md leading-8 text-gray-500">{{data.para}}</p>
   </div>
   {% endfor %}
 </section>
 
-<section class="max-w-6xl mx-auto hidden-effect">
+<section class="max-w-5xl mx-auto hidden-effect">
   <h1 class="text-center text-4xl font-bold">How The App Works?</h1>
 
   <div class="grid grid-cols-1 md:grid-cols-2 py-24 gap-5">
     <div class="flex items-center justify-between gap-5">
-      <div class="relative min-h-[240px] pt-10 pr-[20px] pb-[1.5rem] pl-[40px]">
+      <div class="relative min-h-[240px] pt-10 pr-[10px] pb-[1.5rem] pl-[40px]">
         <div
           class="block bg-[#39b54a] p-5 rounded-full w-16 h-16 text-center text-white text-xl font-bold"
         >
           1
         </div>
+        <div class="border border-gray-200 h-[180px] absolute left-[60%] ml-[3px] top-[45%]"> </div>
       </div>
 
-      <div>
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
         <h1 class="text-xl font-bold">Sign-Up</h1>
-        <p class="text-gray-500">
+        <p class="text-gray-500 leading-8">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -202,11 +199,12 @@ about_data:
         >
           2
         </div>
+          <div class="border border-gray-200 h-[180px] absolute left-[55%] ml-[3px] top-[45%]"> </div>
       </div>
 
-      <div>
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
         <h1 class="text-xl font-bold">Upload</h1>
-        <p class="text-gray-500">
+        <p  class="text-gray-500 leading-8">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -223,12 +221,12 @@ about_data:
           3
         </div>
 
-        <div></div>
+        <div class="border border-gray-200 h-[180px] absolute left-[55%] ml-[3px] top-[45%]"> </div>
       </div>
 
-      <div>
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
         <h1 class="text-xl font-bold">Create</h1>
-        <p class="text-gray-500">
+        <p class="text-gray-500 leading-8">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -245,12 +243,12 @@ about_data:
           4
         </div>
 
-        <div></div>
+          <div class="border border-gray-200 h-[180px] absolute left-[55%] ml-[3px] top-[45%]"> </div>
       </div>
 
-      <div>
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
         <h1 class="text-xl font-bold">Publish</h1>
-        <p class="text-gray-500">
+        <p class="text-gray-500 leading-8">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -268,11 +266,11 @@ about_data:
   />
 </section>
 <section class="bg-[#ebebeb] py-32 hidden-effect" id="pricing">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 text-center lg:grid-cols-2 gap-10 lg:text-left">
-    <div class="space-y-5">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 text-center lg:flex  gap-10 lg:text-left">
+    <div class="flex-1 w-full m-auto md:m-0 lg:w-[40%] space-y-5">
       <h1 class="text-4xl font-bold pb-5">Our Pricing Options</h1>
       <div class="w-20 border m-auto border-[#39b54a] lg:m-0"></div>
-      <p class="leading-8 text-gray-600 pt-5 w-[90%] m-auto md:w-full">
+      <p class="leading-8 m-auto text-gray-600 pt-5 w-[90%] ">
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
         illo inventore veritatis et quasi architecto beatae vitae dicta sunt
@@ -280,9 +278,9 @@ about_data:
         voluptatem accusantium doloremque laudantium.
       </p>
     </div>
-    <div class="grid grid-cols-1 px-10 md:grid-cols-2 md:px-5 gap-5">
+    <div class="flex-2 w-full lg:w-[60%] grid grid-cols-1 px-10 md:grid-cols-2 md:px-5 gap-5">
     <div
-      class="bg-white flex flex-col sm:flex-row md:flex-col items-center justify-around md:justify-center rounded-md text-center py-10 w-full "
+      class="bg-white  flex flex-col mobile:flex-row md:flex-col items-center justify-around md:justify-center rounded-md text-center py-10 w-full "
     >
       <div class="pb-10">
         <h1 class="text-2xl font-bold pb-10">Lite Plan</h1>
@@ -341,7 +339,7 @@ about_data:
     </div>
 
     <div
-     class="bg-[#39b54a] text-white flex flex-col sm:flex-row md:flex-col  items-center justify-around md:justify-center rounded-md text-center py-10 w-full "
+     class="bg-[#39b54a] text-white flex flex-col mobile:flex-row md:flex-col  items-center justify-around md:justify-center rounded-md text-center py-10 w-full "
     >
       <div class="pb-10">
         <h1 class="text-2xl font-bold pb-10">Pro Plan</h1>
@@ -404,10 +402,10 @@ about_data:
   <h1 class="text-3xl lg:text-4xl font-bold text-center">What They Say About Our App.</h1>
   <div class="w-20 border border-[#39b54a] m-auto my-10"></div>
 
-   <div id="my-keen-slider" class="keen-slider">
+   <div id="my-keen-slider" class="keen-slider cursor-grabbing">
 
 
-      <div class="keen-slider__slide text-center flex flex-col  justify-center">
+      <div class="keen-slider__slide text-center flex flex-col justify-center">
          <div class="w-[75%] m-auto flex flex-col items-center">
       <p class="text-2xl lg:text-3xl font-medium leading-[2rem] lg:leading-[3.5rem] text-[#303030]" >
         This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
@@ -422,9 +420,9 @@ about_data:
       </div>
 
 
-      <div class="keen-slider__slide text-center flex flex-col items-center justify-center">
-         <div class="w-[75%] m-auto flex flex-col items-center ">
-      <p class="text-2xllg:text-3xl font-medium leading-[2rem] lg:leading-[3.5rem] text-[#303030]">
+      <div class="keen-slider__slide text-center flex flex-col justify-center">
+         <div class="w-[75%] m-auto flex flex-col items-center">
+      <p class="text-2xl lg:text-3xl font-medium leading-[2rem] lg:leading-[3.5rem] text-[#303030]">
         Your work is going to fill a large part of your life, and the only way to be truly satisfied is
          to do what you believe is great work. And the only way to do great work is to love what you do.
          If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.               
@@ -468,7 +466,7 @@ about_data:
   </div>
 </section>
 
-<div class="fixed bottom-[30px] right-[30px] bg-black p-5 rounded-md scroll-smooth">
+<div class="fixed bottom-[30px] right-[30px] bg-black p-5 rounded-md scroll-smooth hidden-effect">
   <a href="#heroimg">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
