@@ -18,6 +18,12 @@ title: "Dazzle"
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header
@@ -34,19 +40,19 @@ title: "Dazzle"
             class="flex items-center gap-5 text-[14px] font-bold text-[#ffffff73]"
           >
             <li class="hover:text-white">
-              <a href="#heroimg"> Home </a>
+              <a href="#heroimg" class="active" id="home_btn"> Home </a>
             </li>
-            <li class="hover:text-white">
-              <a href="#about"> About </a>
+            <li class="hover:text-white ">
+              <a href="#about" id="about_btn"> About </a>
             </li>
-            <li class="hover:text-white">
-              <a href="#pricing"> Pricing </a>
+            <li class="hover:text-white ">
+              <a href="#pricing" id="pricing_btn"> Pricing </a>
             </li>
-            <li class="hover:text-white">
-              <a href="#testimonial"> Testimonials </a>
+            <li class="hover:text-white ">
+              <a href="#testimonial" id="testimonial_btn"> Testimonials </a>
             </li>
-            <li class="hover:text-white">
-              <a href="#download"> Download </a>
+            <li class="hover:text-white ">
+              <a href="#download" id="download_btn"> Download </a>
             </li>
           </ul>
           <a
@@ -55,7 +61,7 @@ title: "Dazzle"
             >Sign Up</a
           >
         </div>
-        <div class="md:hidden" id="hamburger">
+        <div class="md:hidden cursor-pointer" id="hamburger">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -71,7 +77,7 @@ title: "Dazzle"
             />
           </svg>
         </div>
-        <div class="hidden md:hidden" id="cancle">
+        <div class="hidden md:hidden cursor-pointer" id="cancle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -93,7 +99,7 @@ title: "Dazzle"
         id="hambar"
       >
         <ul
-          class="flex flex-col items-start text-left border-t w-full border-gray-700  gap-8 text-[14px] font-bold text-gray-600"
+          class="flex flex-col items-start text-left border-t w-full border-gray-700 gap-8 text-[14px] font-bold text-gray-600"
         >
           <li class="hover:text-white border-b w-full border-gray-700 py-5">
             <a class="scroll-smooth remover" href="#heroimg"> Home </a>
@@ -120,11 +126,11 @@ title: "Dazzle"
     </header>
     {{ content | safe }}
 
-    <footer class="bg-[#252525] py-20 px-10 text-left">
+    <footer class="bg-[#171717] py-20 px-10 text-left">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="space-y-5 text-center md:text-left">
           <h1 class="text-white font-bold text-2xl">Dazzle.</h1>
-          <p class="text-gray-500">
+          <p class="text-[#ffffff40] text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
             lacinia eget consectetur sed, convallis at tellus
@@ -174,10 +180,10 @@ title: "Dazzle"
             <div
               class="w-20 border-[0.5px] border-gray-700 my-5 m-0 lg:my-5"
             ></div>
-            <p class="text-gray-500 pb-10">
+            <p class="text-[#ffffff40] text-sm pb-10">
               1600 Amphitheatre Parkway Mountain View, CA 94043 US
             </p>
-            <p class="text-gray-500">
+            <p class="text-[#ffffff40] text-sm">
               someone@dazzlesite.com Phone: (+63) 555 1212 Fax: (+63) 555 0100
             </p>
           </div>
@@ -185,14 +191,26 @@ title: "Dazzle"
           <div class="flex flex-col">
             <h1 class="text-white font-bold text-md">Site Links</h1>
             <div
-              class="w-20 border-[0.5px] border-gray-700 my-5 m-0 lg:my-5"
+              class="w-20 border-[0.5px] border-gray-700 space-y-10 my-5 m-0 lg:my-5"
             ></div>
-            <a class="text-gray-500"> Home </a>
-            <a class="text-gray-500"> About Us </a>
-            <a class="text-gray-500"> Blog </a>
-            <a class="text-gray-500"> FAQ </a>
-            <a class="text-gray-500"> Terms </a>
-            <a class="text-gray-500"> Privacy Policy </a>
+            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
+              Home
+            </a>
+            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
+              About Us
+            </a>
+            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
+              Blog
+            </a>
+            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
+              FAQ
+            </a>
+            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
+              Terms
+            </a>
+            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
+              Privacy Policy
+            </a>
           </div>
         </div>
         <div>
@@ -200,12 +218,12 @@ title: "Dazzle"
           <div
             class="w-20 border-[0.5px] border-gray-700 my-5 m-0 lg:my-5"
           ></div>
-          <p class="text-gray-500 pb-10">
+          <p class="text-[#ffffff40] leading-normal pb-10 text-sm">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <div class="flex justify-center lg:justify-start">
-            <div class="px-4 py-2 rounded-s-md">
+          <div class="flex justify-center items-center lg:justify-start">
+            <div class="px-4 py-2 rounded-s-md bg-[#0f0f0f]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -224,7 +242,7 @@ title: "Dazzle"
             <input
               type="email"
               placeholder="Email Address"
-              class="bg-[#252525]"
+              class="bg-[#0f0f0f] py-[0.3rem]"
             />
             <a
               href="https://demos.onepagelove.com/html/dazzle/?EMAIL=&subscribe=Send#"
