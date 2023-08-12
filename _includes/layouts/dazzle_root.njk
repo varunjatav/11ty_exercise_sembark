@@ -1,289 +1,528 @@
 ---
-title: "Dazzle"
+layout: layouts/dazzle_root.njk
+
+about_data:
+  - d: "M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z"
+    head: "Fully Resposive"
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+
+  - d: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+    head: "Retina Ready"
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+
+  - d: "M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+    head: "Stylish Design"
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+
+  - d: "M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+    head: "Clean Code"
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+
+  - d: "M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+    head: "Easy To Customize"
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+
+  - d: "M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
+    head: "Free of Charge"
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="{{ '/main.css' | url }}" />
-    <link
-      rel="icon"
-      href="https://th.bing.com/th/id/R.f4448a428afda09c17d60bb4c60821d7?rik=QTCqsEypgf7E%2bw&riu=http%3a%2f%2fwww.structel.com%2fwp-content%2fuploads%2f2020%2f05%2fD150.png&ehk=umwXafQbTPTrVpWTqQ3RFHVBxWEFzKBNmNMOMOndQHk%3d&risl=&pid=ImgRaw&r=0"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header
-      class="fixed w-full left-0 right-0 max-w-6xl mx-auto py-4 px-8 bg-black text-white z-10"
-    >
-      <div class="flex items-center justify-between">
-        <div class="cursor-pointer">
-          <h1 class="text-3xl font-semibold">Dazzle.</h1>
-        </div>
-        <div
-          class="hidden md:flex justify-between gap-5 items-center cursor-pointer"
+<section
+  class="bg-[url('https://wallpaperaccess.com/full/3813848.jpg')] h-[1000px] w-[100%] bg-cover bg-no-repeat change_to_white lg:h-auto"
+  id="heroimg"
+>
+  <div class="max-w-6xl pt-10 md:pt-20 px-10 mx-auto grid grid-cols-1 text-center lg:grid-cols-2 lg:text-left text-white">
+    <div class="pt-32 md:pt-48 pb-40 space-y-4">
+      <h3 class="text-lg w-full m-auto  lg:w-full font-semibold text-[#ffffffcc] ">WELCOME TO DAZZLE</h2>
+      <h1 class="lg:leading-snug text-4xl  m-auto  lg:w-full lg:text-5xl font-bold">
+        Creative Landing Page to Showcase Your Amazing App.
+      </h1>
+      <div class="pt-10 sm:pt-16 pl-2 flex flex-col sm:flex-row justify-center lg:justify-start gap-5 items-center hidden-effect">
+        <a
+          class="text-white border-[3px] border-white font-bold px-6 py-2 rounded-sm flex items-center justify-center gap-4 w-[200px] cursor-pointer "
+          href="#download"
         >
-          <ul
-            class="flex items-center gap-5 text-[14px] font-bold text-[#ffffff73]"
-          >
-            <li class="hover:text-white">
-              <a href="#heroimg" class="active" id="home_btn"> Home </a>
-            </li>
-            <li class="hover:text-white ">
-              <a href="#about" id="about_btn"> About </a>
-            </li>
-            <li class="hover:text-white ">
-              <a href="#pricing" id="pricing_btn"> Pricing </a>
-            </li>
-            <li class="hover:text-white ">
-              <a href="#testimonial" id="testimonial_btn"> Testimonials </a>
-            </li>
-            <li class="hover:text-white ">
-              <a href="#download" id="download_btn"> Download </a>
-            </li>
-          </ul>
-          <a
-            class="bg-green-600 rounded-md px-5 py-2 text-white font-bold text-[14px]"
-            href="#"
-            >Sign Up</a
-          >
-        </div>
-        <div class="md:hidden cursor-pointer" id="hamburger">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-10 h-10"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-4 h-4"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-        </div>
-        <div class="hidden md:hidden cursor-pointer" id="cancle">
+
+          Downlaod App</a
+        >
+        <a
+          class="text-white border-[3px] border-white font-bold px-6 py-2 rounded-sm flex items-center justify-center gap-4 w-[200px] cursor-pointer"
+          href="https://www.youtube.com"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-10 h-10"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-4 h-4"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
+              d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
             />
           </svg>
-        </div>
+
+          Watch Video</a
+        >
       </div>
-      <div
-        class="flex flex-col justify-between gap-8 items-start pb-5 cursor-pointer md:hidden mt-14 transition-opacity duration-[1500ms]"
-        id="hambar"
-      >
-        <ul
-          class="flex flex-col items-start text-left border-t w-full border-gray-700 gap-8 text-[14px] font-bold text-gray-600"
+    </div>
+    <div class="home-image-right absolute pt-0 md:right-14 lg:pt-[100px] hidden-effect overflow-hidden h-96 md:overflow-auto lg:h-auto">
+     <img
+        src="https://demos.onepagelove.com/html/dazzle/images/iphone-app-470.png"
+        class="h-[768px]"
+        alt="moblie.png"
+      />
+    </div>
+   
+  </div>
+</section>
+<ul class="hidden sm:absolute right-10 top-[50%] sm:flex flex-col gap-3 cursor-pointer">
+  <div class="border border-gray-500 h-[40px] absolute left-[44%] ml-[3px] top-[-50px]"> </div>
+  <li>
+    <a href="#">
+      <img
+        src="https://th.bing.com/th/id/R.7c6676a2408cb8f2bf2710bfa6c6f436?rik=zTPclcp%2bFgZlqA&riu=http%3a%2f%2fwww.bionicsscientific.com%2fimages%2ffacebook.png&ehk=PfZPb1MpV%2b%2b9vH7dQKM3bQeSg7yLyzWPIndGuY%2bEx4k%3d&risl=&pid=ImgRaw&r=0"
+        width="30px"
+        alt="facebook.png"
+      />
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <img
+        src="https://fodar.ca/wp-content/uploads/2019/08/circle-twitter-p-800.png"
+        width="30px"
+        alt="twitter.png"
+      />
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <img
+        src="https://th.bing.com/th/id/R.ce696ac7ed0a96ef661e9b3d46efb51d?rik=tsBkTWivWYuFtA&riu=http%3a%2f%2fmeetthebeasts.com%2fimages%2finstagram-logo.png&ehk=aCkTxr0vpSVh2bK%2fskygbq01%2fhIx3KWzbNzjAVrSa9c%3d&risl=&pid=ImgRaw&r=0"
+        width="30px"
+        alt="instagram.png"
+      />
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <img
+        src="https://th.bing.com/th/id/R.3cfbc995df96e1ace93e0d23e5884b3e?rik=7N4nANscprreig&riu=http%3a%2f%2fclipart-library.com%2fimages%2fdc4LABqni.png&ehk=wMo4WyijaHWTJt1nMQKvD06j9%2fjkDwXAO%2btufnjfRwU%3d&risl=&pid=ImgRaw&r=0"
+        width="30px"
+        alt="youtube.png"
+      />
+    </a>
+  </li>
+</ul>
+<section class="max-w-6xl mx-auto pt-48 hidden-effect change_to_white" id="about">
+  <div class="flex flex-col text-center justify-center gap-20 items-center lg:flex-row lg:items-start lg:text-left border-b border-gray-300 pb-20">
+    <div class="flex-1 w-full lg:w-[30%]">
+      <h1 class="text-4xl font-bold pb-8">About Our App</h1>
+       <div class="w-20 border m-auto border-[#39b54a] lg:m-0"></div>
+    </div>
+    <div class="flex-2 w-full lg:w-[70%]">
+      <h2 class="text-lg leading-loose w-[90%] m-auto text-gray-500 font-medium lg:text-xl lg:w-full lg:leading-loose">
+        Excepteur enim magna veniam labore veniam sint. Ex aliqua esse proident
+        ullamco voluptate. Nisi nisi nisi aliqua eiusmod dolor dolor proident
+        deserunt occaecat elit Lorem reprehenderit. Id culpa veniam ex aliqua
+        magna elit pariatur do nulla. Excepteur enim magna veniam labore veniam
+        sint.
+      </h1>
+     
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-10  m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-0 py-20 gap-4 hidden-effect">
+  {% for data in about_data %}
+  <div class="space-y-4 pb-10 flex flex-col items-center text-center md:items-start md:text-left">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="#39b54a"
+      class="w-12 h-12"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="{{data.d}}" />
+    </svg>
+    <h1 class="text-xl font-bold md:text-left">{{data.head}}</h1>
+    <p class="text-md leading-8 text-gray-500">{{data.para}}</p>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="max-w-5xl mx-auto hidden-effect">
+  <h1 class="text-center text-4xl font-bold">How The App Works?</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 py-24 gap-5">
+    <div class="flex items-center justify-between gap-5">
+      <div class="relative min-h-[240px] pt-10 pr-[10px] pb-[1.5rem] pl-[40px]">
+        <div
+          class="block bg-[#39b54a] p-5 rounded-full w-16 h-16 text-center text-white text-xl font-bold"
         >
-          <li class="hover:text-white border-b w-full border-gray-700 py-5">
-            <a class="scroll-smooth remover" href="#heroimg"> Home </a>
+          1
+        </div>
+        <div class="border border-gray-200 h-[180px] absolute left-[60%] ml-[3px] top-[45%]"> </div>
+      </div>
+
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
+        <h1 class="text-xl font-bold">Sign-Up</h1>
+        <p class="text-gray-500 leading-8">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-5">
+      <div class="relative min-h-[240px] pt-10 pr-[20px] pb-[1.5rem] pl-[40px]">
+        <div
+          class="block bg-[#39b54a] p-5 rounded-full w-16 h-16 text-center text-white text-xl font-bold"
+        >
+          2
+        </div>
+          <div class="border border-gray-200 h-[180px] absolute left-[55%] ml-[3px] top-[45%]"> </div>
+      </div>
+
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
+        <h1 class="text-xl font-bold">Upload</h1>
+        <p  class="text-gray-500 leading-8">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-5">
+      <div class="relative min-h-[240px] pt-10 pr-[20px] pb-[1.5rem] pl-[40px]">
+        <div
+          class="block bg-[#39b54a] p-5 rounded-full w-16 h-16 text-center text-white text-xl font-bold"
+        >
+          3
+        </div>
+
+        <div class="border border-gray-200 h-[180px] absolute left-[55%] ml-[3px] top-[45%]"> </div>
+      </div>
+
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
+        <h1 class="text-xl font-bold">Create</h1>
+        <p class="text-gray-500 leading-8">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-5">
+      <div class="relative min-h-[240px] pt-10 pr-[20px] pb-[1.5rem] pl-[40px]">
+        <div
+          class="block bg-[#39b54a] p-5 rounded-full w-16 h-16 text-center text-white text-xl font-bold"
+        >
+          4
+        </div>
+
+          <div class="border border-gray-200 h-[180px] absolute left-[55%] ml-[3px] top-[45%]"> </div>
+      </div>
+
+      <div class="space-y-5 pt-16 md:pt-[6rem]">
+        <h1 class="text-xl font-bold">Publish</h1>
+        <p class="text-gray-500 leading-8">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto hidden-effect">
+  <img
+    src="https://demos.onepagelove.com/html/dazzle/images/app-screens-2800.png"
+    alt="App Screenshot"
+  />
+</section>
+<section class="bg-[#ebebeb] py-32 hidden-effect change_to_white" id="pricing">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 text-center lg:flex  gap-10 lg:text-left">
+    <div class="flex-1 w-full m-auto md:m-0 lg:w-[40%] space-y-5">
+      <h1 class="text-4xl font-bold pb-5">Our Pricing Options</h1>
+      <div class="w-20 border m-auto border-[#39b54a] lg:m-0"></div>
+      <p class="leading-8 m-auto text-gray-600 pt-5 w-[90%] ">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Sed ut perspiciatis unde omnis iste natus error sit
+        voluptatem accusantium doloremque laudantium.
+      </p>
+    </div>
+    <div class="flex-2 w-full lg:w-[60%] grid grid-cols-1 px-10 md:grid-cols-2 md:px-5 gap-5">
+    <div
+      class="bg-white  flex flex-col mobile:flex-row md:flex-col items-center justify-around md:justify-center rounded-md text-center py-10 w-full "
+    >
+      <div class="pb-10">
+        <h1 class="text-2xl font-bold pb-10">Lite Plan</h1>
+        <h1
+          class="font-[6.8rem]"
+          style="
+            font-family: 'montserrat-medium', sans-serif;
+            font-size: 6.8rem;
+            color: #151515;
+            line-height: 1;
+            margin-bottom: 0;
+          "
+        >
+          <sup
+            style="
+              font-family: 'montserrat-regular', sans-serif;
+              font-size: 2rem;
+              top: -3.6rem;
+            "
+            >$</sup
+          >
+          25
+        </h1>
+        <p class="text-xl text-gray-600 font-semibold">Per Month</p>
+      </div>
+      <div>
+        <ul class="border-t border-gray-300 py-3 w-[200px]">
+          <li class="border-b border-gray-300 pb-3 text-gray-400 text-lg">
+            <span class="font-bold text-[#39b54a]">3GB</span>
+            Storage
           </li>
-          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
-            <a class="smoothscroll remover" href="#about"> About </a>
+          <li class="border-b border-gray-300 py-3 text-gray-400 text-lg">
+            <span class="font-bold text-[#39b54a]">10GB</span>
+            Bandwidth
           </li>
-          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
-            <a class="remover" href="#pricing"> Pricing </a>
+          <li class="border-b border-gray-300 py-3 text-gray-400 text-lg">
+            <span class="font-bold text-[#39b54a]">5</span>
+            Databases
           </li>
-          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
-            <a href="#testimonial"> Testimonials </a>
-          </li>
-          <li class="hover:text-white border-b w-full border-gray-700 pb-5">
-            <a class="remover" href="#download"> Download </a>
+          <li class="border-b border-gray-300 py-3 text-gray-400 text-lg">
+            <span class="font-bold text-[#39b54a]">30</span>
+            Mail Accounts
           </li>
         </ul>
+        <div class="mt-10">
         <a
-          class="bg-green-600 rounded-md px-5 py-2 text-white font-bold text-[14px] my-5 remover mb-5"
-          href="#"
-          >Sign Up</a
+        class="bg-[#39b54a] py-5 px-8 rounded-md text-white text-sm font-bold mt-5 cursor-pointer"
+        href="https://demos.onepagelove.com/html/dazzle/?ref=landingfolio"
+      >
+        Get Started</a
+      >
+      </div>
+      </div>
+
+      
+    </div>
+
+    <div
+     class="bg-[#39b54a] text-white flex flex-col mobile:flex-row md:flex-col  items-center justify-around md:justify-center rounded-md text-center py-10 w-full "
+    >
+      <div class="pb-10">
+        <h1 class="text-2xl font-bold pb-10">Pro Plan</h1>
+        <h1
+          class="font-[6.8rem]"
+          style="
+            font-family: 'montserrat-medium', sans-serif;
+            font-size: 6.8rem;
+            line-height: 1;
+            margin-bottom: 0;
+          "
         >
+          <sup
+            style="
+              font-family: 'montserrat-regular', sans-serif;
+              font-size: 2rem;
+              top: -3.6rem;
+            "
+            >$</sup
+          >
+          50
+        </h1>
+        <p class="text-xl text-gray-300 font-semibold">Per Month</p>
       </div>
-    </header>
-    {{ content | safe }}
-
-    <footer class="bg-[#171717] py-20 px-10 text-left">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="space-y-5 text-center md:text-left">
-          <h1 class="text-white font-bold text-2xl">Dazzle.</h1>
-          <p class="text-[#ffffff40] text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
-            lacinia eget consectetur sed, convallis at tellus
-          </p>
-          <ul class="flex items-center justify-center md:justify-start gap-4">
-            <li class="cursor-pointer">
-              <a href="#">
-                <img
-                  src="https://th.bing.com/th/id/R.7c6676a2408cb8f2bf2710bfa6c6f436?rik=zTPclcp%2bFgZlqA&riu=http%3a%2f%2fwww.bionicsscientific.com%2fimages%2ffacebook.png&ehk=PfZPb1MpV%2b%2b9vH7dQKM3bQeSg7yLyzWPIndGuY%2bEx4k%3d&risl=&pid=ImgRaw&r=0"
-                  width="20px"
-                  alt="facebook.png"
-                />
-              </a>
-            </li>
-            <li class="cursor-pointer">
-              <a href="#">
-                <img
-                  src="https://africa.multicitychallenge.org/images/twitter-logo-white.png"
-                  width="30px"
-                  alt="twitter.png"
-                />
-              </a>
-            </li>
-            <li class="cursor-pointer">
-              <a href="#">
-                <img
-                  src="https://th.bing.com/th/id/R.ce696ac7ed0a96ef661e9b3d46efb51d?rik=tsBkTWivWYuFtA&riu=http%3a%2f%2fmeetthebeasts.com%2fimages%2finstagram-logo.png&ehk=aCkTxr0vpSVh2bK%2fskygbq01%2fhIx3KWzbNzjAVrSa9c%3d&risl=&pid=ImgRaw&r=0"
-                  width="20px"
-                  alt="instagram.png"
-                />
-              </a>
-            </li>
-            <li class="cursor-pointer">
-              <a href="#">
-                <img
-                  src="https://th.bing.com/th/id/R.3cfbc995df96e1ace93e0d23e5884b3e?rik=7N4nANscprreig&riu=http%3a%2f%2fclipart-library.com%2fimages%2fdc4LABqni.png&ehk=wMo4WyijaHWTJt1nMQKvD06j9%2fjkDwXAO%2btufnjfRwU%3d&risl=&pid=ImgRaw&r=0"
-                  width="20px"
-                  alt="youtube.png"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="grid grid-cols-2 gap-20">
-          <div>
-            <h1 class="text-white font-bold text-md">Contact</h1>
-            <div
-              class="w-20 border-[0.5px] border-gray-700 my-5 m-0 lg:my-5"
-            ></div>
-            <p class="text-[#ffffff40] text-sm pb-10">
-              1600 Amphitheatre Parkway Mountain View, CA 94043 US
-            </p>
-            <p class="text-[#ffffff40] text-sm">
-              someone@dazzlesite.com Phone: (+63) 555 1212 Fax: (+63) 555 0100
-            </p>
-          </div>
-
-          <div class="flex flex-col">
-            <h1 class="text-white font-bold text-md">Site Links</h1>
-            <div
-              class="w-20 border-[0.5px] border-gray-700 space-y-10 my-5 m-0 lg:my-5"
-            ></div>
-            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
-              Home
-            </a>
-            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
-              About Us
-            </a>
-            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
-              Blog
-            </a>
-            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
-              FAQ
-            </a>
-            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
-              Terms
-            </a>
-            <a class="text-[#ffffff40] text-sm hover:text-white cursor-pointer">
-              Privacy Policy
-            </a>
-          </div>
-        </div>
-        <div>
-          <h1 class="text-white font-bold text-md">Our Newsletter</h1>
-          <div
-            class="w-20 border-[0.5px] border-gray-700 my-5 m-0 lg:my-5"
-          ></div>
-          <p class="text-[#ffffff40] leading-normal pb-10 text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div class="flex justify-center items-center lg:justify-start">
-            <div class="px-4 py-2 rounded-s-md bg-[#0f0f0f]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="white"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                />
-              </svg>
-            </div>
-            <input
-              type="email"
-              placeholder="Email Address"
-              class="bg-[#0f0f0f] py-[0.3rem]"
-            />
-            <a
-              href="https://demos.onepagelove.com/html/dazzle/?EMAIL=&subscribe=Send#"
-            >
-              <button
-                type="submit"
-                class="text-sm font-bold bg-[#39b54a] text-white px-4 py-2 rounded-e-md"
-              >
-                send
-              </button>
-            </a>
-          </div>
-        </div>
+      <div>
+        <ul class="border-t border-gray-300 py-3 w-[200px]">
+          <li class="border-b border-gray-300 pb-3 text-gray-300 text-lg">
+            <span class="font-bold text-white">5GB</span>
+            Storage
+          </li>
+          <li class="border-b border-gray-300 py-3 text-gray-300 text-lg">
+            <span class="font-bold text-white">20GB</span>
+            Bandwidth
+          </li>
+          <li class="border-b border-gray-300 py-3 text-gray-300 text-lg">
+            <span class="font-bold text-white">15</span>
+            Databases
+          </li>
+          <li class="border-b border-gray-300 py-3 text-gray-300 text-lg">
+            <span class="font-bold text-white">70</span>
+            Mail Accounts
+          </li>
+        </ul>
+        <div class="mt-10">
+        <a
+        class="bg-white py-5 px-8 rounded-md text-black text-sm font-bold mt-5 cursor-pointer"
+        href="https://demos.onepagelove.com/html/dazzle/?ref=landingfolio"
+      >
+        Get Started</a
+      >
       </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
-    <script>
-      var hamburger = document.getElementById("hamburger")
-      var cancle = document.getElementById("cancle")
-      var hambar = document.getElementById("hambar")
-      hambar.classList.add("hidden")
-      hamburger.addEventListener("click", function () {
-        hambar.classList.toggle("hidden")
-        cancle.classList.remove("hidden")
-        hamburger.classList.add("hidden")
-      })
+      </div>
 
-      var remover = document.getElementsByClassName("remover")
-      for (var i = 0; i < remover.length; i++) {
-        remover[i].addEventListener("click", function () {
-          hambar.classList.toggle("hidden")
-          cancle.classList.add("hidden")
-          hamburger.classList.remove("hidden")
+     
+    </div>
+    </div>
+  </div>
+</section>
+<section class="py-40 hidden-effect change_to_white" id="testimonial">
+  <h1 class="text-3xl lg:text-4xl font-bold text-center">What They Say About Our App.</h1>
+  <div class="w-20 border border-[#39b54a] m-auto my-10"></div>
+
+   <div id="my-keen-slider" class="keen-slider cursor-grabbing">
+
+
+      <div class="keen-slider__slide text-center flex flex-col justify-center">
+         <div class="w-[75%] m-auto flex flex-col items-center">
+      <p class="text-2xl lg:text-3xl font-medium leading-[2rem] lg:leading-[3.5rem] text-[#303030]" >
+       " This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+        auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+        elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
+        amet nibh vulputate cursus a sit amet mauris."
+      </p>
+       <img src="https://demos.onepagelove.com/html/dazzle/images/avatars/user-03.jpg" alt="person1" class="rounded-full h-20 w-20 mt-10"/>
+       <h1 class="font-bold pt-4">John Doe</h1>
+       <p class="text-gray-500 font-semibold">CEO, ABC Corp</p>
+    </div>
+      </div>
+
+
+      <div class="keen-slider__slide text-center flex flex-col justify-center">
+         <div class="w-[75%] m-auto flex flex-col items-center">
+      <p class="text-2xl lg:text-3xl font-medium leading-[2rem] lg:leading-[3.5rem] text-[#303030]">
+       " Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+         to do what you believe is great work. And the only way to do great work is to love what you do.
+         If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it."               
+      </p>
+       <img src="https://demos.onepagelove.com/html/dazzle/images/avatars/user-02.jpg" alt="person2" class="rounded-full h-20 w-20 mt-10"/>
+       <h1 class="font-bold pt-4">Steve Jobs</h1>
+       <p class="text-gray-500 font-semibold">CEO, Apple</p>
+    </div>
+      </div>
+      
+    </div>
+</section>
+<section class="bg-[#39b54a] text-center py-20 change_to_white" id="download">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-white text-4xl font-bold hidden-effect">Download Our App Today!</h1>
+    <div class="w-20 border border-[#2e7537] m-auto my-10"></div>
+    <p class="text-[1.3rem] font-light text-[#b2fabc] w-2/3 m-auto leading-[2.5rem] hidden-effect">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+  </div>
+ 
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-4 py-10 hidden-effect">
+     <a href="#">
+     <div class="bg-black rounded-lg flex justify-center items-center gap-4 py-2 px-4 cursor-pointer w-[250px]">
+     <img src="https://th.bing.com/th/id/R.850301eea5a130c4042d1456efcf2aa4?rik=E3g7Obd3t9nWuw&riu=http%3a%2f%2fwww.newdesignfile.com%2fpostpic%2f2011%2f08%2fwhite-transparent-apple-logo_162767.png&ehk=g89kkdcRJxzY%2bPqoZ4l7mPhScPQBFaBJyMpOJssmjxk%3d&risl=&pid=ImgRaw&r=0" class="w-10 h-10" />
+     <div class="text-white text-left">
+      <p class="font-semibold text-sm">Download on the</p>
+      <h1 class="font-bold text-2xl">App Store</h1>
+     </div>
+     </div>
+     </a>
+
+     <a href="#">
+      <div class="bg-black rounded-lg flex justify-center items-center gap-4 py-2 px-4 cursor-pointer w-[250px]">
+     <img src="https://www.freepnglogos.com/uploads/google-play-png-logo/arrow-andorid-google-google-play-logo-market-media-play-png-logo-11.png" class="w-10 h-10" />
+     <div class="text-white text-left">
+      <p class="font-semibold text-sm">GET IT ON</p>
+      <h1 class="font-bold text-2xl">Google Play </h1>
+     </div>
+     </div>
+     </a>
+
+  </div>
+</section>
+
+<div class="fixed bottom-[30px] right-[30px] bg-black p-5 rounded-md scroll-smooth hidden-effect">
+  <a href="#heroimg">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
+  </a>
+</svg>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+  <script>
+    var slider = new KeenSlider("#my-keen-slider")
+ 
+    
+var observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show-effect")
+        
+      }else {
+      if (!entry.target.classList.contains("show-effect")) {
+        entry.target.classList.remove("show-effect");
+      }
+      }
+    });
+  })
+
+  var hiddenElement = document.querySelectorAll(".hidden-effect");
+  hiddenElement.forEach((el) => observer.observe(el));
+
+ 
+
+  var change_to_whites = document.querySelectorAll(".change_to_white");
+  var navLinks = document.querySelectorAll("header ul li a");
+  
+  window.onscroll  = () => {
+    change_to_whites.forEach(sec => {
+      let top  = window.scrollY;
+      let offset = sec.offsetTop;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+      console.log(id)
+
+      if(top >= offset && top < offset + height) {
+        navLinks.forEach(links => {
+          links.classList.remove("active");
+         document.querySelector('header ul li a[href*="' + id + '"]').classList.add('active');
         })
       }
+    })
+  }
 
-      cancle.addEventListener("click", () => {
-        hambar.classList.toggle("hidden")
-        cancle.classList.add("hidden")
-        hamburger.classList.remove("hidden")
-      })
-    </script>
-  </body>
-</html>
+
+
+  </script>
+
+
+
+
