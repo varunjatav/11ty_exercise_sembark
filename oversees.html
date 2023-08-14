@@ -38,20 +38,43 @@ holiday_data:
 
 oversees_data:
   - img: "https://media.beliefnet.com/~/media/photos-with-attribution/faith/001/buddhistgoldenstatueskyjpg.jpg?as=1"
-	name: "Majestic Ladakh | 8 Nights 9 Days"
-	sub_name: "Majestic Ladakh | 8 Nights 9 Days"
-	price: "Starting: ₹33000"
-	sharing: "(Per person on twin sharing)"
-	btn: "View More Details"
- 
+    name: "Majestic Ladakh | 8 Nights 9 Days"
+    sub_name: "Majestic Ladakh | 8 Nights 9 Days"
+    price: "Starting: ₹33000"
+    sharing: "(Per person on twin sharing)"
+    btn: "View More Details"
+    href: "https://www.overseasholidays.in/product/majestic-ladakh-8n-9d-man-man-shortcut/"
+  - img: "https://th.bing.com/th/id/R.f583d66641ca8cea31d06c1967137c03?rik=jTK6wgh%2fAN7hIg&riu=http%3a%2f%2fskywingholidays.com%2fwp-content%2fuploads%2f2020%2f10%2flarge%2fkashmir_01.jpg&ehk=GbrK7tnEefe79921GD%2f8I38aim41tdMPE%2ffh%2fWYF%2frs%3d&risl=&pid=ImgRaw&r=0"
+    name: "Paradise Kashmir | 4 Nights 5 Days"
+    sub_name: "Srinagar 3 Nights | Houseboat 1 Night"
+    price: "Starting: ₹13999"
+    sharing: "(Per person on twin sharing)"
+    btn: "View More Details"
+    href: "https://overseasholidays.in/product/paradise-kashmir-4n-5d/"
+  - img: "https://holidayshunt.com/wp-content/uploads/2021/09/kashmir-honeymoon-package.jpg"
+    name: "Honeymoon Special Tour | 5Nights 6 Days"
+    sub_name: "Srinagar 3 Nights | Pahalgam 1 Night | Houseboat 1 Night"
+    price: "Starting: ₹9999"
+    sharing: "(Per person on twin sharing)"
+    btn: "View More Details"
+    href: "https://overseasholidays.in/product/honeymoon-special-tour-5n-6d/"
 
-
+travelBlog_data:
+  - img: "https://www.adotrip.com/public/images/events/5daff7f3574a4-Ladakh%20Festival%20Travel.jpg"
+    name: "Leh Ladakh festivals You must enjoy"
+    href: "https://www.overseasholidays.in/places-at-kashmir/"
+  - img: "https://lp-cms-production.imgix.net/news/2018/04/ladakh.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=23&dpr=4"
+    name: "Ladakh – 7 Reasons Why Ladakh Should Be Next Holiday Destination!"
+    href: "https://www.overseasholidays.in/stay-in-kashmir/"
+  - img: "https://images.thrillophilia.com/image/upload/s--gDNMhqsD--/c_fill,f_auto,fl_strip_profile,h_800,q_auto,w_1300/v1/images/photos/000/123/864/original/1513416854_985_1510332898_3-leh-ladakh.jpg.jpg?1513416851"
+    name: "Photography for leh ladakh"
+    href: "https://www.overseasholidays.in/travel-through-kashmir/"
 ---
 
 <section>
-  <div id="my-keen-slider" class="keen-slider">
+  <div id="hero-image-slider" class="keen-slider h-[95vh]">
     <div
-      class="keen-slider__slide bg-[url('https://res.cloudinary.com/wowclub/image/upload/v1519052018/20160412092736_IMG_3238-01_ehfjc0.jpg')] bg-no-repeat bg-center bg-cover h-[500px]"
+      class="keen-slider__slide bg-[url('https://www.overseasholidays.in/wp-content/uploads/2021/06/new_slider_with-bottom-1.jpg')] bg-no-repeat bg-center bg-cover h-[95vh]"
     >
       <div class="m-auto text-center items-center pt-96 pb-20 h-[500px]">
         <h1 class="text-4xl text-white font-bold font-autour">
@@ -64,7 +87,7 @@ oversees_data:
       </div>
     </div>
     <div
-      class="keen-slider__slide bg-[url('https://earthnworld.com/wp-content/uploads/2020/05/ladakh.jpg')] bg-no-repeat bg-center bg-cover h-[500px]"
+      class="keen-slider__slide bg-[url('https://www.overseasholidays.in/wp-content/uploads/2021/06/snow-leopard-ladakh-leh-india-himilayas7-1.png')] bg-no-repeat bg-center bg-cover h-[95vh]"
     >
       <div class="m-auto text-center items-center pt-96 pb-20 h-[500px]">
         <h1 class="text-4xl text-white font-bold font-autour">
@@ -77,7 +100,7 @@ oversees_data:
       </div>
     </div>
     <div
-      class="keen-slider__slide bg-[url('https://i.pinimg.com/originals/95/a5/4a/95a54a84d166858cd2abe10bfc12a350.jpg')] bg-no-repeat bg-center bg-cover h-[500px]"
+      class="keen-slider__slide bg-[url('https://www.overseasholidays.in/wp-content/uploads/2021/06/jammu-travel-package-banner-1.png')] bg-no-repeat bg-center bg-cover h-[95vh]"
     >
       <div class="m-auto text-center items-center pt-96 pb-20 h-[500px]">
         <h1 class="text-4xl text-white font-bold font-autour">
@@ -99,6 +122,7 @@ oversees_data:
       {% for data in package_data %}
       <div class="text-center">
         <img
+          loading="lazy"
           src="{{data.img}}"
           alt="{{data.price}}"
           class="hover:filter hover:brightness-75 hover:scale-105 transition-all duration-300 cursor-pointer"
@@ -149,26 +173,26 @@ oversees_data:
 </section>
 
 <section>
-  <div class="text-center py-12 max-w-6xl mx-auto">
-    <h1 class="text-4xl font-light text-[#3a3a3a]">Best Selling Overseas Holidays Packages</h1>
+  <div class="text-center py-12 max-w-full mx-auto">
+    <h1 class="text-4xl font-light text-[#3a3a3a]">
+      Best Selling Overseas Holidays Packages
+    </h1>
     <div class="w-48 m-auto my-4 border border-[#0165FB]"></div>
     <div class="grid grid-cols-3 text-center gap-5">
-      {% for data in holiday_data %}
+      {% for data in oversees_data %}
       <div class="border p-2">
-        <div>
+        <div class="h-[50%]">
           <img
-            src="https://media.beliefnet.com/~/media/photos-with-attribution/faith/001/buddhistgoldenstatueskyjpg.jpg?as=1"
-            alt=""
+            src="{{data.img}}"
+            loading="lazy"
+            alt="{{data.name}}"
+            class="h-full w-full"
           />
         </div>
         <div class="py-2">
-          <a href="" class="text-[#293b72] font-semibold"
-            >Majestic Ladakh | 8 Nights 9 Days</a
-          >
+          <a href="" class="text-[#293b72] font-semibold">{{data.name}}</a>
           <br />
-          <a href="" class="text-xs font-semibold"
-            >MAN - MAN - Shortcut | Munnar 2 nights</a
-          >
+          <a href="" class="text-xs font-semibold">{{data.sub_name}}</a>
           <ul
             class="flex flex-wrap justify-center gap-3 text-sm text-[#3a3a3a]"
           >
@@ -273,11 +297,14 @@ oversees_data:
         </div>
         <div>
           <h1 class="text-red-500 text-sm font-medium">
-            <span class="font-semibold text-lg">Starting: ₹33000</span>
-            (Per person on twin sharing)
+            <span class="font-semibold text-lg">{{data.price}}</span>
+            {{data.sharing}}
           </h1>
-          <a href="" class="bg-blue-600 py-1 text-white flex items-center text-center justify-center gap-2 w-2/3 m-auto my-2 hover:bg-black">
-            View More Details
+          <a
+            href="{{data.href}}"
+            class="bg-blue-600 py-1 text-white flex items-center text-center justify-center gap-2 w-2/3 m-auto my-2 hover:bg-gray-800"
+          >
+            {{data.btn}}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -299,5 +326,323 @@ oversees_data:
     </div>
   </div>
 </section>
+<section>
+  <div class="text-center py-12 max-w-6xl mx-auto h-96">
+    <h1 class="text-4xl font-light text-[#3a3a3a]">Travelers Reviews</h1>
+    <div class="w-48 m-auto my-4 border border-[#0165FB]"></div>
+  </div>
+</section>
+
+<section>
+  <div class="text-center py-12 max-w-6xl mx-auto">
+    <div class="text-4xl font-light text-[#3a3a3a]">
+      Trusted By 100+ Travel Brands in India
+    </div>
+    <div class="w-48 m-auto my-4 border border-[#0165FB]"></div>
+    <div id="brand-slider" class="keen-slider py-10">
+      <div class="keen-slider__slide">
+        <img
+          src="https://th.bing.com/th/id/R.42b008decdc70aed5acac408732754e2?rik=utJBMZt1acQq0Q&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f05%2fHoliday_Inn_logo_horizontal.png&ehk=4H2VBbbI4vYo0y45FSX5qH1LDQbTUv9HHGG24knLOeI%3d&risl=&pid=ImgRaw&r=0"
+          alt="holiday inn"
+          class="h-10 w-30"
+        />
+      </div>
+      <div class="keen-slider__slide">
+        <img
+          src="https://www.tajhotels.com/content/dam/thrp/homepage/logo/TAJ.png"
+          alt="tajj"
+          class="h-10 w-20"
+        />
+      </div>
+      <div class="keen-slider__slide">
+        <img
+          src="https://logos-world.net/wp-content/uploads/2021/03/Hyatt-Hotels-Logo-2013-present.png"
+          alt="hyatt"
+          class="h-12 w-20"
+        />
+      </div>
+      <div class="keen-slider__slide">
+        <img
+          src="https://logos-download.com/wp-content/uploads/2019/07/The_Leela_Palaces_Hotels_and_Resorts_Logo.png"
+          alt="the leela"
+          class="h-14 w-20"
+        />
+      </div>
+      <div class="keen-slider__slide">
+        <img
+          src="https://th.bing.com/th/id/R.553fd27500a2a1112462dad1c99d93c5?rik=KanUQICRBHD8KA&riu=http%3a%2f%2flogonoid.com%2fimages%2fair-asia-logo.png&ehk=Z54jZu4c%2b6vIJ3bDHLLm5X5SLuSa4CFGIBKZnRLCyJ8%3d&risl=&pid=ImgRaw&r=0"
+          alt="air asia"
+          class="h-14 w-20"
+        />
+      </div>
+      <div class="keen-slider__slide">
+        <img
+          src="https://www.yourtechstory.com/wp-content/uploads/2019/09/spicejet.png"
+          alt="spicejet"
+          class="h-30 w-20"
+        />
+      </div>
+      <div class="keen-slider__slide">
+        <img
+          src="https://th.bing.com/th/id/R.02e1d9b2de1f6b7bce9dbe977426f237?rik=gvfcFhc7%2fpD87A&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f05%2fMarriott_logo_logotype_emblem.png&ehk=wrwSgwR6bEu%2bSGql6nBeDuDAa0dQkUBIOwl%2b%2fYV6jrA%3d&risl=&pid=ImgRaw&r=0"
+          alt="marriott"
+          class="h-30 w-20"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="text-center max-w-6xl mx-auto py-12">
+    <div class="text-4xl font-light text-[#3a3a3a]">Travel Blog</div>
+    <div class="w-48 m-auto my-4 border border-[#0165FB]"></div>
+
+    <div class="grid grid-cols-3 text-center gap-5 py-3">
+      {% for data in travelBlog_data %}
+      <a href="{{data.href}}">
+        <div class="border rounded-b-md">
+          <div>
+            <img
+              src="{{data.img}}"
+              loading="lazy"
+              alt="{{data.name}}"
+              class="h-52 w-full"
+            />
+          </div>
+          <div class="py-4 px-2 cursor-pointer">
+            <h1 class="text-[#3a3a3a] hover:text-blue-500">{{data.name}}</h1>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <button
+      class="bg-blue-700 py-2 px-3 flex items-center gap-1 m-auto text-white rounded-md hover:bg-blue-300"
+      id="load_btn"
+    >
+      <img
+        src="https://patientportal.rajagirihospital.com/images/dribbble-spinner-800x600.gif"
+        alt="spinner"
+        class="hidden w-12"
+        id="spinner"
+      />
+      Load More
+    </button>
+  </div>
+</section>
+
+<section>
+  <div class="text-center max-w-6xl mx-auto">
+    <h1 class="text-[#3a3a3a] text-4xl">Approved By</h1>
+    <div class="w-48 m-auto my-4 border border-[#0165FB]"></div>
+    <div class="grid grid-cols-6 gap-5 rounded-xl shadow-lg p-5">
+      <img
+        src="https://www.overseasholidays.in/wp-content/uploads/2021/06/boat.jpg"
+        alt="J&K Tourism"
+      />
+      <img
+        src="https://www.overseasholidays.in/wp-content/uploads/2021/06/commerce.jpg"
+        alt="Kashmir chamber"
+      />
+      <img
+        src="https://www.overseasholidays.in/wp-content/uploads/2021/06/taai.jpg"
+        alt="Taai"
+      />
+      <img
+        src="https://www.overseasholidays.in/wp-content/uploads/2021/06/tourism.jpg"
+        alt="Tourism"
+      />
+      <img
+        src="https://www.overseasholidays.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-07-at-7.17.27-PM-150x150.jpeg"
+        alt="Iatte"
+      />
+      <img
+        src="https://www.overseasholidays.in/wp-content/uploads/2021/08/iata-logo-transp-150x127.png"
+        alt="Iata"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="fixed right-0 top-[50%] bottom-[50%]">
+  <a href="tel:+919103022049">
+    <div class="bg-red-900 p-3 rounded-lg w-12">
+      <img
+        src="https://www.dlf.pt/dfpng/maxpng/425-4258321_telephone-icon-png.png"
+        alt="phone.png"
+        loading="lazy"
+        class="w-8"
+      />
+    </div>
+  </a>
+  <a href="https://www.facebook.com/overseasholidaysindia">
+    <div class="bg-blue-900 p-3 rounded-lg w-12">
+      <img
+        src="https://webstockreview.net/images/white-facebook-icon-png-8.png"
+        alt="facebook.png"
+        loading="lazy"
+        class="w-8"
+      />
+    </div>
+  </a>
+  <a href="https://twitter.com/oshkashmir">
+    <div class="bg-blue-500 p-3 rounded-lg w-12">
+      <img
+        src="https://www.pinclipart.com/picdir/big/578-5789236_logo-twitter-png-blanc-white-twitter-logo-transparent.png"
+        alt="twitter.png"
+        loading="lazy"
+        class="w-8"
+      />
+    </div>
+  </a>
+  <a href="https://www.youtube.com/channel/UC1659E9rnK2ZjshStlM5ymQ">
+    <div class="bg-red-700 p-3 rounded-lg w-12">
+      <img
+        src="https://icon-library.com/images/youtube-icon-white-transparent/youtube-icon-white-transparent-16.jpg"
+        alt="youtube.png"
+        loading="lazy"
+        class="w-8"
+      />
+    </div>
+  </a>
+  <a
+    href="https://www.tripadvisor.in/Attraction_Review-g297623-d14903794-Reviews-Overseas_Holidays-Srinagar_Srinagar_District_Kashmir_Jammu_and_Kashmir.html"
+  >
+    <div class="bg-green-900 p-3 rounded-lg w-12">
+      <img
+        src="https://findicons.com/files/icons/2779/simple_icons/256/tripadvisor.png"
+        alt="tripadvisor-icon.png"
+        loading="lazy"
+        class="w-12"
+      />
+    </div>
+  </a>
+  <a href="https://www.instagram.com/overseas_holidays/">
+    <div class="bg-pink-500 p-3 rounded-lg w-12">
+      <img
+        src="https://tighestimepieces.com/wp-content/uploads/2016/11/Instagram-icon-WHITE.png"
+        alt="instagram-icon.png"
+        loading="lazy"
+        class="w-12"
+      />
+    </div>
+  </a>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+
+<script>
+  function navigation(slider) {
+    let wrapper, dots, arrowLeft, arrowRight;
+
+    function markup(remove) {
+      wrapperMarkup(remove);
+      dotMarkup(remove);
+      arrowMarkup(remove);
+    }
+
+    function removeElement(elment) {
+      elment.parentNode.removeChild(elment);
+    }
+    function createDiv(className) {
+      var div = document.createElement("div");
+      var classNames = className.split(" ");
+      classNames.forEach((name) => div.classList.add(name));
+      return div;
+    }
+
+    function arrowMarkup(remove) {
+      if (remove) {
+        removeElement(arrowLeft);
+        removeElement(arrowRight);
+        return;
+      }
+      arrowLeft = createDiv("arrow arrow--left");
+      arrowLeft.addEventListener("click", () => slider.prev());
+      arrowRight = createDiv("arrow arrow--right");
+      arrowRight.addEventListener("click", () => slider.next());
+
+      wrapper.appendChild(arrowLeft);
+      wrapper.appendChild(arrowRight);
+    }
+
+    function wrapperMarkup(remove) {
+      if (remove) {
+        var parent = wrapper.parentNode;
+        while (wrapper.firstChild)
+          parent.insertBefore(wrapper.firstChild, wrapper);
+        removeElement(wrapper);
+        return;
+      }
+      wrapper = createDiv("navigation-wrapper");
+      slider.container.parentNode.appendChild(wrapper);
+      wrapper.appendChild(slider.container);
+    }
+
+    function dotMarkup(remove) {
+      if (remove) {
+        removeElement(dots);
+        return;
+      }
+      dots = createDiv("dots");
+      slider.track.details.slides.forEach((_e, idx) => {
+        var dot = createDiv("dot");
+        dot.addEventListener("click", () => slider.moveToIdx(idx));
+        dots.appendChild(dot);
+      });
+      wrapper.appendChild(dots);
+    }
+
+    function updateClasses() {
+      var slide = slider.track.details.rel;
+      slide === 0
+        ? arrowLeft.classList.add("arrow--disabled")
+        : arrowLeft.classList.remove("arrow--disabled");
+      slide === slider.track.details.slides.length - 1
+        ? arrowRight.classList.add("arrow--disabled")
+        : arrowRight.classList.remove("arrow--disabled");
+      Array.from(dots.children).forEach(function (dot, idx) {
+        idx === slide
+          ? dot.classList.add("dot--active")
+          : dot.classList.remove("dot--active");
+      });
+    }
+
+    slider.on("created", () => {
+      markup();
+      updateClasses();
+    });
+    slider.on("optionsChanged", () => {
+      console.log(2);
+      markup(true);
+      markup();
+      updateClasses();
+    });
+    slider.on("slideChanged", () => {
+      updateClasses();
+    });
+    slider.on("destroyed", () => {
+      markup(true);
+    });
+  }
+
+  var slider = new KeenSlider("#brand-slider", {
+    breakpoints: {
+      "(min-width: 400px)": {
+        slides: { perView: 3, spacing: 5 },
+      },
+      "(min-width: 1000px)": {
+        slides: { perView: 6, spacing: 10 },
+      },
+    },
+    slides: { perView: 1 },
+  });
+
+  var slider = new KeenSlider("#hero-image-slider", {}, [navigation]);
+
+  var load_btn = document.getElementById("load_btn");
+  var spinner = document.getElementById("spinner");
+  load_btn.addEventListener("click", () => {
+    spinner.classList.remove("hidden");
+  });
+</script>
