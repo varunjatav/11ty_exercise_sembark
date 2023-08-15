@@ -32,14 +32,18 @@ title: "Oversees Holidays"
   </head>
   <body>
     <nav class="py-4 bg-transparent absolute z-50 w-full">
-      <div class="flex items-center justify-around">
+      <div
+        class="relative flex items-center justify-between px-4 lg:justify-around lg:px-0"
+      >
         <img
           src="https://www.overseasholidays.in/wp-content/uploads/2020/10/footer_new_log.png"
           alt="wp-content"
           loading="lazy"
         />
-        <div class="flex items-center gap-6 font-bold text-sm cursor-pointer">
-          <a>Home</a>
+        <div
+          class="hidden lg:flex items-center gap-6 font-bold text-sm cursor-pointer"
+        >
+          <a href="https://www.overseasholidays.in/">Home</a>
           <a
             class="flex items-center gap-2 p-4 hover:border-2 hover:border-blue-900"
             id="domestic"
@@ -60,7 +64,11 @@ title: "Oversees Holidays"
               />
             </svg>
           </a>
-          <a class="p-4 hover:border-2 hover:border-blue-900">Destinations</a>
+          <a
+            href="http://overseasholidays.in/destinations/"
+            class="p-4 hover:border-2 hover:border-blue-900"
+            >Destinations</a
+          >
         </div>
         <div
           class="absolute bg-white top-20 right-[50%] hidden"
@@ -70,30 +78,37 @@ title: "Oversees Holidays"
             <li
               class="border-b border-gray-400 text-[#303030] font-semibold px-2 py-2 hover:bg-blue-900 hover:text-white link"
             >
-              Kashmir Tour Package
+              <a href="https://www.overseasholidays.in/kashmir-tour-packages/"
+                >Kashmir Tour Package</a
+              >
             </li>
             <li
               class="border-b border-gray-400 text-[#303030] font-semibold px-2 py-2 hover:bg-blue-900 hover:text-white link"
             >
-              Ladakh Tour Package
+              <a href="https://overseasholidays.in/ladakh-tour-packages/"
+                >Ladakh Tour Package</a
+              >
             </li>
             <li
               class="border-b border-gray-400 text-[#303030] font-semibold px-2 py-2 hover:bg-blue-900 hover:text-white link"
             >
-              AmarAnth Yatra Tour Package
+              <a href="https://www.overseasholidays.in/amarnath-yatra/"
+                >AmarAnth Yatra Tour Package</a
+              >
             </li>
             <li
               class="px-2 py-2 text-[#303030] font-semibold hover:bg-blue-900 hover:text-white link"
             >
-              Mata Vaishno Devi Tour Package
+              <a href="https://www.overseasholidays.in/mata-vaishno-devi/"
+                >Mata Vaishno Devi Tour Package</a
+              >
             </li>
           </ul>
         </div>
-        <div class="text-sm flex items-center gap-5">
+        <div class="text-sm hidden lg:flex items-center gap-5">
           <a
-            href="https://www.overseasholidays.in/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjI4NzIiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
-            class="flex items-center gap-2 bg-[#00266E] text-white p-2 rounded-full cursor-pointer hovered-btn"
-           
+          
+            class="flex items-center gap-2 bg-[#00266E] text-white p-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-300 openModal"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +128,7 @@ title: "Oversees Holidays"
           </a>
           <a
             href="tel:+919103022049"
-            class="flex items-center gap-2 bg-[#FF6B00] text-[#00266E] p-2 rounded-full cursor-pointer hovered-btn"
+            class="flex items-center gap-2 bg-[#FF6B00] text-[#00266E] p-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -133,6 +148,97 @@ title: "Oversees Holidays"
             Call us! +91-9103022049
           </a>
         </div>
+        <div
+          class="black p-2 ml-5 bg-orange-600 rounded-md lg:hidden"
+          id="hamburger"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+            id="ham"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="w-6 h-6 hidden"
+            id="cancle"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div
+          class="hidden absolute text-left top-20 left-0 right-0 flex flex-col items-left gap-6 font-semibold text-lg cursor-pointer py-5 bg-white lg:hidden"
+          id="hambar"
+        >
+          <a href="">Home</a>
+          <a class="flex items-center gap-2" id="domestic_ham">
+            Domestic Package
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </a>
+          <div class="hidden" id="destination_container_ham">
+            <ul class="cursor-pointer">
+              <li
+                class="border-b border-gray-400 text-[#303030] font-semibold px-2 py-2 hover:bg-blue-900 hover:text-white link"
+              >
+                <a href="https://www.overseasholidays.in/kashmir-tour-packages/"
+                  >Kashmir Tour Package</a
+                >
+              </li>
+              <li
+                class="border-b border-gray-400 text-[#303030] font-semibold px-2 py-2 hover:bg-blue-900 hover:text-white link"
+              >
+                <a href="https://overseasholidays.in/ladakh-tour-packages/"
+                  >Ladakh Tour Package</a
+                >
+              </li>
+              <li
+                class="border-b border-gray-400 text-[#303030] font-semibold px-2 py-2 hover:bg-blue-900 hover:text-white link"
+              >
+                <a href="https://www.overseasholidays.in/amarnath-yatra/"
+                  >AmarAnth Yatra Tour Package</a
+                >
+              </li>
+              <li
+                class="px-2 py-2 text-[#303030] font-semibold hover:bg-blue-900 hover:text-white link"
+              >
+                <a href="https://www.overseasholidays.in/mata-vaishno-devi/"
+                  >Mata Vaishno Devi Tour Package</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="">Destinations</a>
+        </div>
       </div>
     </nav>
 
@@ -149,12 +255,14 @@ title: "Oversees Holidays"
           Talk to our experts and get detailed plan for your next trip.
         </p>
         <a
-          href=""
-          class="py-2 px-8 border-2 border-white hover:border-gray-50 hover:text-gray-50"
+         
+          class="py-2 px-8 border-2 border-white hover:border-gray-50 hover:text-gray-50 cursor-pointer openModal"
           >Talk To an Expert</a
         >
       </div>
-      <div class="grid grid-cols-4 gap-4 max-w-6xl mx-auto py-10 border-b border-gray-500">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto py-10 border-b border-gray-500 px-10 lg:px-0"
+      >
         <div class="text-left space-y-4">
           <h1 class="font-semibold">About</h1>
           <ul class="text-sm space-y-2">
@@ -180,7 +288,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Home
+              <a href="https://overseasholidays.in/">Home</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -204,7 +312,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              About Us
+              <a href="https://overseasholidays.in/about-us/">About Us</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -228,7 +336,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Contact Us
+              <a href="https://overseasholidays.in/contact-us/">Contact Us</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -252,7 +360,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Gallery
+              <a href="https://overseasholidays.in/gallery/">Gallery</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -276,7 +384,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Packages
+              <a href="https://overseasholidays.in/shop/">Packages</a>
             </li>
           </ul>
         </div>
@@ -305,7 +413,9 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Ladakh
+              <a href="https://overseasholidays.in/ladakh-tour-packages/"
+                >Ladakh</a
+              >
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -329,7 +439,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Kashmir
+              <a href="https://overseasholidays.in/landing-page/">Kashmir</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -353,7 +463,7 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Amarnath
+              <a href="https://overseasholidays.in/amarnath-yatra/">Amarnath</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -377,7 +487,9 @@ title: "Oversees Holidays"
                   d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
                 />
               </svg>
-              Mata Vaishno Devi
+              <a href="https://overseasholidays.in/mata-vaishno-devi/"
+                >Mata Vaishno Devi</a
+              >
             </li>
           </ul>
         </div>
@@ -393,7 +505,7 @@ title: "Oversees Holidays"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-8 h-8"
+                class="w-7 h-7"
               >
                 <path
                   stroke-linecap="round"
@@ -428,7 +540,9 @@ title: "Oversees Holidays"
                 />
               </svg>
 
-              overseesholidaykashmir@gmail.com
+              <a href="mailto:overseasholidayskashmir@gmail.com">
+                overseesholidaykashmir@gmail.com</a
+              >
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -448,7 +562,7 @@ title: "Oversees Holidays"
                 />
               </svg>
 
-              +91 9103022049
+              <a href="tel:+91 9103022049">+91 9103022049</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -468,7 +582,7 @@ title: "Oversees Holidays"
                 />
               </svg>
 
-              +91 9622807480
+              <a href="tel:+91 9622807480">+91 9622807480</a>
             </li>
             <li
               class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
@@ -488,18 +602,18 @@ title: "Oversees Holidays"
                 />
               </svg>
 
-              +91 9107192231
+              <a href="tel:+91 9107192231">+91 9107192231</a>
             </li>
             <li
-              class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
+              class="group flex items-center gap-2 hover:text-orange-500 cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="white"
+                fill="white "
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-4 h-4"
+                class="w-4 h-4 group-hover:fill-orange-500"
               >
                 <path
                   stroke-linecap="round"
@@ -508,10 +622,10 @@ title: "Oversees Holidays"
                 />
               </svg>
 
-              +91 194 2472265
+              <a href="tel:+91 194 2472265">+91 194 2472265</a>
             </li>
             <li
-              class="flex items-center gap-2 hover:text-orange-500 cursor-pointer"
+              class="group flex items-center gap-2 hover:text-orange-500 cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -519,7 +633,7 @@ title: "Oversees Holidays"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-4 h-4"
+                class="w-4 h-4 group-hover:fill-orange-500"
               >
                 <path
                   stroke-linecap="round"
@@ -528,33 +642,33 @@ title: "Oversees Holidays"
                 />
               </svg>
 
-              +91 194 2472265
+              <a href="tel:+91 194 2472265">+91 194 2472265</a>
             </li>
           </ul>
         </div>
         <div>
           <form
             action=""
-            class="space-y-4 flex flex-col items-center justify-center"
+            class="space-y-4 flex flex-col items-center justify-center pt-5 md:pt-0"
           >
             <input
               type="text"
               placeholder="Name"
-              class="text-sm text-gray-800 font-semibold p-3 rounded-sm"
+              class="text-sm text-gray-800 font-semibold p-3 rounded-sm w-[80%] lg:w-auto"
             />
             <input
               type="text"
               name="phone"
               id="phone"
               placeholder="Phone"
-              class="text-sm text-gray-800 font-semibold p-3 rounded-sm"
+              class="text-sm text-gray-800 font-semibold p-3 rounded-sm w-[80%] lg:w-auto"
             />
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Email"
-              class="text-sm text-gray-800 font-semibold p-3 rounded-sm"
+              class="text-sm text-gray-800 font-semibold p-3 rounded-sm w-[80%] lg:w-auto"
             />
             <input
               type="submit"
@@ -564,51 +678,55 @@ title: "Oversees Holidays"
           </form>
         </div>
       </div>
-      
+
       <div class="py-10 space-y-2">
-        <div class="flex justify-between items-center max-w-5xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto"
+        >
           <img
             src="https://www.overseasholidays.in/wp-content/uploads/2020/10/cropped-Logo-1.png"
             alt="overseeslogo"
             loading="lazy"
-            class="w-32"
+            class="w-32 py-2"
           />
-          <p class="text-sm text-gray-500">
+          <p class="text-sm text-gray-500 py-2">
             Copyright 2020 © All rights Reserved.
           </p>
-          <div class="flex items-center justify-between gap-5">
-            <a href="https://www.tripadvisor.in/Attraction_Review-g297623-d14903794-Reviews-Overseas_Holidays-Srinagar_Srinagar_District_Kashmir_Jammu_and_Kashmir.html">
-            <img
-              src="https://findicons.com/files/icons/2779/simple_icons/256/tripadvisor.png"
-              alt="tripadvisor"
-              class="w-14"
-              loading="lazy"
-            />
-          </a>
-          <a href="https://www.facebook.com/overseasholidaysindia">
-            <img
-              src="https://webstockreview.net/images/white-facebook-icon-png-8.png"
-              alt="facebook"
-              class="w-8"
-              loading="lazy"
-            />
-          </a>
-          <a href="https://twitter.com/oshkashmir">
-            <img
-              src="https://www.pinclipart.com/picdir/big/578-5789236_logo-twitter-png-blanc-white-twitter-logo-transparent.png"
-              alt="twitter"
-              class="w-8"
-              loading="lazy"
-            />
-          </a>
-          <a href="https://www.youtube.com/channel/UC1659E9rnK2ZjshStlM5ymQ">
-            <img
-              src="https://icon-library.com/images/youtube-icon-white-transparent/youtube-icon-white-transparent-16.jpg"
-              alt="youtube"
-              class="w-8"
-              loading="lazy"
-            />
-          </a>
+          <div class="flex items-center justify-between gap-5 py-2">
+            <a
+              href="https://www.tripadvisor.in/Attraction_Review-g297623-d14903794-Reviews-Overseas_Holidays-Srinagar_Srinagar_District_Kashmir_Jammu_and_Kashmir.html"
+            >
+              <img
+                src="https://findicons.com/files/icons/2779/simple_icons/256/tripadvisor.png"
+                alt="tripadvisor"
+                class="w-14"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.facebook.com/overseasholidaysindia">
+              <img
+                src="https://webstockreview.net/images/white-facebook-icon-png-8.png"
+                alt="facebook"
+                class="w-8"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://twitter.com/oshkashmir">
+              <img
+                src="https://www.pinclipart.com/picdir/big/578-5789236_logo-twitter-png-blanc-white-twitter-logo-transparent.png"
+                alt="twitter"
+                class="w-8"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.youtube.com/channel/UC1659E9rnK2ZjshStlM5ymQ">
+              <img
+                src="https://icon-library.com/images/youtube-icon-white-transparent/youtube-icon-white-transparent-16.jpg"
+                alt="youtube"
+                class="w-8"
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -616,85 +734,167 @@ title: "Oversees Holidays"
 
     <!-- Modal -->
     <div
-      data-te-modal-init
-      class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-      id="ExpertModal"
-      tabindex="-1"
-      aria-labelledby="ExpertModalLabel"
-      aria-hidden="true"
+      id="modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
     >
-      <div
-        data-te-modal-dialog-ref
-        class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]"
-      >
+      <div class="bg-white  px-2 shadow-lg w-[50%]">
+        <!-- Modal content goes here -->
         <div
-          class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
+          class="flex justify-end items-center  cursor-pointer"
+          id="closeModal"
         >
-          <div
-            class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="w-8 h-8"
           >
-            <!--Modal title-->
-            <h5
-              class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-              id="ExpertModalLabel"
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 p-3">
+          <div class="hidden lg:block space-y-5">
+            <h1 class="text-blue-800 text-2xl">How it works?</h1>
+            <div class="flex items-center gap-2">
+              <img
+                src="https://www.overseasholidays.in/wp-content/uploads/elementor/thumbs/1-p91t7ytxz6whmpbpssnqzpi5kjuz5eyssddxn8xuq0.png"
+                alt="one"
+              />
+              <h2 class="text-sm">Tell us details of your holiday plan.</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                src="https://www.overseasholidays.in/wp-content/uploads/elementor/thumbs/2-p91tcgi6mp1t3msvkqjkwkpfqtq3xcsmqllg6ua4zs.png"
+                alt="two"
+              />
+              <h2 class="text-sm">
+                Get multiple quotes from expert agents. Compare & customize further.</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                src="https://www.overseasholidays.in/wp-content/uploads/elementor/thumbs/305-3059131_circled-3-c-icon-price-margin-icon-p91tfhjgpo4v2gxyw6s8m9cbop323jdpzi852czl1g.jpg"
+                alt="three"
+              />
+              <h2 class="text-sm">Tell us details of your holiday plan.</h2>
+            </div>
+            <div
+              class="flex items-center justify-between gap-2 border-b border-black"
             >
-              Modal title
-            </h5>
-            <!--Close button-->
-            <button
-              type="button"
-              class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-              data-te-modal-dismiss
-              aria-label="Close"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
+              <div class="m-auto text-center">
+                <img
+                  src="https://worldtraveltoucan.com/wp-content/uploads/2017/11/destination-icon.png"
+                  alt="destination.png"
+                  class="m-auto w-16 mb-4"
                 />
-              </svg>
-            </button>
+                <h1 class="font-bold">50+</h1>
+                <p class="text-sm">Destinations</p>
+              </div>
+              <div class="m-auto text-center">
+                <img
+                  src="https://th.bing.com/th/id/R.8ac6c6a544833692d9d7a51a4cba5718?rik=hwfKBihkAeHc7Q&riu=http%3a%2f%2fclipart-library.com%2fimg%2f1144156.png&ehk=XtMSAAgDzkN6SB0OuLMCyjx6k%2fT5npN%2bUbeAridMDls%3d&risl=&pid=ImgRaw&r=0"
+                  alt="book.png"
+                  class="m-auto w-16 mb-4"
+                />
+                <h1 class="font-bold">5000+</h1>
+                <p class="text-sm">Satisfied guests</p>
+              </div>
+              <div class="m-auto text-center">
+                <img
+                  src="https://th.bing.com/th/id/R.86d9908ab3ea6b42f9dc28ec2ab2c5c6?rik=CmXSe3Z8cmfQ%2fQ&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fblue-check-mark-transparent-background%2fblue-check-mark-transparent-background-16.png&ehk=qqa3iNY4jT5vlU39aBukEcscK9RpNPOOwXFhzHIerFQ%3d&risl=&pid=ImgRaw&r=0"
+                  alt="tick.png"
+                  class="m-auto w-16 mb-4"
+                />
+                <h1 class="font-bold">Stringent</h1>
+                <p class="text-sm">Good quality</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <h1 class="font-bold text-2xl">Call us for Details</h1>
+              <a href="tel:+91 9103022049" class="text-blue-500"
+                >+91 9103022049</a
+              >
+              <br />
+              <a
+                href="mailto:overseasholidayskashmir@gmail.com"
+                class="text-blue-500"
+                >overseasholidayskashmir@gmail.com</a
+              >
+            </div>
           </div>
-
-          <!--Modal body-->
-          <div class="relative p-4" style="min-height: 1500px">
-            This is some placeholder content to show the scrolling behavior for
-            modals. Instead of repeating the text the modal, we use an inline
-            style set a minimum height, thereby extending the length of the
-            overall modal and demonstrating the overflow scrolling. When content
-            becomes longer than the height of the viewport, scrolling will move
-            the modal as needed.
-          </div>
-
-          <!--Modal footer-->
-          <div
-            class="-4 flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
-          >
-            <button
-              type="button"
-              class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
-              data-te-modal-dismiss
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              Save changes
-            </button>
+          <div class="pb-4">
+            <h1 class="text-blue-800 text-2xl pb-0 lg:pb-2">Talk to an expert</h1>
+            <div>
+              <form
+                action=""
+                class="space-y-2 flex flex-col items-center justify-center pt-5 md:pt-0"
+              >
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="text-sm text-gray-800 font-semibold p-3 rounded-sm w-[100%] border border-black"
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone"
+                  class="text-sm text-gray-800 font-semibold p-3 rounded-sm w-[100%] border border-black"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  class="text-sm text-gray-800 font-semibold p-3 rounded-sm w-[100%] border border-black"
+                />
+                <input
+                  type="submit"
+                  value="Get Itenary"
+                  class="bg-[#014960] w-[100%] py-1 text-white font-light rounded-sm cursor-pointer hover:bg-red-700"
+                />
+              </form>
+            </div>
+            <div>
+              <h1 class="text-blue-800 text-2xl pb-2">Approved By</h1>
+              <div class="grid grid-cols-3">
+                <img
+                  src="https://www.overseasholidays.in/wp-content/uploads/2021/06/boat.jpg"
+                  alt="J&K Tourism"
+                  class="m-auto w-14 mb-4"
+                />
+                <img
+                  src="https://www.overseasholidays.in/wp-content/uploads/2021/06/commerce.jpg"
+                  alt="Kashmir chamber"
+                  class="m-auto w-14 mb-4"
+                />
+                <img
+                  src="https://www.overseasholidays.in/wp-content/uploads/2021/06/taai.jpg"
+                  alt="Taai"
+                  class="m-auto w-14 mb-4"
+                />
+                <img
+                  src="https://www.overseasholidays.in/wp-content/uploads/2021/06/tourism.jpg"
+                  alt="Tourism"
+                  class="m-auto w-14 mb-4"
+                />
+                <img
+                  src="https://www.overseasholidays.in/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-07-at-7.17.27-PM-150x150.jpeg"
+                  alt="Iatte"
+                  class="m-auto w-14 mb-4"
+                />
+                <img
+                  src="https://www.overseasholidays.in/wp-content/uploads/2021/08/iata-logo-transp-150x127.png"
+                  alt="Iata"
+                  class="m-auto w-14 mb-4"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -703,6 +903,30 @@ title: "Oversees Holidays"
 </html>
 
 <script>
+  var openModalButton = document.getElementsByClassName("openModal");
+  var closeModalButton = document.getElementById("closeModal");
+  var modal = document.getElementById("modal");
+
+  for (var i = 0; i < openModalButton.length; i++){
+    openModalButton[i].addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    })
+  }
+  
+
+  closeModalButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  var hamburger = document.getElementById("hamburger");
+  var hambar = document.getElementById("hambar");
+  var ham = document.getElementById("ham");
+  var cancle = document.getElementById("cancle");
+  hamburger.addEventListener("click", () => {
+    hambar.classList.toggle("hidden");
+    ham.classList.toggle("hidden");
+    cancle.classList.toggle("hidden");
+  });
   var slider = new KeenSlider("#my-keen-slider", {
     loop: {
       min: -5,
@@ -713,32 +937,24 @@ title: "Oversees Holidays"
   var domestic = document.getElementById("domestic");
   var destination_container = document.getElementById("destination_container");
 
-  let hideTimeout;
   domestic.addEventListener("mouseenter", () => {
-    clearTimeout(hideTimeout);
     destination_container.classList.remove("hidden");
   });
-  domestic.addEventListener("mouseleave", () => {
-    hideTimeout = setTimeout(() => {
-      destination_container.classList.add("hidden");
-    }, 2000);
+  destination_container.addEventListener("mouseenter", () => {
+    destination_container.classList.remove("hidden");
   });
-  var links = document.getElementsByClassName("link");
-  for (var link in links) {
-    link.addEventListener("mouseenter", () => {
-      destination_container.classList.remove("hidden");
-    });
-    link.addEventListener("mouseleave", () => {
-      destination_container.classList.add("hidden");
-    });
-  }
+  destination_container.addEventListener("mouseleave", () => {
+    destination_container.classList.add("hidden");
+  });
+  domestic.addEventListener("mouseleave", () => {
+    destination_container.classList.add("hidden");
+  });
 
-  // Initialization for ES Users
-import {
-  Modal,
-  Ripple,
-  initTE,
-} from "tw-elements";
-
-initTE({ Modal, Ripple });
+  var domestic_ham = document.getElementById("domestic_ham");
+  var destination_container_ham = document.getElementById(
+    "destination_container_ham"
+  );
+  domestic_ham.addEventListener("click", () => {
+    destination_container_ham.classList.toggle("hidden");
+  });
 </script>
