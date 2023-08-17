@@ -2,71 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-[class^="number-slide"],
-[class*=" number-slide"] {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  color: #fff;
-  font-weight: 500;
-  height: 300px;
-  max-height: 100vh;
-}
-
-.bg-color {
-  background-color: #fff5e1;
-}
-.bg-color2 {
-  background-color: #fee1f0;
-}
-.bg-color3 {
-  background-color: #effaf7;
-}
-.bg-color4 {
-  background-color: #F6F1FC;
-}
-.text1 {
-  color: #ad710d;
-}
-.text2 {
-  color: #e54837;
-}
-.text3 {
-  color: #069d94;
-}
-.text4 {
-  color: #7b34dd;
-}
-.stroke {
-  stroke: #ad710d;
-}
-.stroke2 {
-  stroke: #e54837;
-}
-.stroke3 {
-  stroke: #069d94;
-}
-.stroke4 {
-  stroke: #7b34dd;
-}
-.hover:hover{
-  transform: scale(1.1);
-  transition: transform .8s ease-in;
- -webkit-transition: transform .8s ease-in;
-
-}
-
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "muli-regular", sans-serif;
+
+  line-height: 1.875;
+}
+.hovered-btn {
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+.banner_rajasthan{
+  background-image: linear-gradient(rgb(0 0 0 / 34%), rgb(0 0 0 / 230%)),
+      url('https://rajasthanvacations.in/build/assets/rajasthan-banner.69f5dc8f.webp');
+}
+.font-Cormorant{
+  font-family: Cormorant Garamond, serif
+}
+.getQuote_backround{
+  background: linear-gradient(135deg,#F69000 0%,#C94A2F 52%,#C94A2F 100%);
+}
+.text-10{
+  font-size: 10px;
+}
+.hovered-btn:hover {
+  transform: scale(1.1);
+}
+header ul li a.active {
+  color: white;
+}
+.row{
+  display: grid;
+  grid-template-columns: repeat(20%, 60%, 20%);
+}
+.khammaGhani{
+  background: linear-gradient(135deg,#F69000 0%,#C94A2F 52%,#C94A2F 100%);
 }
 [class^="number-slide"],
 [class*=" number-slide"] {
-  background: grey;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,11 +53,61 @@ body {
 }
 
 .number-slide1 {
-  background-color: white;
-  color: black;
-  display: grid;
-  grid-template-rows: repeat(2,1fr);
-  height:100%;
+  background: rgb(64, 175, 255);
+  background: linear-gradient(
+    128deg,
+    rgba(64, 175, 255, 1) 0%,
+    rgba(63, 97, 255, 1) 100%
+  );
+}
+
+.number-slide2 {
+  background: rgb(255, 75, 64);
+  background: linear-gradient(
+    128deg,
+    rgba(255, 154, 63, 1) 0%,
+    rgba(255, 75, 64, 1) 100%
+  );
+}
+
+.number-slide3 {
+  background: rgb(182, 255, 64);
+  background: linear-gradient(
+    128deg,
+    rgba(182, 255, 64, 1) 0%,
+    rgba(63, 255, 71, 1) 100%
+  );
+  background: linear-gradient(
+    128deg,
+    rgba(189, 255, 83, 1) 0%,
+    rgba(43, 250, 82, 1) 100%
+  );
+}
+
+.number-slide4 {
+  background: rgb(64, 255, 242);
+  background: linear-gradient(
+    128deg,
+    rgba(64, 255, 242, 1) 0%,
+    rgba(63, 188, 255, 1) 100%
+  );
+}
+
+.number-slide5 {
+  background: rgb(255, 64, 156);
+  background: linear-gradient(
+    128deg,
+    rgba(255, 64, 156, 1) 0%,
+    rgba(255, 63, 63, 1) 100%
+  );
+}
+.number-slide6 {
+  background: rgb(64, 76, 255);
+  background: linear-gradient(
+    128deg,
+    rgba(64, 76, 255, 1) 0%,
+    rgba(174, 63, 255, 1) 100%
+  );
 }
 
 .navigation-wrapper {
@@ -145,80 +170,143 @@ body {
   background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='grey' viewBox='0 0 24 24' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.banner {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('https://img.veenaworld.com/wp-content/uploads/2018/08/Himachal-feature-image.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  padding: 2.5rem 5rem;
+
+.height {
+  max-height: 100%;
 }
-.himachal-form{
-  width:30%
-}
-@media screen and (max-width:1024px){
-  .banner{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-  }
-  .himachal-form{
-    width:100%
-  }
-}
-@media screen and (max-width: 900px){
-  .banner{
-    padding: 1rem;
-  }
-  
-  .himachal-form{
-    width:100%
-  }
-}
-@media screen and (min-width:400px) and (max-width: 600px){
-  .banner{
-    display: block;
-    padding: 1rem;
-  }
-}
-@media screen and (max-width: 760px){
-  .banner{
-    display: block;
-    padding: 1rem;
-  }
-  .testimonial{
-    text-align: center;
-    align-items: center;
-  }
-  .testimonial h1{
-    text-align: center;
-  }
-  .testimonial div{
-    /* border: 1px solid black; */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
-  }
-  .himachal-form{
-    width:100%
-  }
-  /* .icons {
-    width:3rem;
-  }
-  .social__icon__wrapper {
-    width:3rem
-  } */
-}
-@media screen and (max-width: 400px){
-  .banner{
-    display: block;
-    padding: 0.5rem;
+
+@media only screen and (max-width: 900px) {
+  .home-image-right {
+    width: 400px;
+    right: auto;
+    top: 86%;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 0;
+    margin-bottom: -678px;
   }
 }
 
+.border-purple-500 {
+  border-color: #8f00ff; /* Change the border color to purple (#8F00FF) on hover */
+}
+.hidden-effect {
+  opacity: 0;
+  transition: all 2s;
+}
+@media (prefers-reduced-motion) {
+  .hidden-effect {
+    transition: none;
+  }
+}
+.show-effect {
+  opacity: 1;
+}
+.glow-effect {
+  position: relative;
+  width: 90%;
+  border-radius: 20px;
+}
+
+.glow-effect::before {
+  opacity: 0.4;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: 0 0 100px 30px rgba(143, 0, 255, 0.5),
+    0 0 100px 35px rgba(143, 0, 255, 0.5);
+  z-index: -1;
+}
+
+.bg-color {
+  background-color: #fff5e1;
+}
+.bg-color2 {
+  background-color: #fee1f0;
+}
+.bg-color3 {
+  background-color: #effaf7;
+}
+.bg-color4 {
+  background-color: #f6f1fc;
+}
+.text1 {
+  color: #ad710d;
+}
+.text2 {
+  color: #e54837;
+}
+.text3 {
+  color: #069d94;
+}
+.text4 {
+  color: #7b34dd;
+}
+.stroke {
+  stroke: #ad710d;
+}
+.stroke2 {
+  stroke: #e54837;
+}
+.stroke3 {
+  stroke: #069d94;
+}
+.stroke4 {
+  stroke: #7b34dd;
+}
+.preview {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.back {
+  background: radial-gradient(
+    157.73% 157.73% at 50% -29.9%,
+    rgba(203, 213, 225, 0.16) 0%,
+    rgba(203, 213, 225, 0) 100%
+  );
+  background-image: radial-gradient(
+    157.73% 157.73% at 50% -29.9%,
+    rgba(203, 213, 225, 0.16) 0%,
+    rgba(203, 213, 225, 0) 100%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://img.veenaworld.com/wp-content/uploads/2018/08/Himachal-feature-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
 .free {
   background-color: #329a8c;
 }
-
 .package-btn {
   margin-top: 6rem;
   padding: 1rem;
@@ -226,8 +314,8 @@ body {
   border-radius: 2rem;
 }
 
-.form>div {
-  width: 80%
+.form > div {
+  width: 80%;
 }
 
 .form input {
@@ -238,7 +326,6 @@ body {
   border: 1px solid #ea4335;
   background: #ea4335;
 }
-
 .social__icon__wrapper {
   width: 3rem;
   height: 3rem;
@@ -253,21 +340,17 @@ body {
   border: 1px solid #34e0a1;
   background: #34e0a1;
 }
-
 .fb__icon__wrapper {
   border: 1px solid #1b74e4;
   background: #1b74e4;
 }
-
 @keyframes blink {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -281,11 +364,9 @@ body {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.2);
   }
-
   100% {
     transform: scale(1);
   }
@@ -295,19 +376,18 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* .journeys {
-  background-image: url('https://pyt-images.imgix.net//pyt-images.imgix.net/images/activity/Card%205.png?w=270&h=360&fit=crop&dpr=1&auto=format%2Ccompress%2Cenhance&q=40');
-  height: 500px;
-} */
-
+.journeys {
+  background-image: url("https://pyt-images.imgix.net//pyt-images.imgix.net/images/activity/Card%205.png?w=270&h=360&fit=crop&dpr=1&auto=format%2Ccompress%2Cenhance&q=40");
+}
 
 .hoverImg:hover {
   transform: scale(1.1);
-  transition: transform .8s ease-in;
-  -webkit-transition: transform .8s ease-in;
+  -webkit-transition: transform 0.8s ease-in;
+  transition: transform 0.8s ease-in;
 }
 
 .itinary {
+  /* padding: 10px 0; */
   margin: 0;
   border-bottom: solid 1px #cfcfcf;
   border-top: solid 1px #cfcfcf;
@@ -328,20 +408,15 @@ ul {
 .itinary ul li div img {
   width: 50px;
 }
-
 .single .package_img {
   margin-top: 20px;
-  height:200px
-}
-.single .package_img img {
-  height:100%
 }
 
 .confused_text h1 {
   font-size: 30px;
   font-weight: 600;
   color: #fff;
-  line-height: 40px
+  line-height: 40px;
 }
 
 .confused_btn {
@@ -354,68 +429,4 @@ ul {
   min-height: 20px;
   color: #2e3042;
   font-size: 18px;
-
 }
-
-.content {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-.content span {
-  color: yellow;
-}
-
-label {
-  font-weight: 800;
-  font-size: small;
-}
-
-.position {
-  top: 90%;
-  height: 100px;
-}
-
-.right_btn_position {
-  @apply right-0;
-  top: 45%;
-
-}
-
-.left_btn_position {
-  @apply left-0;
-  top: 45%;
-}
-
-.width {
-  width: 30%;
-}
-
-.content-width {
-  width: 70%;
-}
-
-.div_padding {
-  padding: 100px 10px;
-}
-
-.div_height {
-  height: 500px;
-}
-
-.modal-overlay {
-  z-index: -1;
-}
-
-.modal-container {
-  max-height: 80%;
-}
-
-.hide {
-  display: none;
-}
-
-
-
-
