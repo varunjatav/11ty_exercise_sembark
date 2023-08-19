@@ -10,6 +10,33 @@ body {
 
   line-height: 1.875;
 }
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+.active{
+  height: auto;
+}
+.slider_active{
+  height: auto;
+}
+.about-active{
+  height: auto;
+}
+.col{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) -12px);
+  gap: 16px;
+  overflow: hidden
+}
 .hovered-btn {
   transform: scale(1);
   transition: transform 0.3s ease-in;
