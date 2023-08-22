@@ -47,43 +47,62 @@ footer_data:
           <img
             src="https://rajasthanvacations.in/images/logo-tourepedia.webp"
             alt="logo.png"
-            class="w-44"
+            class="w-32 lg:w-44"
           />
           <ul
-            class="flex justify-between items-center gap-5 text-red-600 font-bold"
+            class="hidden lg:flex justify-between items-center gap-5 text-red-600 font-bold"
           >
-            <li>
-              <a href="">Popular Tours</a>
+            <li class="cursor-pointer">
+              <a href="#popular-rajasthan-tour-packages">Popular Tours</a>
             </li>
-            <li>
-              <a href="">Theme Tours</a>
+            <li id="theme_btn" class="cursor-pointer flex items-center gap-2">
+              <a>Theme Tours</a>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+              
             </li>
-            <li>
-              <a href="">Reviews</a>
+            <li class="cursor-pointer">
+              <a href="#reviews">Reviews</a>
             </li>
-            <li>
-              <a href="">FAQ's</a>
+            <li class="cursor-pointer">
+              <a href="#faq">FAQ's</a>
             </li>
           </ul>
         </div>
+        <div class="hidden absolute top-16 left-[360px] bg-[#fff] py-2  rounded-sm border border-gray-400" id="theme_div">
+          <ul class="text-gray-400 font-roza">
+            <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+             <a href="#family-rajasthan-tour-packages">Family Rajasthan Tour Packages</a> </li>
+            <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+              <a href="#honeymoon-rajasthan-tour-packages">Honeymoon Rajasthan Tour Packages</a> </li>
+            <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+              <a href="#luxury-rajasthan-tour-packages"> Luxury Rajasthan Tour Packages</a> </li>
+            <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+              <a href="#rajasthan-weekend-tour-packages">Rajasthan Weekend Tour Packages</a> </li>
+          </ul>
+        </div>
         <div class="flex items-center gap-1">
-          <div class="bg-[#06920b] w-8 h-8 rounded-full flex items-center">
+          <a href="tel:+918302059300">
+          <div class="bg-[#06920b] w-6 h-6 lg:w-8 lg:h-8 rounded-full flex items-center justify-center" >
             <img
               src="https://www.dlf.pt/dfpng/maxpng/6-66817_whatsapp-png.png"
               alt="whatsappicon"
-              class="w-4 h-4 m-auto cursor-pointer"
+              class=" w-3 h-3 lg:w-4 lg:h-4 cursor-pointer"
               loading="lazy"
             />
           </div>
+        </a>
           <div class="flex items-center justify-between gap-2">
-            <div class="bg-[#6ebe53] w-8 h-8 rounded-full flex items-center">
+
+            <div class="bg-[#6ebe53] w-6 h-6 lg:w-8 lg:h-8 rounded-full flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="white"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="white"
-                class="w-4 h-4 m-auto"
+                class=" w-3 h-3 lg:w-4 lg:h-4 m-auto cursor-pointer"
               >
                 <path
                   stroke-linecap="round"
@@ -92,26 +111,68 @@ footer_data:
                 />
               </svg>
             </div>
-            <a href="tel:+91-8302059300" class="text-red-600 font-bold">
+            <a href="tel:+91-8302059300" class="text-red-600 font-bold sm: text-sm lg:text-lg">
               +91-8302059300
             </a>
           </div>
         </div>
+        <div class="block border border-gray-300 p-2 rounded-lg lg:hidden cursor-pointer" id="hamburger">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          
+        </div>
       </nav>
+      <div id="hambar" class="hidden block lg:hidden">
+        <ul
+            class="flex flex-col justify-between  gap-5 text-red-600 font-bold"
+          >
+            <li class="cursor-pointer">
+              <a href="#popular-rajasthan-tour-packages">Popular Tours</a>
+            </li>
+            <li id="theme_btn2" class="cursor-pointer flex items-center gap-2">
+              <a>Theme Tours</a>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+              
+            </li>
+            <div class="hidden bg-[#fff] py-2  rounded-sm border border-gray-400" id="theme_div2">
+              <ul class="text-gray-400 font-roza">
+                <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+                 <a href="#family-rajasthan-tour-packages">Family Rajasthan Tour Packages</a> </li>
+                <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+                  <a href="#honeymoon-rajasthan-tour-packages">Honeymoon Rajasthan Tour Packages</a> </li>
+                <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+                  <a href="#luxury-rajasthan-tour-packages"> Luxury Rajasthan Tour Packages</a> </li>
+                <li class="hover:bg-gray-200 px-4 cursor-pointer active:bg-blue-500 link">
+                  <a href="#rajasthan-weekend-tour-packages">Rajasthan Weekend Tour Packages</a> </li>
+              </ul>
+            </div>
+            <li class="cursor-pointer">
+              <a href="#reviews">Reviews</a>
+            </li>
+            <li class="cursor-pointer">
+              <a href="#faq">FAQ's</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
     </header>
     {{ content | safe }}
 
     <footer class="text-center pt-5">
       <div class="mx-auto bg-[#f3fff6] pt-10">
         <h1
-          class="text-[#2e3042] text-[44px] font-Cormorant leading-[52px] w-2/3 m-auto"
+        class="text-[#2e3042] w-[80%] lg:w-[60%] m-auto text-3xl lg:text-[44px] font-Cormorant lg:leading-[52px]"
         >
           Explore the Royal Grandeur of Rajasthan with
           <span class="text-red-500">Tourepedia Holidays</span>
         </h1>
-        <div class="max-w-6xl mx-auto flex items-center justify-between py-5">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-center justify-between py-5">
           {% for data in footer_data%}
-          <div class="flex flex-col gap-10 items-center justify-between">
+          <div class="flex flex-col  items-center justify-between">
             <img src="{{ data.img }}" alt="{{ data.title }}" />
             <h5 class="text-lg font-medium text-[#0c0c0c] font-roza">
               {{ data.title }}
@@ -193,6 +254,7 @@ footer_data:
           </h1>
           <h1 class="text-xs text-gray-500 font-roza">Follow Us</h1>
           <div class="flex items-center justify-center gap-4">
+            <a href="https://www.facebook.com/tourepedia1" target="__blank">
             <div class="rounded-md bg-blue-700 p-2">
               <img
                 src="https://clipground.com/images/white-facebook-logo-png-5.png"
@@ -201,6 +263,8 @@ footer_data:
                 loading="lazy"
               />
             </div>
+          </a>
+          <a href="https://instagram.com/tourepedia_holidays?igshid=NTc4MTIwNjQ2YQ==" target="__blank">
             <div class="rounded-md bg-pink-700 p-2">
               <img
                 src="https://tighestimepieces.com/wp-content/uploads/2016/11/Instagram-icon-WHITE.png"
@@ -209,6 +273,8 @@ footer_data:
                 loading="lazy"
               />
             </div>
+          </a>
+          <a href="https://wa.me/9166021917?text=Hello%20Tourepedia%2C%20I%20want%20Rajasthan%20Tour%20Quotation" target="__blank">
             <div class="rounded-md bg-green-700 p-2">
               <img
                 src="https://toppng.com/public/uploads/thumbnail/logo-whatsapp-branco-png-icone-whatsapp-png-branco-11562849301allxbzyi80.png"
@@ -217,6 +283,7 @@ footer_data:
                 loading="lazy"
               />
             </div>
+          </a>
           </div>
         </div>
       </div>
@@ -242,3 +309,37 @@ footer_data:
     </footer>
   </body>
 </html>
+
+<script>
+  var theme_btn = document.getElementById("theme_btn");
+  var theme_div = document.getElementById("theme_div");
+  var links  = document.querySelectorAll(".link");
+  for(var i = 0; i < links.length; i++){
+    links[i].addEventListener("click", () => {
+      theme_div.classList.add("hidden")
+    })
+  }
+  theme_btn.addEventListener("click", () => {
+    console.log('clicked');
+    theme_div.classList.toggle("hidden")
+
+  })
+  var theme_btn2 = document.getElementById("theme_btn2");
+  var theme_div2 = document.getElementById("theme_div2");
+  var links  = document.querySelectorAll(".link");
+  for(var i = 0; i < links.length; i++){
+    links[i].addEventListener("click", () => {
+      theme_div.classList.add("hidden")
+    })
+  }
+  theme_btn2.addEventListener("click", () => {
+    console.log('clicked');
+    theme_div2.classList.toggle("hidden")
+  })
+  var hamburger = document.getElementById("hamburger");
+  var hambar = document.getElementById("hambar");
+  hamburger.addEventListener("click", () => {
+    console.log("clicked");
+    hambar.classList.toggle("hidden");
+  })
+</script>
